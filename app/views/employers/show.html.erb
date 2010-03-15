@@ -1,0 +1,63 @@
+<p>
+  <b>First name:</b>
+  <%=h @employer.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @employer.last_name %>
+</p>
+
+<p>
+  <b>Company name:</b>
+  <%=h @employer.company_name %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%=h @employer.address1 %>
+</p>
+
+<p>
+  <b>Address2:</b>
+  <%=h @employer.address2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @employer.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @employer.state %>
+</p>
+
+<p>
+  <b>Zip code:</b>
+  <%=h @employer.zip_code %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @employer.country %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @employer.user_id %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @employer.phone %>
+</p>
+
+<p>
+  <b>Pay method:</b>
+  <%=h @employer.pay_method %>
+</p>
+
+
+<%= link_to 'Edit', edit_employer_path(@employer) %> |
+<%= link_to 'Back', employers_path %>

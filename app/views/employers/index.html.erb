@@ -1,0 +1,42 @@
+<h1>Listing employers</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Company name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip code</th>
+    <th>Country</th>
+    <th>User</th>
+    <th>Phone</th>
+    <th>Pay method</th>
+  </tr>
+
+<% @employers.each do |employer| %>
+  <tr>
+    <td><%=h employer.first_name %></td>
+    <td><%=h employer.last_name %></td>
+    <td><%=h employer.company_name %></td>
+    <td><%=h employer.address1 %></td>
+    <td><%=h employer.address2 %></td>
+    <td><%=h employer.city %></td>
+    <td><%=h employer.state %></td>
+    <td><%=h employer.zip_code %></td>
+    <td><%=h employer.country %></td>
+    <td><%=h employer.user_id %></td>
+    <td><%=h employer.phone %></td>
+    <td><%=h employer.pay_method %></td>
+    <td><%= link_to 'Show', employer %></td>
+    <td><%= link_to 'Edit', edit_employer_path(employer) %></td>
+    <td><%= link_to 'Destroy', employer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New employer', new_employer_path %>
