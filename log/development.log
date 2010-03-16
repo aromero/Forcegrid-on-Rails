@@ -3504,3 +3504,34 @@ Processing JobsController#new (for 127.0.0.1 at 2010-03-15 23:31:11) [GET]
 Rendering template within layouts/application
 Rendering jobs/new
 Completed in 23ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/employers/1/jobs/new]
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+  [4;36;1mEmployer Load (0.6ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+
+Processing EmployersController#index (for 127.0.0.1 at 2010-03-15 23:39:00) [GET]
+  [4;36;1mEmployer Load (0.7ms)[0m   [0;1mSELECT * FROM "employers" [0m
+Rendering template within layouts/application
+Rendering employers/index
+Completed in 81ms (View: 76, DB: 1) | 200 OK [http://0.0.0.0/employers]
+
+
+Processing EmployersController#index (for 127.0.0.1 at 2010-03-15 23:39:06) [GET]
+  [4;35;1mEmployer Load (0.7ms)[0m   [0mSELECT * FROM "employers" [0m
+Rendering template within layouts/application
+Rendering employers/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/employers]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-15 23:39:09) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-15 23:39:11) [GET]
+  [4;36;1mJob Load (0.6ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/jobs]

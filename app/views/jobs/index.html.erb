@@ -27,7 +27,7 @@
     <td><%=h job.service_contact %></td>
     <td><%=h job.buyers_support_contact %></td>
     <td><%=h job.status %></td>
-    <td><%=h job.employer_id %></td>
+    <td><%=h job.employer.full_name %></td>
     <td><%= link_to 'Show', job %></td>
     <td><%= link_to 'Edit', edit_job_path(job) %></td>
     <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>

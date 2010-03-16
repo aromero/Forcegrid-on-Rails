@@ -13,7 +13,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.xml
   def show
-    @job = Job.find(params[:id])
+    @job = Job.find(params[:id], :include => [:employer])
 
     respond_to do |format|
       format.html # show.html.erb
