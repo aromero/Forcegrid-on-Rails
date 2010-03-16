@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  price: 9.99
+  pricing_method: MyString
+  comments: MyText
+  job_id: 1
+  worker_id: 1
+
+two:
+  price: 9.99
+  pricing_method: MyString
+  comments: MyText
+  job_id: 1
+  worker_id: 1

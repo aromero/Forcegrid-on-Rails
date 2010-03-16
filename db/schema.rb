@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100315235847) do
+ActiveRecord::Schema.define(:version => 20100316034752) do
+
+  create_table "bids", :force => true do |t|
+    t.decimal  "price"
+    t.string   "pricing_method"
+    t.text     "comments"
+    t.integer  "job_id"
+    t.integer  "worker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "employers", :force => true do |t|
     t.string   "first_name"
@@ -42,6 +52,30 @@ ActiveRecord::Schema.define(:version => 20100315235847) do
     t.integer  "employer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "workers", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone"
+    t.string   "country"
+    t.string   "business_name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip_code"
+    t.string   "company_phone"
+    t.string   "website_url"
+    t.string   "number_employees"
+    t.integer  "year_comp_founded"
+    t.string   "stock_parts"
+    t.string   "company_logo"
+    t.text     "company_background"
+    t.text     "detailed_service_desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
 end

@@ -3535,3 +3535,754 @@ Rendering template within layouts/application
 Rendering jobs/index
   [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
 Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/jobs]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:12:09) [GET]
+  [4;36;1mWorker Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: workers: SELECT * FROM "workers" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: workers: SELECT * FROM "workers" ):
+  app/controllers/workers_controller.rb:5:in `index'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployers (20100315232731)
+Migrating to CreateJobs (20100315235847)
+Migrating to CreateWorkers (20100316012111)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "workers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "phone" varchar(255), "country" varchar(255), "business_name" varchar(255), "address1" varchar(255), "address2" varchar(255), "city" varchar(255), "state" varchar(255), "zip_code" varchar(255), "company_phone" varchar(255), "website_url" varchar(255), "number_employees" varchar(255), "year_comp_founded" integer, "stock_parts" varchar(255), "company_logo" varchar(255), "company_background" text, "detailed_service_desc" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100316012111')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("employers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("workers")[0m
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:13:11) [GET]
+  [4;35;1mWorker Load (0.5ms)[0m   [0mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#new (for 127.0.0.1 at 2010-03-16 00:13:13) [GET]
+Rendering template within layouts/application
+Rendering workers/new
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/workers/new]
+
+
+Processing WorkersController#create (for 127.0.0.1 at 2010-03-16 00:13:26) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "worker"=>{"city"=>"", "address1"=>"", "year_comp_founded"=>"", "address2"=>"", "business_name"=>"", "zip_code"=>"", "country"=>"", "company_background"=>"", "stock_parts"=>"", "company_phone"=>"", "website_url"=>"", "company_logo"=>"", "phone"=>"", "last_name"=>"Perez", "number_employees"=>"", "detailed_service_desc"=>"", "state"=>"", "first_name"=>"Roberto"}}
+  [4;36;1mWorker Create (0.5ms)[0m   [0;1mINSERT INTO "workers" ("address1", "city", "business_name", "address2", "year_comp_founded", "created_at", "country", "zip_code", "company_phone", "stock_parts", "company_background", "updated_at", "website_url", "company_logo", "last_name", "phone", "number_employees", "first_name", "state", "detailed_service_desc") VALUES('', '', '', '', NULL, '2010-03-16 03:13:26', '', '', '', '', '', '2010-03-16 03:13:26', '', '', 'Perez', '', '', 'Roberto', '', '')[0m
+Redirected to http://0.0.0.0:3000/workers/1
+Completed in 14ms (DB: 0) | 302 Found [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:13:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:13:27) [GET]
+  [4;36;1mWorker Load (0.8ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:13:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.5ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:13:53) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:15:16) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:16:28) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.6ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:17:26) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:17:30) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:17:41) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:18:26) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (1.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.6ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 90ms (View: 84, DB: 2) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:18:27) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:19:04) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (1.3ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 2) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:19:20) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:19:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:21:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+
+ActionView::TemplateError (undefined local variable or method `view_jobs_path' for #<ActionView::Base:0x1044bef10>) on line #94 of app/views/workers/show.html.erb:
+91: 
+92: <%= link_to 'Edit', edit_worker_path(@worker) %> |
+93: <%= link_to 'Back', workers_path %> |
+94: <%= link_to 'Ver trabajos disponibles', view_jobs_path %>
+
+    app/views/workers/show.html.erb:94
+    app/controllers/workers_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:21:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+
+ActionView::TemplateError (undefined local variable or method `index_jobs_path' for #<ActionView::Base:0x1041646f8>) on line #94 of app/views/workers/show.html.erb:
+91: 
+92: <%= link_to 'Edit', edit_worker_path(@worker) %> |
+93: <%= link_to 'Back', workers_path %> |
+94: <%= link_to 'Ver trabajos disponibles', index_jobs_path %>
+
+    app/views/workers/show.html.erb:94
+    app/controllers/workers_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 00:21:58) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmployersController#index (for 127.0.0.1 at 2010-03-16 00:22:00) [GET]
+  [4;35;1mEmployer Load (0.7ms)[0m   [0mSELECT * FROM "employers" [0m
+Rendering template within layouts/application
+Rendering employers/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/employers]
+
+
+Processing EmployersController#show (for 127.0.0.1 at 2010-03-16 00:22:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering employers/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "jobs" WHERE ("jobs".employer_id = 1) [0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".employer_id = 1) [0m
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/employers/1]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:22:12) [GET]
+  [4;35;1mWorker Load (0.8ms)[0m   [0mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 79ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:22:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+
+ActionView::TemplateError (undefined local variable or method `index_jobs_path' for #<ActionView::Base:0x1044174b8>) on line #94 of app/views/workers/show.html.erb:
+91: 
+92: <%= link_to 'Edit', edit_worker_path(@worker) %> |
+93: <%= link_to 'Back', workers_path %> |
+94: <%= link_to 'Ver trabajos disponibles', index_jobs_path %>
+
+    app/views/workers/show.html.erb:94
+    app/controllers/workers_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:22:34) [GET]
+  [4;35;1mWorker Load (0.7ms)[0m   [0mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:22:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.5ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 83ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:22:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.5ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:23:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+
+ActionView::TemplateError (worker_jobs_url failed to generate from {:action=>"index", :controller=>"jobs"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["workers", :worker_id, "jobs"] - are they all satisfied?) on line #94 of app/views/workers/show.html.erb:
+91: 
+92: <%= link_to 'Edit', edit_worker_path(@worker) %> |
+93: <%= link_to 'Back', workers_path %> |
+94: <%= link_to 'Ver trabajos disponibles', worker_jobs_path %>
+
+    (eval):20:in `worker_jobs_path'
+    app/views/workers/show.html.erb:94
+    app/controllers/workers_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:23:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+
+ActionView::TemplateError (undefined local variable or method `jobs_worker_path' for #<ActionView::Base:0x1044637c8>) on line #94 of app/views/workers/show.html.erb:
+91: 
+92: <%= link_to 'Edit', edit_worker_path(@worker) %> |
+93: <%= link_to 'Back', workers_path %> |
+94: <%= link_to 'Ver trabajos disponibles', jobs_worker_path %>
+
+    app/views/workers/show.html.erb:94
+    app/controllers/workers_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:23:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing EmployersController#index (for 127.0.0.1 at 2010-03-16 00:23:34) [GET]
+  [4;35;1mEmployer Load (0.7ms)[0m   [0mSELECT * FROM "employers" [0m
+Rendering template within layouts/application
+Rendering employers/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/employers]
+
+
+Processing EmployersController#show (for 127.0.0.1 at 2010-03-16 00:23:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering employers/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "jobs" WHERE ("jobs".employer_id = 1) [0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".employer_id = 1) [0m
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/employers/1]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:24:38) [GET]
+  [4;35;1mWorker Load (0.7ms)[0m   [0mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:24:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:24:42) [GET]
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:25:00) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:25:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+
+ActionView::TemplateError (worker_jobs_url failed to generate from {:action=>"index", :controller=>"jobs"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["workers", :worker_id, "jobs"] - are they all satisfied?) on line #94 of app/views/workers/show.html.erb:
+91: 
+92: <%= link_to 'Edit', edit_worker_path(@worker) %> |
+93: <%= link_to 'Back', workers_path %> |
+94: <%= link_to 'Ver trabajos disponibles', worker_jobs_path %>
+
+    (eval):20:in `worker_jobs_path'
+    app/views/workers/show.html.erb:94
+    app/controllers/workers_controller.rb:18:in `show'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:25:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 84ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:25:20) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:25:26) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 00:25:36) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:25:38) [GET]
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-03-16 00:25:42) [GET]
+Rendering template within layouts/application
+Rendering jobs/new
+  [4;35;1mEmployer Load (0.6ms)[0m   [0mSELECT * FROM "employers" [0m
+Completed in 98ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/jobs/new]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:25:47) [GET]
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/jobs]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:25:50) [GET]
+  [4;36;1mWorker Load (0.8ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:25:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:25:56) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+  [4;36;1mSQL (1.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployers (20100315232731)
+Migrating to CreateJobs (20100315235847)
+Migrating to CreateWorkers (20100316012111)
+Migrating to CreateBids (20100316032855)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "bids" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "price" decimal, "pricing_method" varchar(255), "comments" text, "job_id" integer, "worker_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100316032855')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("bids")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("employers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("workers")[0m
+  [4;36;1mBid Load (0.6ms)[0m   [0;1mSELECT * FROM "bids" [0m
+  [4;35;1mEmployer Load (0.9ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;36;1mBid Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: bids.employer_id: SELECT * FROM "bids" WHERE ("bids".employer_id = 1) [0m
+  [4;35;1mEmployer Load (0.3ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;36;1mBid Load (0.2ms)[0m   [0;1mSELECT * FROM "bids" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;35;1mBid Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: jobs.bid_id: SELECT "bids".* FROM "bids" INNER JOIN "jobs" ON "bids".id = "jobs".bid_id WHERE (("jobs".employer_id = 1)) [0m
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;35;1mBid Load (0.2ms)[0m   [0mSELECT "bids".* FROM "bids" INNER JOIN "jobs" ON "bids".job_id = "jobs".id WHERE (("jobs".employer_id = 1)) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployers (20100315232731)
+Migrating to CreateJobs (20100315235847)
+Migrating to CreateWorkers (20100316012111)
+Migrating to CreateBids (20100316032855)
+Migrating to AddUserIdToEmployers (20100316034708)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: duplicate column name: user_id: ALTER TABLE "employers" ADD "user_id" integer[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployers (20100315232731)
+Migrating to CreateJobs (20100315235847)
+Migrating to CreateWorkers (20100316012111)
+Migrating to CreateBids (20100316032855)
+Migrating to AddUserIdToWorkers (20100316034752)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "workers" ADD "user_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100316034752')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bids")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("employers")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("workers")[0m
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 00:52:07) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmployersController#index (for 127.0.0.1 at 2010-03-16 00:52:09) [GET]
+  [4;36;1mEmployer Load (1.1ms)[0m   [0;1mSELECT * FROM "employers" [0m
+Rendering template within layouts/application
+Rendering employers/index
+Completed in 28ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/employers]
+
+
+Processing EmployersController#new (for 127.0.0.1 at 2010-03-16 00:52:11) [GET]
+Rendering template within layouts/application
+Rendering employers/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/employers/new]
+
+
+Processing EmployersController#index (for 127.0.0.1 at 2010-03-16 00:52:13) [GET]
+  [4;35;1mEmployer Load (0.7ms)[0m   [0mSELECT * FROM "employers" [0m
+Rendering template within layouts/application
+Rendering employers/index
+Completed in 75ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/employers]
+
+
+Processing EmployersController#show (for 127.0.0.1 at 2010-03-16 00:52:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering employers/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "jobs" WHERE ("jobs".employer_id = 1) [0m
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".employer_id = 1) [0m
+Completed in 28ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/employers/1]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-03-16 00:52:17) [GET]
+  Parameters: {"employer_id"=>"1"}
+Rendering template within layouts/application
+Rendering jobs/new
+Completed in 98ms (View: 92, DB: 0) | 200 OK [http://0.0.0.0/employers/1/jobs/new]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:52:20) [GET]
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/jobs]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 00:52:24) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:52:26) [GET]
+  [4;35;1mWorker Load (0.8ms)[0m   [0mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#new (for 127.0.0.1 at 2010-03-16 00:52:30) [GET]
+Rendering template within layouts/application
+Rendering workers/new
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/workers/new]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:52:32) [GET]
+  [4;36;1mWorker Load (1.7ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 84ms (View: 10, DB: 2) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:52:37) [GET]
+  [4;35;1mWorker Load (0.8ms)[0m   [0mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 00:52:40) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 00:52:45) [GET]
+  [4;36;1mWorker Load (1.0ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 00:52:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.5ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 00:52:48) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 82ms (View: 76, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]

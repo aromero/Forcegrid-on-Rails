@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :jobs, :has_one => :employer
-  map.resources :employers, :has_many => :jobs
-  map.resources :workers, :has_many => :jobs
+  map.resources :employers, :has_many => [:jobs, :bids]
+  map.resources :workers, :has_many => [:jobs, :bids]
 
   # The priority is based upon order of creation: first created -> highest priority.
 
