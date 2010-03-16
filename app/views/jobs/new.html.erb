@@ -1,4 +1,4 @@
-<h1>New job</h1>
+<h1>Nuevo Trabajo</h1>
 
 <% form_for(@job) do |f| %>
   <%= f.error_messages %>
@@ -43,10 +43,12 @@
     <%= f.label :status %><br />
     <%= f.text_field :status %>
   </p>
+	<% unless params[:employer_id] %>
   <p>
-    <%= f.label :employer_id %><br />
-    <%= f.text_field :employer_id %>
+    	<%= f.label :employer_id %><br />
+   		<%= select("job", "employer_id", Employer.all.collect {|p| [ p.full_name, p.id ] }, { :include_blank => false }) %>
   </p>
+	<% end %>
   <p>
     <%= f.submit 'Create' %>
   </p>

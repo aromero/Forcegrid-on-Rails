@@ -1,0 +1,54 @@
+<h1>Listar Trabajadores</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Phone</th>
+    <th>Country</th>
+    <th>Business name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip code</th>
+    <th>Company phone</th>
+    <th>Website url</th>
+    <th>Number employees</th>
+    <th>Year comp founded</th>
+    <th>Stock parts</th>
+    <th>Company logo</th>
+    <th>Company background</th>
+    <th>Detailed service desc</th>
+  </tr>
+
+<% @workers.each do |worker| %>
+  <tr>
+    <td><%=h worker.first_name %></td>
+    <td><%=h worker.last_name %></td>
+    <td><%=h worker.phone %></td>
+    <td><%=h worker.country %></td>
+    <td><%=h worker.business_name %></td>
+    <td><%=h worker.address1 %></td>
+    <td><%=h worker.address2 %></td>
+    <td><%=h worker.city %></td>
+    <td><%=h worker.state %></td>
+    <td><%=h worker.zip_code %></td>
+    <td><%=h worker.company_phone %></td>
+    <td><%=h worker.website_url %></td>
+    <td><%=h worker.number_employees %></td>
+    <td><%=h worker.year_comp_founded %></td>
+    <td><%=h worker.stock_parts %></td>
+    <td><%=h worker.company_logo %></td>
+    <td><%=h worker.company_background %></td>
+    <td><%=h worker.detailed_service_desc %></td>
+    <td><%= link_to 'Show', worker %></td>
+    <td><%= link_to 'Edit', edit_worker_path(worker) %></td>
+    <td><%= link_to 'Destroy', worker, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New worker', new_worker_path %>

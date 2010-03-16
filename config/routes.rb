@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :jobs, :has_one => :employer
   map.resources :employers, :has_many => :jobs
+  map.resources :workers, :has_many => :jobs
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -28,12 +29,12 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
-  #   end
+    # map.namespace :main do |main|
+    #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
+    #     admin.resources :products
+    #   end
   
-  map.root :controller => "employers"
+  map.root :controller => "main/home"
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,0 +1,83 @@
+<h1>Nuevo Trabajador</h1>
+
+<% form_for(@worker) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :business_name %><br />
+    <%= f.text_field :business_name %>
+  </p>
+  <p>
+    <%= f.label :address1 %><br />
+    <%= f.text_field :address1 %>
+  </p>
+  <p>
+    <%= f.label :address2 %><br />
+    <%= f.text_field :address2 %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip_code %><br />
+    <%= f.text_field :zip_code %>
+  </p>
+  <p>
+    <%= f.label :company_phone %><br />
+    <%= f.text_field :company_phone %>
+  </p>
+  <p>
+    <%= f.label :website_url %><br />
+    <%= f.text_field :website_url %>
+  </p>
+  <p>
+    <%= f.label :number_employees %><br />
+    <%= f.text_field :number_employees %>
+  </p>
+  <p>
+    <%= f.label :year_comp_founded %><br />
+    <%= f.text_field :year_comp_founded %>
+  </p>
+  <p>
+    <%= f.label :stock_parts %><br />
+    <%= f.text_field :stock_parts %>
+  </p>
+  <p>
+    <%= f.label :company_logo %><br />
+    <%= f.text_field :company_logo %>
+  </p>
+  <p>
+    <%= f.label :company_background %><br />
+    <%= f.text_area :company_background %>
+  </p>
+  <p>
+    <%= f.label :detailed_service_desc %><br />
+    <%= f.text_area :detailed_service_desc %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', workers_path %>
