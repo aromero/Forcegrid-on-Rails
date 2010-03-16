@@ -1,0 +1,58 @@
+<p>
+  <b>Title:</b>
+  <%=h @job.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @job.description %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%=h @job.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%=h @job.end_time %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @job.location %>
+</p>
+
+<p>
+  <b>Budget:</b>
+  <%=h @job.budget %>
+</p>
+
+<p>
+  <b>Pricing method:</b>
+  <%=h @job.pricing_method %>
+</p>
+
+<p>
+  <b>Service contact:</b>
+  <%=h @job.service_contact %>
+</p>
+
+<p>
+  <b>Buyers support contact:</b>
+  <%=h @job.buyers_support_contact %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @job.status %>
+</p>
+
+<p>
+  <b>Employer:</b>
+  <%=h @job.employer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

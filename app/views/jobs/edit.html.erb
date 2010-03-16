@@ -1,0 +1,56 @@
+<h1>Editing job</h1>
+
+<% form_for(@job) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :start_time %><br />
+    <%= f.date_select :start_time %>
+  </p>
+  <p>
+    <%= f.label :end_time %><br />
+    <%= f.date_select :end_time %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :budget %><br />
+    <%= f.text_field :budget %>
+  </p>
+  <p>
+    <%= f.label :pricing_method %><br />
+    <%= f.text_field :pricing_method %>
+  </p>
+  <p>
+    <%= f.label :service_contact %><br />
+    <%= f.text_field :service_contact %>
+  </p>
+  <p>
+    <%= f.label :buyers_support_contact %><br />
+    <%= f.text_field :buyers_support_contact %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :employer_id %><br />
+    <%= f.text_field :employer_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @job %> |
+<%= link_to 'Back', jobs_path %>

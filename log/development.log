@@ -37,3 +37,90 @@ Processing EmployersController#index (for 127.0.0.1 at 2010-03-15 20:35:18) [GET
 Rendering template within layouts/employers
 Rendering employers/index
 Completed in 6ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/employers]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployers (20100315232731)
+Migrating to CreateJobs (20100315235847)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "start_time" date, "end_time" date, "location" varchar(255), "budget" decimal, "pricing_method" varchar(255), "service_contact" varchar(255), "buyers_support_contact" varchar(255), "status" integer, "employer_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100315235847')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("employers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("jobs")[0m
+
+
+Processing EmployersController#index (for 127.0.0.1 at 2010-03-15 21:02:22) [GET]
+  [4;36;1mEmployer Load (0.6ms)[0m   [0;1mSELECT * FROM "employers" [0m
+Rendering template within layouts/employers
+Rendering employers/index
+Completed in 111ms (View: 77, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmployersController#new (for 127.0.0.1 at 2010-03-15 21:02:25) [GET]
+Rendering template within layouts/employers
+Rendering employers/new
+Completed in 29ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/employers/new]
+
+
+Processing EmployersController#create (for 127.0.0.1 at 2010-03-15 21:02:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W0CJk3pK3o/qQJpAfXYD+9lS6mF4zH0wh0CPHoElWOs=", "employer"=>{"city"=>"Saenz Peña", "address1"=>"Raffo 2976", "address2"=>"", "country"=>"Argentina", "zip_code"=>"1674", "company_name"=>"ITParc", "pay_method"=>"", "user_id"=>"ferparra", "phone"=>"828-2871281", "last_name"=>"Parra", "state"=>"Buenos Aires", "first_name"=>"Fernando"}}
+  [4;35;1mEmployer Create (0.4ms)[0m   [0mINSERT INTO "employers" ("address1", "city", "address2", "created_at", "company_name", "zip_code", "country", "updated_at", "pay_method", "user_id", "last_name", "phone", "first_name", "state") VALUES('Raffo 2976', 'Saenz Peña', '', '2010-03-16 00:02:54', 'ITParc', '1674', 'Argentina', '2010-03-16 00:02:54', '', 0, 'Parra', '828-2871281', 'Fernando', 'Buenos Aires')[0m
+Redirected to http://0.0.0.0:3000/employers/1
+Completed in 22ms (DB: 0) | 302 Found [http://0.0.0.0/employers]
+
+
+Processing EmployersController#show (for 127.0.0.1 at 2010-03-15 21:02:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Rendering template within layouts/employers
+Rendering employers/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/employers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-15 21:03:01) [GET]
+  Parameters: {"employer_id"=>"1"}
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 24ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/employers/1/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-03-15 21:03:10) [GET]
+Rendering template within layouts/jobs
+Rendering jobs/new
+Completed in 295ms (View: 289, DB: 0) | 200 OK [http://0.0.0.0/jobs/new]
+  [4;36;1mEmployer Load (0.8ms)[0m   [0;1mSELECT * FROM "employers" [0m
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-03-15 21:04:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"W0CJk3pK3o/qQJpAfXYD+9lS6mF4zH0wh0CPHoElWOs=", "job"=>{"location"=>"Buenos Aires", "start_time(1i)"=>"2010", "start_time(2i)"=>"3", "title"=>"Primer job", "start_time(3i)"=>"11", "service_contact"=>"", "end_time(1i)"=>"2012", "end_time(2i)"=>"3", "buyers_support_contact"=>"", "pricing_method"=>"", "end_time(3i)"=>"16", "description"=>"De prueba", "employer_id"=>"1", "status"=>"", "budget"=>"2717271"}}
+  [4;36;1mJob Create (0.5ms)[0m   [0;1mINSERT INTO "jobs" ("end_time", "location", "created_at", "title", "updated_at", "service_contact", "pricing_method", "buyers_support_contact", "description", "budget", "status", "employer_id", "start_time") VALUES('2012-03-16', 'Buenos Aires', '2010-03-16 00:04:30', 'Primer job', '2010-03-16 00:04:30', '', '', '', 'De prueba', 2717271.0, NULL, 1, '2010-03-11')[0m
+Redirected to http://0.0.0.0:3000/jobs/1
+Completed in 14ms (DB: 0) | 302 Found [http://0.0.0.0/jobs]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2010-03-15 21:04:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/jobs
+Rendering jobs/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/jobs/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-15 21:04:39) [GET]
+  Parameters: {"employer_id"=>"1"}
+  [4;36;1mJob Load (0.6ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/jobs
+Rendering jobs/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/employers/1/jobs]
