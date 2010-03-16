@@ -62,9 +62,9 @@
 <%= link_to 'Edit', edit_employer_path(@employer) %> |
 <%= link_to 'Back', employers_path %>
 
-<h3>Trabajos Postulados</h3>
 
 <% unless @employer.jobs.empty? %>
+<h3>Trabajos Creados</h3>
 	<table>
 	  <tr>
 	    <th>Title</th>
@@ -85,7 +85,6 @@
 	  </tr>
 	<% end %>
 	</table>
-	
-	<%= link_to 'New job', new_employer_job_path(@employer) %>
 <% end %>
 
+<%= link_to 'New job', new_employer_job_path(@employer) %>
