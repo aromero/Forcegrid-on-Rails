@@ -1,0 +1,28 @@
+<p>
+  <b>Price:</b>
+  <%=h @bid.price %>
+</p>
+
+<p>
+  <b>Pricing method:</b>
+  <%=h @bid.pricing_method %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%=h @bid.comments %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%=h @bid.job_id %>
+</p>
+
+<p>
+  <b>Worker:</b>
+  <%=h @bid.worker_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_bid_path(@bid) %> |
+<%= link_to 'Back', bids_path %>

@@ -1,0 +1,28 @@
+<h1>Listing bids</h1>
+
+<table>
+  <tr>
+    <th>Price</th>
+    <th>Pricing method</th>
+    <th>Comments</th>
+    <th>Job</th>
+    <th>Worker</th>
+  </tr>
+
+<% @bids.each do |bid| %>
+  <tr>
+    <td><%=h bid.price %></td>
+    <td><%=h bid.pricing_method %></td>
+    <td><%=h bid.comments %></td>
+    <td><%=h bid.job_id %></td>
+    <td><%=h bid.worker_id %></td>
+    <td><%= link_to 'Show', bid %></td>
+    <td><%= link_to 'Edit', edit_bid_path(bid) %></td>
+    <td><%= link_to 'Destroy', bid, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bid', new_bid_path %>

@@ -4286,3 +4286,1605 @@ Rendering template within layouts/application
 Rendering jobs/index
   [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
 Completed in 82ms (View: 76, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+  [4;36;1mJob Load (0.9ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+  [4;35;1mJob Load (0.6ms)[0m   [0mSELECT * FROM "jobs" LIMIT 1[0m
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" LIMIT 1[0m
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" LIMIT 1[0m
+  [4;36;1mBid Load (0.2ms)[0m   [0;1mSELECT * FROM "bids" WHERE ("bids".job_id = 1) LIMIT 1[0m
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" LIMIT 1[0m
+  [4;36;1mBid Load (0.2ms)[0m   [0;1mSELECT * FROM "bids" WHERE ("bids".job_id = 1) LIMIT 1[0m
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 01:55:32) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 01:55:35) [GET]
+  [4;36;1mWorker Load (0.8ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 73ms (View: 67, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 01:55:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 01:55:38) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 02:04:56) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 02:04:58) [GET]
+  [4;36;1mWorker Load (1.2ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 30ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:05:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.5ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:05:01) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 89ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:05:22) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:05:39) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_worker_job_bid_path' for #<ActionView::Base:0x1042a3a50>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", new_worker_job_bid_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.8ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:05:43) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_worker_job_bid_path' for #<ActionView::Base:0x1042ee988>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", new_worker_job_bid_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 02:05:47) [GET]
+  [4;36;1mWorker Load (0.8ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers/]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 02:06:57) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 02:06:58) [GET]
+  [4;36;1mWorker Load (1.1ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:07:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:07:03) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_worker_job_bid_path' for #<ActionView::Base:0x1044e0bd8>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", new_worker_job_bid_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:07:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:07:52) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:08:01) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:08:31) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_worker_job_bid_path' for #<ActionView::Base:0x104231428>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", new_worker_job_bid_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:08:50) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_job_bid_path' for #<ActionView::Base:0x10429c200>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", new_job_bid_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:08:57) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:16:13) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:16:39) [GET]
+Rendering template within layouts/bids
+Rendering bids/new
+Completed in 89ms (View: 83, DB: 0) | 200 OK [http://0.0.0.0/bids/new]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:18:04) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#new to #<job:0x104064488> (for 127.0.0.1 at 2010-03-16 02:18:20) [GET]
+Completed in 6ms (View: 1, DB: 0) | 406 Not Acceptable [http://0.0.0.0/bids/new.%23%3Cjob:0x104064488%3E]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:18:37) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_job_bid_path' for #<ActionView::Base:0x10434cd30>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", new_job_bid_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:18:47) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_bid_job_path' for #<ActionView::Base:0x1044e1a10>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", new_bid_job_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:19:02) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (1.4ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.6ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `new_bid_job_path' for #<ActionView::Base:0x1043e92e8>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", new_bid_job_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.7ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:19:13) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:19:36) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#show (for 127.0.0.1 at 2010-03-16 02:19:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBid Load (0.1ms)[0m   [0;1mSELECT * FROM "bids" WHERE ("bids"."id" = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Bid with ID=1):
+  app/controllers/bids_controller.rb:16:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (95.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:19:59) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.8ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#new to #<job:0x1043bac18> (for 127.0.0.1 at 2010-03-16 02:20:02) [GET]
+Completed in 8ms (View: 3, DB: 0) | 406 Not Acceptable [http://0.0.0.0/bids/new.%23%3Cjob:0x1043bac18%3E]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:20:11) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#new to 1 (for 127.0.0.1 at 2010-03-16 02:20:13) [GET]
+Completed in 7ms (View: 1, DB: 0) | 406 Not Acceptable [http://0.0.0.0/bids/new.1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:21:08) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:21:20) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.3ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:21:48) [GET]
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/jobs]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 02:24:44) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 02:24:51) [GET]
+  [4;36;1mWorker Load (1.0ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 30ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:24:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:24:54) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.5ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 29ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:25:36) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `job_bid_path' for #<ActionView::Base:0x10437ecb8>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", job_bid_path(job) %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.2ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:25:41) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `job_bid_path' for #<ActionView::Base:0x1044223b8>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", job_bid_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:25:52) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (bid_job_url failed to generate from {:action=>"bid", :controller=>"jobs"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["jobs", :id, "bid"] - are they all satisfied?) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", bid_job_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    (eval):16:in `bid_job_path'
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:27:37) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (1.0ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.5ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (bid_job_url failed to generate from {:action=>"bid", :controller=>"jobs"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["jobs", :id, "bid"] - are they all satisfied?) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", bid_job_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    (eval):16:in `bid_job_path'
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.4ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 02:27:50) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 02:27:52) [GET]
+  [4;36;1mWorker Load (0.8ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#new (for 127.0.0.1 at 2010-03-16 02:27:56) [GET]
+Rendering template within layouts/application
+Rendering workers/new
+Completed in 25ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/workers/new]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:27:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:28:00) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (bid_job_url failed to generate from {:action=>"bid", :controller=>"jobs"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["jobs", :id, "bid"] - are they all satisfied?) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", bid_job_path %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    (eval):16:in `bid_job_path'
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:28:26) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#bid (for 127.0.0.1 at 2010-03-16 02:30:13) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering jobs/bid
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/jobs/1/bid]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:31:09) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `worker_bid_job_path' for #<ActionView::Base:0x104407720>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", worker_bid_job_path(job) %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:31:20) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.8ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `bid_worker_job_path' for #<ActionView::Base:0x1044e34a0>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", bid_worker_job_path(job) %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:31:28) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (4.2ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `bid_job_worker_path' for #<ActionView::Base:0x10415e438>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", bid_job_worker_path(job) %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:31:37) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `worker' for #<ActionView::Base:0x1041fdb28>) on line #32 of app/views/jobs/index.html.erb:
+29:     <td><%=h job.status %></td>
+30:     <td><%=h job.employer.full_name %></td>
+31: 	<% if params[:worker_id] %>
+32: 	<td><%= link_to "Ofertar", bid_job_path(worker) %></td>
+33: 	<% else %>
+34: 	<td><%= link_to 'Show', job %></td>
+35:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    app/views/jobs/index.html.erb:32
+    app/views/jobs/index.html.erb:18:in `each'
+    app/views/jobs/index.html.erb:18
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:31:47) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#bid (for 127.0.0.1 at 2010-03-16 02:31:49) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering jobs/bid
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/jobs/1/bid]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:36:24) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 90ms (View: 84, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#1 (for 127.0.0.1 at 2010-03-16 02:36:28) [PUT]
+  Parameters: {"authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "id"=>"bid"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: bid, create, destroy, edit, index, new, show, and update):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:39:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.5ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 41ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/workers/1/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:39:45) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 28ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing ApplicationController#bid (for 127.0.0.1 at 2010-03-16 02:39:58) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+
+NameError (uninitialized constant JobController):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:40:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 40ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/workers/1/]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:40:41) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#bid (for 127.0.0.1 at 2010-03-16 02:40:44) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/application
+Rendering jobs/bid
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing JobsController#bid (for 127.0.0.1 at 2010-03-16 02:41:48) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/application
+Rendering jobs/bid
+Completed in 67ms (View: 65, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 02:46:47) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 02:46:49) [GET]
+  [4;36;1mWorker Load (1.1ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 30ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:46:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:46:52) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 88ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:46:54) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:47:05) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:47:30) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:49:23) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:51:54) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:52:22) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:53:12) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 88ms (View: 82, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#create (for 127.0.0.1 at 2010-03-16 02:53:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "bid"=>{"price"=>"3232", "comments"=>"A ver que pasa...", "pricing_method"=>"contado"}}
+  [4;35;1mBid Create (0.4ms)[0m   [0mINSERT INTO "bids" ("price", "created_at", "comments", "updated_at", "pricing_method", "worker_id", "job_id") VALUES(3232.0, '2010-03-16 05:53:17', 'A ver que pasa...', '2010-03-16 05:53:17', 'contado', NULL, NULL)[0m
+
+ActionController::RoutingError (bid_url failed to generate from {:action=>"new", :controller=>"bids", :worker_id=>#<Bid id: 1, price: #<BigDecimal:1043b5218,'0.3232E4',9(18)>, pricing_method: "contado", comments: "A ver que pasa...", job_id: nil, worker_id: nil, created_at: "2010-03-16 05:53:17", updated_at: "2010-03-16 05:53:17">}, expected: {:action=>"new", :controller=>"bids"}, diff: {:worker_id=>#<Bid id: 1, price: #<BigDecimal:1043b4bb0,'0.3232E4',9(18)>, pricing_method: "contado", comments: "A ver que pasa...", job_id: nil, worker_id: nil, created_at: "2010-03-16 05:53:17", updated_at: "2010-03-16 05:53:17">}):
+  (eval):20:in `bid_url'
+  app/controllers/bids_controller.rb:48
+  app/controllers/bids_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing BidsController#create (for 127.0.0.1 at 2010-03-16 02:56:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "bid"=>{"price"=>"3232", "comments"=>"A ver que pasa...", "pricing_method"=>"contado"}}
+  [4;36;1mBid Create (0.3ms)[0m   [0;1mINSERT INTO "bids" ("price", "created_at", "comments", "updated_at", "pricing_method", "worker_id", "job_id") VALUES(3232.0, '2010-03-16 05:56:17', 'A ver que pasa...', '2010-03-16 05:56:17', 'contado', NULL, NULL)[0m
+
+ActionController::RoutingError (bid_url failed to generate from {:action=>"new", :controller=>"bids", :worker_id=>#<Bid id: 2, price: #<BigDecimal:104287a30,'0.3232E4',9(18)>, pricing_method: "contado", comments: "A ver que pasa...", job_id: nil, worker_id: nil, created_at: "2010-03-16 05:56:17", updated_at: "2010-03-16 05:56:17">}, expected: {:action=>"new", :controller=>"bids"}, diff: {:worker_id=>#<Bid id: 2, price: #<BigDecimal:1042873c8,'0.3232E4',9(18)>, pricing_method: "contado", comments: "A ver que pasa...", job_id: nil, worker_id: nil, created_at: "2010-03-16 05:56:17", updated_at: "2010-03-16 05:56:17">}):
+  (eval):20:in `bid_url'
+  app/controllers/bids_controller.rb:48
+  app/controllers/bids_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mBid Load (0.5ms)[0m   [0mSELECT * FROM "bids" [0m
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 02:59:35) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 02:59:36) [GET]
+  [4;35;1mWorker Load (0.8ms)[0m   [0mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 02:59:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mWorker Load (0.5ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 02:59:41) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 02:59:45) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `1' for #<Bid:0x1042b27d0>) on line #31 of app/views/bids/new.html.erb:
+28:     <%= f.text_field :worker_id %>
+29:   </p>
+30: <% end %>
+31: <%= f.hidden_field params[:worker_id] %>
+32:   <p>
+33:     <%= f.submit 'Create' %>
+34:   </p>
+
+    app/views/bids/new.html.erb:31
+    app/views/bids/new.html.erb:6
+    app/controllers/bids_controller.rb:29:in `new'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:01:32) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 23ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:02:03) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:03:38) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 88ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#create (for 127.0.0.1 at 2010-03-16 03:03:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "bid"=>{"price"=>"928218", "comments"=>"Otra más", "worker_id"=>"1", "pricing_method"=>"tarjeta", "job_id"=>"1"}}
+  [4;35;1mBid Create (0.4ms)[0m   [0mINSERT INTO "bids" ("price", "created_at", "comments", "updated_at", "pricing_method", "worker_id", "job_id") VALUES(928218.0, '2010-03-16 06:03:54', 'Otra más', '2010-03-16 06:03:54', 'tarjeta', 1, 1)[0m
+
+ActionController::RoutingError (bid_url failed to generate from {:action=>"new", :controller=>"bids", :worker_id=>#<Bid id: 3, price: #<BigDecimal:104384758,'0.928218E6',9(18)>, pricing_method: "tarjeta", comments: "Otra más", job_id: 1, worker_id: 1, created_at: "2010-03-16 06:03:54", updated_at: "2010-03-16 06:03:54">}, expected: {:action=>"new", :controller=>"bids"}, diff: {:worker_id=>#<Bid id: 3, price: #<BigDecimal:1043840f0,'0.928218E6',9(18)>, pricing_method: "tarjeta", comments: "Otra más", job_id: 1, worker_id: 1, created_at: "2010-03-16 06:03:54", updated_at: "2010-03-16 06:03:54">}):
+  (eval):20:in `bid_url'
+  app/controllers/bids_controller.rb:48
+  app/controllers/bids_controller.rb:45:in `create'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mBid Load (0.6ms)[0m   [0;1mSELECT * FROM "bids" [0m
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 03:14:44) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 03:14:47) [GET]
+  [4;36;1mWorker Load (0.8ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 03:14:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 03:14:50) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.5ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:14:57) [POST]
+  Parameters: {"authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 03:15:59) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.5ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 03:16:32) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.7ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `has_key?' for "1":String) on line #33 of app/views/jobs/index.html.erb:
+30:     <td><%=h job.status %></td>
+31:     <td><%=h job.employer.full_name %></td>
+32: 	<% if params[:worker_id] %>
+33: 	<td><%= link_to "Ofertar", new_bid_path(job, params[:worker_id]) %></td>
+34: 	<% else %>
+35: 	<td><%= link_to 'Show', job %></td>
+36:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    (eval):4:in `new_bid_path'
+    app/views/jobs/index.html.erb:33
+    app/views/jobs/index.html.erb:19:in `each'
+    app/views/jobs/index.html.erb:19
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 03:16:52) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.8ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `has_key?' for #<Worker:0x1040c6110>) on line #33 of app/views/jobs/index.html.erb:
+30:     <td><%=h job.status %></td>
+31:     <td><%=h job.employer.full_name %></td>
+32: 	<% if params[:worker_id] %>
+33: 	<td><%= link_to "Ofertar", new_bid_path(job, Worker.find(params[:worker_id])) %></td>
+34: 	<% else %>
+35: 	<td><%= link_to 'Show', job %></td>
+36:     <td><%= link_to 'Edit', edit_job_path(job) %></td>
+
+    (eval):4:in `new_bid_path'
+    app/views/jobs/index.html.erb:33
+    app/views/jobs/index.html.erb:19:in `each'
+    app/views/jobs/index.html.erb:19
+    app/controllers/jobs_controller.rb:7:in `index'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 03:16:59) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.8ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;36;1mWorker Load (0.5ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Completed in 31ms (View: 23, DB: 2) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 03:17:17) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;35;1mJob Load (0.8ms)[0m   [0mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mEmployer Load (0.4ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Completed in 103ms (View: 25, DB: 2) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:17:23) [POST]
+  Parameters: {"authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;36;1mJob Load (0.5ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:17:49) [POST]
+  Parameters: {"authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 23ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:17:51) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;36;1mJob Load (0.4ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 83ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:17:58) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 03:19:12) [GET]
+  Parameters: {"worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 03:19:43) [GET]
+
+ActionController::RoutingError (No route matches "/workers/1/jobs/1/bid/new" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-16 10:55:32) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 21ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing WorkersController#index (for 127.0.0.1 at 2010-03-16 10:55:34) [GET]
+  [4;36;1mWorker Load (1.1ms)[0m   [0;1mSELECT * FROM "workers" [0m
+Rendering template within layouts/application
+Rendering workers/index
+Completed in 87ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/workers]
+
+
+Processing WorkersController#show (for 127.0.0.1 at 2010-03-16 10:55:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mWorker Load (0.4ms)[0m   [0mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering workers/show
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/workers/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 10:55:37) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.7ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Completed in 35ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 10:55:46) [GET]
+
+ActionController::RoutingError (No route matches "/workers/1/jobs/1/show" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing BidsController#new (for 127.0.0.1 at 2010-03-16 10:55:55) [POST]
+  Parameters: {"authenticity_token"=>"brVQEysPuO8F3UE2jw4MybmfWpaxCib4hXCsfyxK4Pk=", "worker_id"=>"1", "job_id"=>"1"}
+Rendering template within layouts/bids
+Rendering bids/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/bid]
+
+
+Processing JobsController#edit (for 127.0.0.1 at 2010-03-16 10:56:07) [GET]
+  Parameters: {"id"=>"1", "worker_id"=>"1"}
+  [4;35;1mJob Load (0.4ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering jobs/edit
+Completed in 31ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/workers/1/jobs/1/edit]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2010-03-16 10:56:14) [GET]
+  Parameters: {"id"=>"1", "worker_id"=>"1"}
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs/1]
+
+
+Processing JobsController#show (for 127.0.0.1 at 2010-03-16 10:58:37) [GET]
+  Parameters: {"id"=>"1", "worker_id"=>"1"}
+  [4;36;1mJob Load (0.3ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs"."id" = 1) [0m
+  [4;35;1mEmployer Load (0.5ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering jobs/show
+Completed in 45ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/workers/1/jobs/1]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-03-16 10:58:40) [GET]
+  Parameters: {"worker_id"=>"1"}
+  [4;36;1mJob Load (0.8ms)[0m   [0;1mSELECT * FROM "jobs" [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mEmployer Load (0.4ms)[0m   [0mSELECT * FROM "employers" WHERE ("employers"."id" = 1) [0m
+  [4;36;1mWorker Load (0.4ms)[0m   [0;1mSELECT * FROM "workers" WHERE ("workers"."id" = 1) [0m
+Completed in 33ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/workers/1/jobs]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 10:58:59) [GET]
+
+ActionController::RoutingError (No route matches "/workers/1/jobs/1/bid_job" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

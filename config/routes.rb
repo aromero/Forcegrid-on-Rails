@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :jobs, :has_one => :employer
-  map.resources :employers, :has_many => [:jobs, :bids]
+  map.resources :bids
+  map.resources :jobs, :has_one => [:employer, :bid]
+  map.resources :employers, :has_many => :jobs
   map.resources :workers, :has_many => [:jobs, :bids]
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
 
+  #map.bid 'workers/:worker_id/jobs/:job_id/bid', :controller => 'bids', :action => 'new'
+  
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products
 

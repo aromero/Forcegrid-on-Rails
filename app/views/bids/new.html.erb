@@ -1,0 +1,36 @@
+<h1>Nueva oferta</h1>
+<% form_for(@bid) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :pricing_method %><br />
+    <%= f.text_field :pricing_method %>
+  </p>
+  <p>
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </p>
+<% unless params[:worker_id] || params[:job_id] %>
+  <p>
+    <%= f.label :job_id %><br />
+    <%= f.text_field :job_id %>
+  </p>
+  <p>
+    <%= f.label :worker_id %><br />
+    <%= f.text_field :worker_id %>
+  </p>
+<% else %>
+	<%= hidden_field_tag 'bid[worker_id]', params[:worker_id] %>
+	<%= hidden_field_tag 'bid[job_id]', params[:job_id] %>
+	
+<% end %>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', url_for(:back) %>

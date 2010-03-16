@@ -15,6 +15,7 @@
     <th>Employer</th>
   </tr>
 
+
 <% @jobs.each do |job| %>
   <tr>
     <td><%=h job.title %></td>
@@ -29,7 +30,7 @@
     <td><%=h job.status %></td>
     <td><%=h job.employer.full_name %></td>
 	<% if params[:worker_id] %>
-	<td><a href="#">Postular (TODO)</a></td>
+	<td><%= link_to "Ofertar", bid_path(job, Worker.find(params[:worker_id])), :method => :new %></td>
 	<% else %>
 	<td><%= link_to 'Show', job %></td>
     <td><%= link_to 'Edit', edit_job_path(job) %></td>
