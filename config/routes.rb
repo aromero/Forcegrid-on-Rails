@@ -17,8 +17,6 @@ ActionController::Routing::Routes.draw do |map|
   # Sample of named route:
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
-
-  #map.bid 'workers/:worker_id/jobs/:job_id/bid', :controller => 'bids', :action => 'new'
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products
@@ -36,10 +34,10 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # Sample resource route within a namespace:
-    # map.namespace :main do |main|
-    #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-    #     admin.resources :products
-    #   end
+  # map.namespace :main do |main|
+  #     map.register :
+  # end
+  map.connect 'main/register', :controller => 'main/home', :action => 'register'
   
   map.root :controller => "main/home"
 
