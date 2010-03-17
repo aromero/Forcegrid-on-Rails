@@ -3,6 +3,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :jobs, :has_one => [:employer, :bid]
   map.resources :employers, :has_many => :jobs
   map.resources :workers, :has_many => [:jobs, :bids]
+  
+  map.resource :account, :controller => 'users'
+  map.resources :users
+  map.resource :user_session
 
   # The priority is based upon order of creation: first created -> highest priority.
 
