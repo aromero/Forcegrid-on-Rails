@@ -1,7 +1,7 @@
 class Worker < ActiveRecord::Base
   has_many :bids
   has_many :employers, :through => :bids
-  has_one :user
+  belongs_to :user
   
   validates_presence_of :first_name, :last_name
   

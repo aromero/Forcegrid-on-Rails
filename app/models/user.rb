@@ -1,8 +1,10 @@
 require 'authlogic'
 
 class User < ActiveRecord::Base
-  belongs_to :employer
-  belongs_to :worker
-  
   acts_as_authentic
+  
+  has_one :employer, :dependent => :nullify
+  has_one :worker, :dependent => :nullify
+  accepts_nested_attributes_for :worker, :employer, :allow_destroy => true
+  accepts_nested_attributes_for :employer, :employer, :allow_destroy => true
 end
