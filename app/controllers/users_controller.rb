@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
+    @user.build_employer
   end
   
   def create

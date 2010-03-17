@@ -37,7 +37,6 @@ ActionController::Routing::Routes.draw do |map|
   # map.namespace :main do |main|
   #     map.register :
   # end
-  map.connect 'main/register', :controller => 'main/home', :action => 'register'
   
   map.root :controller => "main/home"
 

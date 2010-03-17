@@ -3,8 +3,8 @@
 <% form_for @user, :url => account_path do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
-  <% if params[:id] == 'employer' %>
-      <% f.fields_for @user.employer do |e| %>
+  <% if params[:type] == 'employer' %>
+      <% f.fields_for :employer do |e| %>
          <%= render :partial => 'new_employer', :locals => { :e => e } %>
       <% end %>
   <% else %>
