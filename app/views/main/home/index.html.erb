@@ -3,6 +3,7 @@
 	<li><%= link_to "Administración de Empleadores", employers_path %></li>
 	<li><%= link_to "Administración de Trabajos", jobs_path %></li>
 	<li><%= link_to "Administración de Trabajadores", workers_path %></li>
-	<li><%= link_to "Registrarse", new_user_path %></li>
+	<li><%= link_to "Registrarse como Empleador", new_user_path(:type => 'employer') %></li>
+	<li><%= link_to "Registrarse como Trabajador", new_user_path(:type => 'worker') %></li>
 	<li><%= link_to "Login", account_path %></li>
 </ul>
