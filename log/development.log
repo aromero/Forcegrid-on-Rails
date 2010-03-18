@@ -6185,3 +6185,1143 @@ Completed in 3ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/]
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" [0m
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 01:07:04) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 01:07:08) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.0ms)
+Completed in 31ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 01:09:02) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 01:09:09) [GET]
+
+ActionController::RoutingError (No route matches "/main/register" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Main::HomeController#register (for 127.0.0.1 at 2010-03-17 01:15:33) [GET]
+Rendering template within layouts/application
+Rendering main/home/register
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/main/register]
+
+
+Processing Main::HomeController#register (for 127.0.0.1 at 2010-03-17 01:41:56) [GET]
+Rendering template within layouts/application
+Rendering main/home/register
+Completed in 26ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/main/register]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 01:42:03) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (19.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployers (20100315232731)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "employers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "company_name" varchar(255), "address1" varchar(255), "address2" varchar(255), "city" varchar(255), "state" varchar(255), "zip_code" varchar(255), "country" varchar(255), "user_id" integer, "phone" varchar(255), "pay_method" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100315232731')[0m
+Migrating to CreateJobs (20100315235847)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" varchar(255), "start_time" date, "end_time" date, "location" varchar(255), "budget" decimal, "pricing_method" varchar(255), "service_contact" varchar(255), "buyers_support_contact" varchar(255), "status" integer, "employer_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100315235847')[0m
+Migrating to CreateWorkers (20100316012111)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "workers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "phone" varchar(255), "country" varchar(255), "business_name" varchar(255), "address1" varchar(255), "address2" varchar(255), "city" varchar(255), "state" varchar(255), "zip_code" varchar(255), "company_phone" varchar(255), "website_url" varchar(255), "number_employees" varchar(255), "year_comp_founded" integer, "stock_parts" varchar(255), "company_logo" varchar(255), "company_background" text, "detailed_service_desc" text, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100316012111')[0m
+Migrating to CreateBids (20100316032855)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "bids" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "price" decimal, "pricing_method" varchar(255), "comments" text, "job_id" integer, "worker_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100316032855')[0m
+Migrating to AddUserIdToWorkers (20100316034752)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: duplicate column name: user_id: ALTER TABLE "workers" ADD "user_id" integer[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployers (20100315232731)
+Migrating to CreateJobs (20100315235847)
+Migrating to CreateWorkers (20100316012111)
+Migrating to CreateBids (20100316032855)
+Migrating to CreateUsers (20100317001057)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "last_login_at" datetime, "current_login_at" datetime, "last_login_ip" varchar(255), "current_login_ip" varchar(255)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_users_on_persistence_token" ON "users" ("persistence_token")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_users_on_last_request_at" ON "users" ("last_request_at")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100317001057')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("bids")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("employers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_last_request_at')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_persistence_token')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("workers")[0m
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 16:39:34) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 96ms (View: 93, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:39:38) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (17.7ms)
+Completed in 91ms (View: 31, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:40:56) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.4ms)
+Completed in 157ms (View: 115, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:40:58) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 26ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:41:39) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 94ms (View: 79, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:41:40) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 26ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#worker (for 127.0.0.1 at 2010-03-17 16:41:51) [GET]
+  Parameters: {"id"=>"new"}
+
+ActionController::UnknownAction (No action responded to worker. Actions: create, edit, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:41:57) [GET]
+  Parameters: {"id"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/users/new/worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:44:50) [GET]
+  Parameters: {"id"=>"worker"}
+
+NoMethodError (undefined method `[]' for :worker:Symbol):
+  (eval):3:in `has_one'
+  app/models/user.rb:4
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:30:in `require_no_user'
+
+Rendered rescues/_trace (49.7ms)
+Rendered rescues/_request_and_response (21.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:45:04) [GET]
+
+NoMethodError (undefined method `[]' for :worker:Symbol):
+  (eval):3:in `has_one'
+  app/models/user.rb:4
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:30:in `require_no_user'
+
+Rendered rescues/_trace (126.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:45:07) [GET]
+
+NoMethodError (undefined method `[]' for :worker:Symbol):
+  (eval):3:in `has_one'
+  app/models/user.rb:4
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:33:in `klass'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:90:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:213:in `login_field'
+  authlogic (2.1.3) lib/authlogic/session/password.rb:118:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/activation.rb:48:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/klass.rb:64:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/scopes.rb:79:in `initialize'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `new'
+  authlogic (2.1.3) lib/authlogic/session/persistence.rb:37:in `find'
+  app/controllers/application_controller.rb:12:in `current_user_session'
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/application_controller.rb:30:in `require_no_user'
+
+Rendered rescues/_trace (48.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:45:54) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.6ms)
+Completed in 30ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:48:47) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 28ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:48:49) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 24ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:50:05) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 94ms (View: 79, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:50:07) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 25ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:50:36) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 27ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:50:37) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 92ms (View: 78, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:50:38) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:51:41) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:51:43) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 91ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:51:52) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.6ms)
+Completed in 119ms (View: 100, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:51:53) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Completed in 26ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:51:53) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 25ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:53:49) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.6ms)
+Completed in 26ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:53:50) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Completed in 25ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:54:00) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.0ms)
+Completed in 115ms (View: 97, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-17 16:54:03) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 16:54:07) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:54:10) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Completed in 87ms (View: 71, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:54:53) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Completed in 41ms (View: 26, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:54:54) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 25ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:54:54) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.6ms)
+Completed in 95ms (View: 79, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:56:29) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Completed in 29ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:56:30) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 16:57:42) [GET]
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (undefined method `password' for #<User:0x1034e5760>) on line #5 of app/views/users/_form.erb:
+2: <%= form.text_field :email %><br />
+3: <br />
+4: <%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
+5: <%= form.password_field :password %><br />
+6: <br />
+7: <%= form.label :password_confirmation %><br />
+8: <%= form.password_field :password_confirmation %><br />
+
+    app/views/users/_form.erb:5
+    app/views/users/new.html.erb:6
+    app/views/users/new.html.erb:4
+
+Rendered rescues/_trace (57.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 17:10:58) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:11:00) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (3.1ms)
+Completed in 46ms (View: 27, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:13:14) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+
+ActionView::TemplateError (undefined local variable or method `e' for #<ActionView::Base:0x10369c388>) on line #2 of app/views/users/_new_employer.erb:
+1: <p>
+2:   <%= e.label :first_name %><br />
+3:   <%= e.text_field :first_name %>
+4: </p>
+5: <p>
+
+    app/views/users/_new_employer.erb:2
+    app/views/users/new.html.erb:8
+    app/views/users/new.html.erb:7
+    app/views/users/new.html.erb:4
+
+Rendered rescues/_trace (55.4ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:13:52) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #2 of app/views/users/_new_employer.erb:
+1: <p>
+2:   <%= form.label :first_name %><br />
+3:   <%= form.text_field :first_name %>
+4: </p>
+5: <p>
+
+    app/views/users/_new_employer.erb:2:in `form'
+    app/views/users/_new_employer.erb:2
+    app/views/users/new.html.erb:8
+    app/views/users/new.html.erb:7
+    app/views/users/new.html.erb:4
+
+Rendered rescues/_trace (55.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:16:15) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.7ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:17:19) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 40ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:18:34) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+
+ActionView::TemplateError (undefined local variable or method `e' for #<ActionView::Base:0x1036f8638>) on line #2 of app/views/users/_new_employer.html.erb:
+1: <p>
+2:       <%= e.label :first_name %><br />
+3:       <%= e.text_field :first_name %>
+4:     </p>
+5:     <p>
+
+    app/views/users/_new_employer.html.erb:2
+    app/views/users/new.html.erb:8
+    app/views/users/new.html.erb:7
+    app/views/users/new.html.erb:4
+
+Rendered rescues/_trace (124.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:19:06) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Rendered users/_new_employer (9.8ms)
+Completed in 37ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-17 17:20:44) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:20:50) [GET]
+  Parameters: {"id"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (9.2ms)
+Completed in 38ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/users/new/worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:21:38) [GET]
+  Parameters: {"id"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Completed in 25ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/users/new/worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:21:44) [GET]
+  Parameters: {"id"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (9.1ms)
+Completed in 101ms (View: 19, DB: 0) | 200 OK [http://0.0.0.0/users/new/employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:22:57) [GET]
+  Parameters: {"id"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (9.6ms)
+Completed in 38ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/users/new/employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:23:01) [GET]
+  Parameters: {"id"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Rendered users/_new_employer (9.2ms)
+Completed in 100ms (View: 85, DB: 0) | 200 OK [http://0.0.0.0/users/new/worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:23:07) [GET]
+  Parameters: {"id"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Rendered users/_new_employer (9.1ms)
+Completed in 34ms (View: 19, DB: 0) | 200 OK [http://0.0.0.0/users/new/employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:23:12) [GET]
+  Parameters: {"id"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (9.3ms)
+Completed in 35ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/users/new/worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:24:21) [GET]
+  Parameters: {"id"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_worker (16.5ms)
+Completed in 52ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/users/new/worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:24:26) [GET]
+  Parameters: {"id"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (13.8ms)
+Completed in 39ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/users/new/employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:24:39) [GET]
+  Parameters: {"id"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (9.9ms)
+Completed in 41ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/users/new/employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 17:24:43) [GET]
+  Parameters: {"id"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_worker (14.4ms)
+Completed in 39ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/users/new/worker]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 18:43:57) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+
+ActionView::TemplateError (undefined local variable or method `new_employer_user_path' for #<ActionView::Base:0x10337c158>) on line #6 of app/views/main/home/index.html.erb:
+3: 	<li><%= link_to "Administración de Empleadores", employers_path %></li>
+4: 	<li><%= link_to "Administración de Trabajos", jobs_path %></li>
+5: 	<li><%= link_to "Administración de Trabajadores", workers_path %></li>
+6: 	<li><%= link_to "Registrarse como Empleador", new_employer_user_path %></li>
+7: 	<li><%= link_to "Registrarse como Trabajador", new_worker_user_path %></li>
+8: 	<li><%= link_to "Login", account_path %></li>
+9: </ul>
+
+    app/views/main/home/index.html.erb:6
+
+Rendered rescues/_trace (101.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 18:44:18) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+
+ActionView::TemplateError (undefined local variable or method `new_user_employer_path' for #<ActionView::Base:0x1034b7f40>) on line #6 of app/views/main/home/index.html.erb:
+3: 	<li><%= link_to "Administración de Empleadores", employers_path %></li>
+4: 	<li><%= link_to "Administración de Trabajos", jobs_path %></li>
+5: 	<li><%= link_to "Administración de Trabajadores", workers_path %></li>
+6: 	<li><%= link_to "Registrarse como Empleador", new_user_employer_path %></li>
+7: 	<li><%= link_to "Registrarse como Trabajador", new_user_path %></li>
+8: 	<li><%= link_to "Login", account_path %></li>
+9: </ul>
+
+    app/views/main/home/index.html.erb:6
+
+Rendered rescues/_trace (39.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 18:44:37) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 79ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 18:44:44) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 18:45:26) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 18:45:30) [GET]
+  Parameters: {"id"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (8.9ms)
+Completed in 57ms (View: 19, DB: 0) | 200 OK [http://0.0.0.0/users/new?id=employer]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 18:45:55) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 18:46:22) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 18:46:24) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (8.7ms)
+Completed in 38ms (View: 22, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 18:46:29) [GET]
+  Parameters: {"type"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_worker (76.7ms)
+Completed in 102ms (View: 87, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:01:46) [GET]
+  Parameters: {"type"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.6ms)
+Rendered users/_new_worker (14.3ms)
+Completed in 40ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=worker]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 19:14:18) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:14:21) [GET]
+  Parameters: {"type"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Rendered users/_new_worker (82.0ms)
+Completed in 107ms (View: 92, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-17 19:14:46) [POST]
+  Parameters: {"commit"=>"Unirse", "authenticity_token"=>"W0CJk3pK3o/qQJpAfXYD+9lS6mF4zH0wh0CPHoElWOs=", "user"=>{"nil_class"=>{"address1"=>"", "city"=>"", "business_name"=>"", "address2"=>"", "year_comp_founded"=>"", "country"=>"Argentina", "zip_code"=>"", "company_phone"=>"", "stock_parts"=>"", "company_background"=>"gfdsgfdgd", "website_url"=>"", "company_logo"=>"", "last_name"=>"Parra", "phone"=>"", "number_employees"=>"", "first_name"=>"Fernando", "state"=>"", "detailed_service_desc"=>""}, "password_confirmation"=>"ferparra", "password"=>"ferparra", "email"=>"ferparra@itparc.com"}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: nil_class):
+  app/controllers/users_controller.rb:10:in `new'
+  app/controllers/users_controller.rb:10:in `create'
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:19:55) [GET]
+  Parameters: {"type"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Rendered users/_new_worker (16.2ms)
+Completed in 119ms (View: 103, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:20:43) [GET]
+  Parameters: {"type"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Rendered users/_new_worker (14.5ms)
+Completed in 45ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:20:45) [GET]
+  Parameters: {"type"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_worker (14.5ms)
+Completed in 105ms (View: 91, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:20:51) [GET]
+  Parameters: {"type"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_worker (14.0ms)
+Completed in 41ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:21:05) [GET]
+  Parameters: {"type"=>"worker"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Rendered users/_new_worker (14.8ms)
+Completed in 116ms (View: 101, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:22:32) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+
+ActionView::TemplateError (`@user[user[:employer]' is not allowed as an instance variable name) on line #2 of app/views/users/_new_employer.html.erb:
+1: <p>
+2:       <%= e.label :first_name %><br />
+3:       <%= e.text_field :first_name %>
+4:     </p>
+5:     <p>
+
+    app/views/users/_new_employer.html.erb:2
+    app/views/users/new.html.erb:8
+    app/views/users/new.html.erb:7
+    app/views/users/new.html.erb:3
+
+Rendered rescues/_trace (131.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:22:48) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.5ms)
+Rendered users/_new_employer (9.3ms)
+Completed in 41ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:23:08) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.8ms)
+Completed in 30ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:23:38) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+
+ActionView::TemplateError (undefined method `employers' for #<User:0x103859e50>) on line #7 of app/views/users/new.html.erb:
+4:   <%= f.error_messages %>
+5:   <%= render :partial => "form", :object => f %>
+6:   <% if params[:type] == 'employer' %>
+7:       <% f.fields_for @user.employers do |e| %>
+8:          <%= render :partial => 'new_employer', :locals => { :e => e } %>
+9:       <% end %>
+10:   <% else %>
+
+    app/views/users/new.html.erb:7
+    app/views/users/new.html.erb:3
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:23:43) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (9.5ms)
+Completed in 112ms (View: 95, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:24:06) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.8ms)
+Completed in 33ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:26:23) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.3ms)
+Completed in 29ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:26:30) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (9.1ms)
+Completed in 41ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:27:50) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Completed in 32ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:32:10) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (10.4ms)
+Completed in 111ms (View: 21, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-17 19:32:49) [POST]
+  Parameters: {"commit"=>"Unirse", "authenticity_token"=>"W0CJk3pK3o/qQJpAfXYD+9lS6mF4zH0wh0CPHoElWOs=", "user"=>{"password_confirmation"=>"ferparra", "employer_attributes"=>{"address1"=>"", "city"=>"", "address2"=>"", "company_name"=>"ITParc", "zip_code"=>"", "country"=>"", "pay_method"=>"", "user_id"=>"", "last_name"=>"Parra", "phone"=>"", "first_name"=>"Fernando", "state"=>""}, "password"=>"ferparra", "email"=>"ferparra@itparc.com"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ferparra@itparc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b755ead90c317d450d4e60acbf8c24a92ba5ba4f145878b6791e237380b78a9a5d0aaac73648450e35a5923ed2ffda8061cd1af4398da65242459f2904c0c5f2') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.7ms)
+Rendered users/_new_worker (15.0ms)
+Completed in 633ms (View: 28, DB: 0) | 200 OK [http://0.0.0.0/account]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-17 19:32:56) [POST]
+  Parameters: {"commit"=>"Unirse", "authenticity_token"=>"W0CJk3pK3o/qQJpAfXYD+9lS6mF4zH0wh0CPHoElWOs=", "user"=>{"nil_class"=>{"address1"=>"dsfgs", "city"=>"", "business_name"=>"", "address2"=>"", "year_comp_founded"=>"", "country"=>"", "zip_code"=>"", "company_phone"=>"", "stock_parts"=>"", "company_background"=>"", "website_url"=>"", "company_logo"=>"", "last_name"=>"", "phone"=>"", "number_employees"=>"", "first_name"=>"", "state"=>"", "detailed_service_desc"=>""}, "password_confirmation"=>"ferparra", "password"=>"ferparra", "email"=>"ferparra@itparc.com"}}
+
+ActiveRecord::UnknownAttributeError (unknown attribute: nil_class):
+  app/controllers/users_controller.rb:11:in `new'
+  app/controllers/users_controller.rb:11:in `create'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 19:34:19) [GET]
+  Parameters: {"type"=>"employer"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (1.4ms)
+Rendered users/_new_employer (9.0ms)
+Completed in 41ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-03-17 19:34:43) [POST]
+  Parameters: {"commit"=>"Unirse", "authenticity_token"=>"W0CJk3pK3o/qQJpAfXYD+9lS6mF4zH0wh0CPHoElWOs=", "user"=>{"password_confirmation"=>"ferparra", "employer_attributes"=>{"address1"=>"Raffo 2976", "city"=>"", "address2"=>"", "company_name"=>"ITParc", "zip_code"=>"", "country"=>"", "pay_method"=>"", "user_id"=>"", "last_name"=>"Parra", "phone"=>"", "first_name"=>"Fernando", "state"=>""}, "password"=>"ferparra", "email"=>"ferparra@itparc.com"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'ferparra@itparc.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;36;1mUser Create (0.6ms)[0m   [0;1mINSERT INTO "users" ("created_at", "last_request_at", "crypted_password", "updated_at", "current_login_ip", "password_salt", "current_login_at", "persistence_token", "login_count", "last_login_ip", "last_login_at", "email") VALUES('2010-03-17 22:34:44', '2010-03-17 22:34:44', '2c2e0e65a86b3e1e9377d572b04c0e9a2219aca7e5745ff0aa90404be7b16dee5a7bba090aed08789a9dd23684949f5d2dce70cef08d8beed20853cd6f77156b', '2010-03-17 22:34:44', '127.0.0.1', 'q1JEyRao8q6si1PBsTVc', '2010-03-17 22:34:43', '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae', 1, NULL, NULL, 'ferparra@itparc.com')[0m
+  [4;35;1mEmployer Create (0.2ms)[0m   [0mINSERT INTO "employers" ("address1", "city", "address2", "created_at", "company_name", "zip_code", "country", "updated_at", "pay_method", "user_id", "last_name", "phone", "first_name", "state") VALUES('Raffo 2976', '', '', '2010-03-17 22:34:44', 'ITParc', '', '', '2010-03-17 22:34:44', '', 1, 'Parra', '', 'Fernando', '')[0m
+Redirected to http://0.0.0.0:3000/account
+Completed in 195ms (DB: 1) | 302 Found [http://0.0.0.0/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-17 19:34:44) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-17 22:34:44', "last_request_at" = '2010-03-17 22:34:44' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 122ms (View: 97, DB: 1) | 200 OK [http://0.0.0.0/account]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mEmployer Load (0.5ms)[0m   [0;1mSELECT * FROM "employers" WHERE ("employers".user_id = 1) LIMIT 1[0m
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 19:37:52) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 19:38:04) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 19:38:05) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 23:56:51) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 125ms (View: 123, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 23:56:56) [GET]
+  Parameters: {"params"=>{"type"=>"worker"}}
+
+NameError (uninitialized constant AccountController):
+  
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-17 23:57:24) [GET]
+  Parameters: {"params"=>{"type"=>"worker"}}
+
+ActionController::UnknownAction (No action responded to index. Actions: create, edit, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 23:58:25) [GET]
+  Parameters: {"params"=>{"type"=>"worker"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:58:26', "last_request_at" = '2010-03-18 02:58:26' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 551ms (DB: 1) | 302 Found [http://0.0.0.0/worker_registration]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-17 23:58:26) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:58:26', "last_request_at" = '2010-03-18 02:58:26' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 36ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/account]
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 23:58:30) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 23:58:37) [GET]
+  Parameters: {"params"=>{"type"=>"worker"}}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:58:37', "last_request_at" = '2010-03-18 02:58:37' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 24ms (DB: 1) | 302 Found [http://0.0.0.0/worker_registration]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-17 23:58:37) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:58:37', "last_request_at" = '2010-03-18 02:58:37' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 26ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/account]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 23:58:53) [GET]
+  Parameters: {"type"=>"worker"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:58:53', "last_request_at" = '2010-03-18 02:58:53' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 24ms (DB: 1) | 302 Found [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-17 23:58:54) [GET]
+  [4;36;1mUser Load (2.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:58:54', "last_request_at" = '2010-03-18 02:58:54' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 28ms (View: 2, DB: 3) | 200 OK [http://0.0.0.0/account]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 23:59:05) [GET]
+
+ActionController::RoutingError (No route matches "/account/logout" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 23:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/account/destroy" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 23:59:43) [GET]
+
+ActionController::RoutingError (No route matches "/user_session/destroy" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Main::HomeController#index (for 127.0.0.1 at 2010-03-17 23:59:46) [GET]
+Rendering template within layouts/application
+Rendering main/home/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 23:59:48) [GET]
+  Parameters: {"type"=>"employer"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:59:48', "last_request_at" = '2010-03-18 02:59:48' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 24ms (DB: 2) | 302 Found [http://0.0.0.0/users/new?type=employer]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-17 23:59:48) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:59:48', "last_request_at" = '2010-03-18 02:59:48' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 29ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/account]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-03-17 23:59:55) [GET]
+  Parameters: {"type"=>"worker"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:59:55', "last_request_at" = '2010-03-18 02:59:55' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 23ms (DB: 1) | 302 Found [http://0.0.0.0/users/new?type=worker]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-03-17 23:59:55) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19eabcd91cba5bb2624d64b0e5d2b7578e16ddd8849433c9c223022d11d44b60290b7660c5451262094100d9f28bb0e9dcfa36fc50397ea4a04aa554d1cc96ae') LIMIT 1[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-18 02:59:55', "last_request_at" = '2010-03-18 02:59:55' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 29ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/account]
