@@ -8,7 +8,7 @@
          <%= render :partial => 'new_employer', :locals => { :e => e } %>
       <% end %>
   <% else %>
-      <% f.fields_for @user.worker do |w| %>
+      <% f.fields_for :worker do |w| %>
          <%= render :partial => 'new_worker', :locals => { :w => w } %>
       <% end %>
   <% end %>

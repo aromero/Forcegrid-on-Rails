@@ -31,13 +31,10 @@
     <td><%=h job.buyers_support_contact %></td>
     <td><%=h job.status %></td>
     <td><%=h job.employer.full_name %></td>
-	<% if params[:worker_id] %>
-	<td><%= link_to "Ofertar", bid_path(job, Worker.find(params[:worker_id])), :method => :new %></td>
-	<% else %>
+	<td><%= link_to_if current_user.is_worker?, "Ofertar", bid_path(job, current_user.worker) %></td>
 	<td><%= link_to 'Show', job %></td>
     <td><%= link_to 'Edit', edit_job_path(job) %></td>
     <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
-	<% end %>
   </tr>
 <% end %>
 </table>
