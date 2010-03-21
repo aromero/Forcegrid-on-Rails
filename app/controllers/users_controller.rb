@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
-    @user.build_employer
+    @user.build_employer if params[:type] == 'employer'
+    @user.build_worker if params[:type] == 'worker'
   end
   
   def create
