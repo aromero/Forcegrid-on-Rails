@@ -8,6 +8,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resource :user_session
   
+  map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
+  map.activate '/activate/:id', :controller => 'activations', :action => 'create'
+  
   map.root :controller => "main/home"
 
   map.connect ':controller/:action/:id'
