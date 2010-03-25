@@ -1,0 +1,8 @@
+<%= s.label :name %>
+<%= select 'user[worker_attributes][skills]', :skill_id, Skill.all.collect {|p| [ p.name, p.id ] }, {:prompt => 'Select Skill'} %>
+<br />
+
+user_worker_attributes_skills_name
+user[worker_attributes][company_logo]
+
+skill[category_id

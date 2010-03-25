@@ -10,6 +10,9 @@
   <% else %>
       <% f.fields_for :worker do |w| %>
          <%= render :partial => 'new_worker', :locals => { :w => w } %>
+         <% w.fields_for :skills do |s| %>
+            <%= render :partial => 'new_skill', :locals => { :s => s } %>
+         <% end %>
       <% end %>
   <% end %>
   <%= f.submit "Unirse" %>
