@@ -5,7 +5,10 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @user.build_employer if params[:type] == 'employer'
-    @user.build_worker if params[:type] == 'worker'
+    if params[:type] == 'worker'
+      worker = @user.build_worker
+      10.times { worker.skills.build }
+    end
   end
   
   def create

@@ -5,6 +5,8 @@ class Worker < ActiveRecord::Base
   
   has_many :skill_workers
   has_many :skills, :through => :skill_workers
+  accepts_nested_attributes_for :skills,
+        :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   
   validates_presence_of :first_name, :last_name
   
