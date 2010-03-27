@@ -1,5 +1,5 @@
-<%= s.label :name, "Name" %>
-<%= s.collection_select :id, Skill.all, :id, :name, :include_blank => true, :rows => 10 %>
-<%= s.check_box :_destroy %>
-<%= s.label :_destroy, "Remove" %>
-<br />
+<div class="skill">
+    <%= s.label :name, "Name" %>
+    <%= s.collection_select :id, Skill.all, :id, :name, :include_blank => true, :rows => 10 %>
+    <br />
+</div>

@@ -71,6 +71,9 @@
   <%= w.text_area :detailed_service_desc %>
 </p>
 
-<% w.fields_for :skills do |builder| %>
-    <%= render 'new_skill', :s => builder %>
-<% end %>
+<div id="skills">
+    <% w.fields_for :skills do |builder| %>
+        <%= render 'new_skill', :s => builder %>
+    <% end %>
+    <a class="remove" href="#">Remove</a> | <a class="add" href="#">Add Skill</a><br />
+</div>
