@@ -75,5 +75,5 @@
     <% w.fields_for :skills do |builder| %>
         <%= render 'new_skill', :s => builder %>
     <% end %>
-    <a class="remove" href="#">Remove</a> | <a class="add" href="#">Add Skill</a><br />
+    <%= link_to 'Add Skill', '#', :class => 'add' %>
 </div>

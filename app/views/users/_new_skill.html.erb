@@ -1,5 +1,6 @@
 <div class="skill">
     <%= s.label :name, "Name" %>
     <%= s.collection_select :id, Skill.all, :id, :name, :include_blank => true, :rows => 10 %>
+    <%= link_to "Remove Skill", "#", :class => 'remove' %>
     <br />
 </div>
