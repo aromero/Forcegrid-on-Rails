@@ -4,10 +4,16 @@ one:
   id: 1
   name: 'Servicios'
   description: 'Servicios de IT'
-  sub_category: 1
+  category_id: 
 
 two:
   id: 2
   name: Productos
   description: 'Productos'
-  sub_category: 1
+  category_id: 
+    
+three:
+  id: 3
+  name: 'Soporte'
+  description: 'Soporte'
+  category_id: 1
