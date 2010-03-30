@@ -1,11 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  description: MyString
+  id: 1
+  name: 'Servicios'
+  description: 'Servicios de IT'
   sub_category: 1
 
 two:
-  name: MyString
-  description: MyString
+  id: 2
+  name: Productos
+  description: 'Productos'
   sub_category: 1

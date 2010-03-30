@@ -27,4 +27,16 @@ $(function() {
 		
 		e.preventDefault();
 	});
+	
+	$('.skill select#category_category_id').change(function(e) {
+		category_id = $(this).find('option:selected');
+		$(this).siblings('select:first').focus();
+		
+		$.get('../workers/skills_by_category.xml?id=1', function(doc){
+			$(doc).find('skill').each(function() {
+				alert($(this).find('name').text())
+				alert($(this).find('category-id').text());
+			});
+		})
+	});
 });

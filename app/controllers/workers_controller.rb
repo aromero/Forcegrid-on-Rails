@@ -82,4 +82,12 @@ class WorkersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def skills_by_category
+    @skills = Skill.find_all_by_category_id(params[:id])
+    
+    respond_to do |format|
+      format.xml { render :xml => @skills }
+    end
+  end
 end

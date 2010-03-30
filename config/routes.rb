@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :bids
   map.resources :jobs, :has_one => [:employer, :bid]
   map.resources :employers, :has_many => :jobs
-  map.resources :workers, :has_many => [:jobs, :bids]
+  map.resources :workers, :has_many => [:jobs, :bids], :collection => { :skills_by_category => :get}
   
   map.resource :account, :controller => 'users'
   map.resources :users
