@@ -29,13 +29,18 @@ $(function() {
 	});
 	
 	$('.skill select#category_category_id').change(function(e) {
-		category_id = $(this).find('option:selected');
-		$(this).siblings('select:first').focus();
+		var category_id = $(this).find('option:selected').val();
+		var selected = $(this).siblings('select:first').focus();
 		
-		$.get('../workers/skills_by_category.xml?id=1', function(doc){
+		$.get('../workers/skills_by_category.xml?id=' + category_id, function(doc){
 			$(doc).find('skill').each(function() {
-				alert($(this).find('name').text())
-				alert($(this).find('category-id').text());
+					var name = $(this).find('name').text();
+					var id = $(this).find('category-id').text();
+					//$(selected).append().html(function(){
+					//	return '<option value=' + id +'>' + name + '</option>'
+					//});
+					$(selected).append('<option value=' + id +'>' + name + '</option>')
+					return false;
 			});
 		})
 	});
