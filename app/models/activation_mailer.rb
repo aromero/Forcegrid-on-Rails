@@ -7,7 +7,7 @@ class ActivationMailer < ActionMailer::Base
     from      'accountvalidation@itparc.com'
     sent_on    Time.now
     
-    body       :account_validation_url => register_url(user.perishable_token)
+    body       :account_activation_url => register_url(user.perishable_token)
   end
 
   def activation_confirmation(user)

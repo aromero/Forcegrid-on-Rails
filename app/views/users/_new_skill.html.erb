@@ -1,6 +1,7 @@
 <div class="skill">
-    <%= select "category", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, :length => '20', :prompt => 'Select Category' %>
-    <%= s.collection_select :id, {}, :id, :name, :include_blank => true, :rows => 10, :length => '20', :prompt => 'Select Skill' %>
+    <%= select "category", "category_id", Category.main.all.collect {|p| [ p.name, p.id ] }, :length => '20', :prompt => 'Select Category' %>
+    <%= select "subcategory", "subcategory_id", {}, :include_blank => false, :length => '20', :prompt => 'Select Subcategory' %>
+    <%= s.collection_select :id, {}, :id, :name, :include_blank => false, :rows => 10, :length => '20', :prompt => 'Select Skill' %>
     <%= link_to "Remove Skill", "#", :class => 'remove' %>
     <br />
 </div>
