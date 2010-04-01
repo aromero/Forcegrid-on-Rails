@@ -8,8 +8,7 @@ class User < ActiveRecord::Base
   
   has_one :employer, :dependent => :destroy
   has_one :worker, :dependent => :destroy
-  accepts_nested_attributes_for :worker, 
-        :employer, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :worker, :employer
   
   def is_worker?
     true unless self.worker.nil?

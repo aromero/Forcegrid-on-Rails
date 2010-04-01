@@ -7,12 +7,13 @@ class UsersController < ApplicationController
     @user.build_employer if params[:type] == 'employer'
     if params[:type] == 'worker'
       worker = @user.build_worker
-      10.times { worker.skills.build }
+      10.times { worker.skill_workers.build }
     end
   end
   
   def create
     @user = User.new(params[:user])
+    
     if @user.save_without_session_maintenance
       @user.deliver_activation_instructions!
       flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"

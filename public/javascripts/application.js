@@ -49,9 +49,8 @@ $(function() {
 		$.get('../xhr/skills?id=' + category_id, function(doc){
 			$(doc).find('skill').each(function() {
 					var name = $(this).find('name').text();
-					var id = $(this).find('category-id').text();
+					var id = $(this).find('id').text();
 					$(selected).append('<option value=' + id +'>' + name + '</option>')
-					return false;
 			});
 		})
 	});
