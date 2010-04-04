@@ -9,6 +9,8 @@ $(function() {
 		if (element[0]) 
 		{
 			$(element).show();
+			var subcat = $(element).siblings('select:first').attr('disabled', true);
+			$(subcat).siblings('select:last').attr('disabled', true);
 		}
 		
 		//si todos los elementos fueron mostrados, eliminar link a agregar
@@ -40,6 +42,8 @@ $(function() {
 					return false;
 			});
 		})
+		
+		$(selected).siblings('select:first').removeAttr('disabled');
 	});
 	
 	$('.skill select#subcategory_subcategory_id').change(function(e) {
