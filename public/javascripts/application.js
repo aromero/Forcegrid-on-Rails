@@ -9,8 +9,8 @@ $(function() {
 		if (element[0]) 
 		{
 			$(element).show();
-			var subcat = $(element).siblings('select:first').attr('disabled', true);
-			$(subcat).siblings('select:last').attr('disabled', true);
+			$(element).find('#subcategory_subcategory_id').attr('disabled', true);
+			$(element).find('select:last').attr('disabled', true);
 		}
 		
 		//si todos los elementos fueron mostrados, eliminar link a agregar
@@ -32,7 +32,7 @@ $(function() {
 	
 	$('.skill select#category_category_id').change(function(e) {
 		var category_id = $(this).find('option:selected').val();
-		var selected = $(this).siblings('select:first').focus();
+		var selected = $(this).siblings('select:first').focus().removeAttr('disabled');
 		
 		$.get('../xhr/subcategories?id=' + category_id, function(doc){
 			$(doc).find('category').each(function() {
@@ -42,13 +42,11 @@ $(function() {
 					return false;
 			});
 		})
-		
-		$(selected).siblings('select:first').removeAttr('disabled');
 	});
 	
 	$('.skill select#subcategory_subcategory_id').change(function(e) {
 		var category_id = $(this).find('option:selected').val();
-		var selected = $(this).siblings('select:last').focus();
+		var selected = $(this).siblings('select:last').focus().removeAttr('disabled');
 		
 		$.get('../xhr/skills?id=' + category_id, function(doc){
 			$(doc).find('skill').each(function() {
