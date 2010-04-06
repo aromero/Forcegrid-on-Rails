@@ -1,7 +1,7 @@
 class Worker < ActiveRecord::Base
   has_many :bids
   has_many :employers, :through => :bids
-  belongs_to :user
+  has_one :user, :as => :owner
   
   has_many :skill_workers
   has_many :skills, :through => :skill_workers

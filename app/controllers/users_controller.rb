@@ -3,16 +3,27 @@ class UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update]
   
   def new
-    @user = User.new
-    @user.build_employer if params[:type] == 'employer'
-    if params[:type] == 'worker'
-      worker = @user.build_worker
-      10.times { worker.skill_workers.build }
+    case params[:type]
+    when 'employer'
+      @employer = Employer.new
+      @user = @employer.build_user
+    when 'worker'
+      @worker = Worker.new
+      @user = @worker.build_user
+      10.times { @worker.skill_workers.build }
     end
   end
   
   def create
+    @owner = Employer.new(params[:employer]) if params[:employer]
+    if params[:worker]
+      @owner = Worker.new(params[:worker])
+      debugger
+    end
+    @owner.save
+    
     @user = User.new(params[:user])
+    @user.owner = @owner
     
     if @user.save_without_session_maintenance
       @user.deliver_activation_instructions!
@@ -39,9 +50,5 @@ class UsersController < ApplicationController
     else
       render :action => :edit
     end
-  end
-  
-  def add_skills
-    
   end
 end

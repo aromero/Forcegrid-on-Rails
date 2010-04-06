@@ -3,12 +3,12 @@
 <% form_for @user, :url => account_path do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
-  <% if params[:type] == 'employer' %>
-      <% f.fields_for :employer do |builder| %>
+  <% unless @employer.nil? %>
+      <% fields_for :employer do |builder| %>
          <%= render 'new_employer', :e => builder %>
       <% end %>
   <% else %>
-      <% f.fields_for :worker do |builder| %>
+      <% fields_for :worker do |builder| %>
          <%= render 'new_worker', :w => builder %>
       <% end %>
   <% end %>

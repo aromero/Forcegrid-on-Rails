@@ -1,8 +1,7 @@
 class Employer < ActiveRecord::Base
   has_many :jobs
   has_many :bids, :through => :jobs
-  belongs_to :user
-  #belongs_to :user
+  has_one :user, :as => :owner
   
   validates_presence_of :first_name, :last_name, :company_name, :address1
   

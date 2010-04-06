@@ -92,6 +92,8 @@ ActiveRecord::Schema.define(:version => 20100324021200) do
     t.string   "current_login_ip"
     t.boolean  "admin"
     t.boolean  "active"
+    t.string   "owner_type"
+    t.integer  "owner_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
@@ -117,7 +119,6 @@ ActiveRecord::Schema.define(:version => 20100324021200) do
     t.string   "company_logo"
     t.text     "company_background"
     t.text     "detailed_service_desc"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

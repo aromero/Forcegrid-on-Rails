@@ -6,9 +6,7 @@ class User < ActiveRecord::Base
     c.validates_length_of_password_confirmation_field_options = {:on => :update, :minimum => 4, :if => :require_password?}
   end
   
-  has_one :employer, :dependent => :destroy
-  has_one :worker, :dependent => :destroy
-  accepts_nested_attributes_for :worker, :employer
+  belongs_to :owner, :polymorphic => true
   
   def worker?
     true unless self.worker.nil?

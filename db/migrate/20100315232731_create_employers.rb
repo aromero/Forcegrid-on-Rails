@@ -13,7 +13,6 @@ class CreateEmployers < ActiveRecord::Migration
       t.integer :user_id
       t.string :phone
       t.string :pay_method
-      t.integer :user_id
 
       t.timestamps
     end
