@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     @owner = Employer.new(params[:employer]) if params[:employer]
     if params[:worker]
       @owner = Worker.new(params[:worker])
-      debugger
     end
     @owner.save
     
