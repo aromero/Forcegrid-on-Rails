@@ -10,8 +10,12 @@ class User < ActiveRecord::Base
   has_one :worker, :dependent => :destroy
   accepts_nested_attributes_for :worker, :employer
   
-  def is_worker?
+  def worker?
     true unless self.worker.nil?
+  end
+  
+  def employer?
+    true unless self.employer.nil?
   end
   
   def activate!

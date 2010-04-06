@@ -1,7 +1,5 @@
 <h1>Listado de Trabajos</h1>
 
-<%= session[:id] %>
-
 <table>
   <tr>
     <th>Title</th>
@@ -31,10 +29,12 @@
     <td><%=h job.buyers_support_contact %></td>
     <td><%=h job.status %></td>
     <td><%=h job.employer.full_name %></td>
-	<td><%= link_to_if current_user.is_worker?, "Ofertar", bid_path(job, current_user.worker) %></td>
+	<td><%= link_to_if current_user.worker?, "Ofertar", bid_path(job, current_user.worker) %></td>
+	<% if current_user %>
 	<td><%= link_to 'Show', job %></td>
     <td><%= link_to 'Edit', edit_job_path(job) %></td>
     <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
