@@ -9,8 +9,8 @@ class UsersController < ApplicationController
       @user = @employer.build_user
     when 'worker'
       @worker = Worker.new
-      @user = @worker.build_user
       10.times { @worker.skill_workers.build }
+      @user = @worker.build_user
     end
   end
   

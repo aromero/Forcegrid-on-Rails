@@ -8,7 +8,7 @@
          <%= render 'new_employer', :e => builder %>
       <% end %>
   <% else %>
-      <% fields_for :worker do |builder| %>
+      <% fields_for :worker, @worker do |builder| %>
          <%= render 'new_worker', :w => builder %>
       <% end %>
   <% end %>
