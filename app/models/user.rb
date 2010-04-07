@@ -9,11 +9,11 @@ class User < ActiveRecord::Base
   belongs_to :owner, :polymorphic => true
   
   def worker?
-    true unless self.worker.nil?
+    true unless self.owner_type != 'Worker'
   end
   
   def employer?
-    true unless self.employer.nil?
+    true unless self.owner_type != 'Employer'
   end
   
   def activate!

@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    @jobs = Job.current
   end
 
   def show
@@ -17,7 +17,7 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(params[:job])
-    @job.employer ||= current_user.employer
+    @job.employer ||= Employer.find(current_user.owner)
     
     if @job.save
       flash[:notice] = 'Job was successfully created.'
