@@ -1,11 +1,13 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
-
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   helper_method :current_user_session, :current_user
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "Access denied."
+    redirect_to root_url
+  end
+  
   private
     def current_user_session
       return @current_user_session if defined?(@current_user_session)

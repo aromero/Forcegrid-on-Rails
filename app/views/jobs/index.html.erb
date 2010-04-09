@@ -30,7 +30,7 @@
     <td><%=h job.status %></td>
     <td><%=h job.employer.full_name %></td>
 	<td><%= link_to_if current_user.worker?, "Ofertar", bid_path(job, current_user.owner) %></td>
-	<% if current_user %>
+	<% if can? :manage, @jobs %>
 	<td><%= link_to 'Show', job %></td>
     <td><%= link_to 'Edit', edit_job_path(job) %></td>
     <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -41,4 +41,6 @@
 
 <br />
 
+<% if can? :create, Job %>
 <%= link_to 'New job', new_job_path %>
+<% end %>
