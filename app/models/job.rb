@@ -6,7 +6,7 @@ class Job < ActiveRecord::Base
   validate :time_interval
   
   validates_each :start_time, :end_time do |record, attr, value|
-    record.errors.add attr, 'is in the past' if value < Date.today
+    record.errors.add attr, 'is in the past' unless value.future?
   end
   
   def time_interval
