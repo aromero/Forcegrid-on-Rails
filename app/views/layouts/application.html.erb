@@ -5,10 +5,21 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>ITParc - <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'scaffold', 'application' %>
 </head>
 <body>
-
+<div class="login">
+    <ul>
+        <% unless current_user_session %>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Register as Worker",  new_account_path(:type => 'employer') %></li>
+        <li><%= link_to "Register as Employer", new_account_path(:type => 'worker') %></li>
+        <% else %>
+        <li><%= link_to "Logout", current_user_session, :method => :delete %></li>
+        <li>Edit Profile</li>
+        <% end %>
+    </ul>
+</div>
 <p style="color: green"><%= flash[:notice] %><%= flash[:error] %></p>
 
 <%= yield %>

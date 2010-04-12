@@ -1,6 +1,4 @@
 class BidsController < ApplicationController
-  # GET /bids
-  # GET /bids.xml
   def index
     @bids = Bid.all
 
@@ -10,8 +8,6 @@ class BidsController < ApplicationController
     end
   end
 
-  # GET /bids/1
-  # GET /bids/1.xml
   def show
     @bid = Bid.find(params[:id])
 
@@ -21,8 +17,6 @@ class BidsController < ApplicationController
     end
   end
 
-  # GET /bids/new
-  # GET /bids/new.xml
   def new
     @bid = Bid.new
 
@@ -32,13 +26,10 @@ class BidsController < ApplicationController
     end
   end
 
-  # GET /bids/1/edit
   def edit
     @bid = Bid.find(params[:id])
   end
 
-  # POST /bids
-  # POST /bids.xml
   def create
     @bid = Bid.new(params[:bid])
 
@@ -54,8 +45,6 @@ class BidsController < ApplicationController
     end
   end
 
-  # PUT /bids/1
-  # PUT /bids/1.xml
   def update
     @bid = Bid.find(params[:id])
 
@@ -71,8 +60,6 @@ class BidsController < ApplicationController
     end
   end
 
-  # DELETE /bids/1
-  # DELETE /bids/1.xml
   def destroy
     @bid = Bid.find(params[:id])
     @bid.destroy

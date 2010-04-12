@@ -23,7 +23,7 @@
     <td><%=h job.status %></td>
     <td><%=h job.employer.full_name %></td>
     
-	<td><%= link_to_if current_user.worker?, "Ofertar", bid_path(job, current_user.owner) %></td>
+	<td><%= link_to_if current_user.worker? || current.user.guest?, "Ofertar", new_bid_path(job) %></td>
 	<td><%= link_to 'Show', job %></td>
 	<% if can? :manage, @jobs %>
     <td><%= link_to 'Edit', edit_job_path(job) %></td>
