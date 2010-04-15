@@ -6,7 +6,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find(params[:id], :include => [:employer])
+    @job = Job.find(params[:id], :include => [:employer, :category])
   end
 
   def new
