@@ -11,7 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
   map.activate '/activate/:id', :controller => 'activations', :action => 'create'
   
-  map.root :controller => "landing/home"
+  map.root :controller => "landing"
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

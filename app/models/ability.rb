@@ -1,7 +1,8 @@
 class Ability
   include CanCan::Ability
   
-  def initialize(user = User.new)
+  def initialize(user)
+    user ||= User.new
     if user.admin?
       can :manage, :all
     else
@@ -11,6 +12,9 @@ class Ability
         can :update, Job do |job|
           job.try(:employer) == user.owner
         end
+      end
+      if user.worker?
+        can :create, Bid
       end
     end
   end

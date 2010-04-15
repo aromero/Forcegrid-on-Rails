@@ -9,8 +9,10 @@ class BidsController < ApplicationController
 
   def new
     @bid = Bid.new
-    flash[:notice] = "If you are registered, please login. If not, please fill in this form."
-    redirect_to new_account_path(:type => 'worker') unless can? :create, Bid
+    unless can? :create, Bid
+      flash[:notice] = "If you are registered, please login. If not, please fill in this form."
+      redirect_to new_account_path(:type => 'worker')
+    end
   end
 
   def edit
@@ -19,6 +21,13 @@ class BidsController < ApplicationController
 
   def create
     @bid = Bid.new(params[:bid])
+    
+    if @bid.save
+      flash[:notice] = 'You have just created a new Bid for this Job'
+      redirect_to(@bid.job)
+    else
+      render :action => "new"
+    end
   end
 
   def update

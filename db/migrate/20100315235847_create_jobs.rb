@@ -12,6 +12,7 @@ class CreateJobs < ActiveRecord::Migration
       t.string :buyers_support_contact
       t.integer :status
       t.integer :employer_id
+      t.integer :category_id
 
       t.timestamps
     end

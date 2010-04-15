@@ -12,8 +12,8 @@
     <ul>
         <% unless current_user_session %>
         <li><%= link_to "Login", new_user_session_path %></li>
-        <li><%= link_to "Register as Worker",  new_account_path(:type => 'employer') %></li>
-        <li><%= link_to "Register as Employer", new_account_path(:type => 'worker') %></li>
+        <li><%= link_to "Register as Employer",  new_account_path(:type => 'employer') %></li>
+        <li><%= link_to "Register as Worker", new_account_path(:type => 'worker') %></li>
         <% else %>
         <li><%= link_to "Logout", current_user_session, :method => :delete %></li>
         <li>Edit Profile</li>

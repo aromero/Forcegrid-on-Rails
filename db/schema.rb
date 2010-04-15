@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20100324021200) do
     t.string   "buyers_support_contact"
     t.integer  "status"
     t.integer  "employer_id"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

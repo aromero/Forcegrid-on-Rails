@@ -20,6 +20,10 @@
     <%= f.date_select :end_time %>
   </p>
   <p>
+    <%= f.label :category %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </p>
+  <p>
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </p>
