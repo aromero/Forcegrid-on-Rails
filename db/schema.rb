@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100317001057) do
+ActiveRecord::Schema.define(:version => 20100415153309) do
+
+  create_table "assigments", :force => true do |t|
+    t.integer  "job_id"
+    t.integer  "worker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "bids", :force => true do |t|
     t.decimal  "price"
@@ -17,6 +24,14 @@ ActiveRecord::Schema.define(:version => 20100317001057) do
     t.text     "comments"
     t.integer  "job_id"
     t.integer  "worker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,6 +65,21 @@ ActiveRecord::Schema.define(:version => 20100317001057) do
     t.string   "buyers_support_contact"
     t.integer  "status"
     t.integer  "employer_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skill_workers", :id => false, :force => true do |t|
+    t.integer  "skill_id"
+    t.integer  "worker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.string   "name"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -70,6 +100,8 @@ ActiveRecord::Schema.define(:version => 20100317001057) do
     t.string   "current_login_ip"
     t.boolean  "admin"
     t.boolean  "active"
+    t.string   "owner_type"
+    t.integer  "owner_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
@@ -95,7 +127,6 @@ ActiveRecord::Schema.define(:version => 20100317001057) do
     t.string   "company_logo"
     t.text     "company_background"
     t.text     "detailed_service_desc"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,2 @@
+module XhrHelper
+end

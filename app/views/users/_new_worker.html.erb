@@ -70,3 +70,10 @@
   <%= w.label :detailed_service_desc %><br />
   <%= w.text_area :detailed_service_desc %>
 </p>
+
+<div id="skills">
+    <% w.fields_for :skill_workers do |builder| %>
+        <%= render 'new_skill', :s => builder %>
+    <% end %>
+    <%= link_to 'Add Skill', '#', :class => 'add' %>
+</div>

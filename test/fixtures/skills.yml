@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: 'DBA'
+  category_id: 1 
+
+two:
+  id: 2
+  name: 'Sys Admin'
+  category_id: 1
+
+three:
+ id: 3
+ name: 'SAP'
+ category_id: 2 
+
+four:
+  id: 4
+  name: 'Oracle Fusion'
+  category_id: 2

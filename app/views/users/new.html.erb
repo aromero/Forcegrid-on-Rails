@@ -1,15 +1,15 @@
-<h1>Register</h1>
+<h1>Register as <%= params[:type].capitalize %></h1>
 
 <% form_for @user, :url => account_path do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
-  <% if params[:type] == 'employer' %>
-      <% f.fields_for :employer do |e| %>
-         <%= render :partial => 'new_employer', :locals => { :e => e } %>
+  <% unless @employer.nil? %>
+      <% fields_for :employer do |builder| %>
+         <%= render 'new_employer', :e => builder %>
       <% end %>
   <% else %>
-      <% f.fields_for :worker do |w| %>
-         <%= render :partial => 'new_worker', :locals => { :w => w } %>
+      <% fields_for :worker, @worker do |builder| %>
+         <%= render 'new_worker', :w => builder %>
       <% end %>
   <% end %>
   <%= f.submit "Unirse" %>

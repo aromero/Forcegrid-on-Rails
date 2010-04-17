@@ -20,6 +20,10 @@
     <%= f.date_select :end_time %>
   </p>
   <p>
+    <%= f.label :category %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </p>
+  <p>
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </p>
@@ -44,9 +48,11 @@
     <%= f.text_field :status %>
   </p>
 	<% unless params[:employer_id] %>
-  <p>
-    	<%= f.label :employer_id %><br />
-   		<%= select("job", "employer_id", Employer.all.collect {|p| [ p.full_name, p.id ] }, { :include_blank => false }) %>
+  <p>  	
+	<% if current_user && current_user.admin? %>
+	<%= f.label :employer_id %><br />
+		<%= select("job", "employer_id", Employer.all.collect {|p| [ p.full_name, p.id ] }, { :include_blank => false }) %>
+	<% end %>
   </p>
 	<% end %>
   <p>

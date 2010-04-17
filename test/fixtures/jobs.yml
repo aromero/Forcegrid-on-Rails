@@ -1,27 +1,27 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  title: MyString
-  description: MyString
-  start_time: 2010-03-15
-  end_time: 2010-03-15
-  location: MyString
-  budget: 9.99
-  pricing_method: MyString
-  service_contact: MyString
-  buyers_support_contact: MyString
-  status: 1
-  employer_id: 1
-
-two:
-  title: MyString
-  description: MyString
-  start_time: 2010-03-15
-  end_time: 2010-03-15
-  location: MyString
-  budget: 9.99
-  pricing_method: MyString
-  service_contact: MyString
-  buyers_support_contact: MyString
-  status: 1
-  employer_id: 1
+# # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# 
+# one:
+#   title: MyString
+#   description: MyString
+#   start_time: 2010-03-15
+#   end_time: 2010-03-15
+#   location: MyString
+#   budget: 9.99
+#   pricing_method: MyString
+#   service_contact: MyString
+#   buyers_support_contact: MyString
+#   status: 1
+#   employer_id: 1
+# 
+# two:
+#   title: MyString
+#   description: MyString
+#   start_time: 2010-03-15
+#   end_time: 2010-03-15
+#   location: MyString
+#   budget: 9.99
+#   pricing_method: MyString
+#   service_contact: MyString
+#   buyers_support_contact: MyString
+#   status: 1
+#   employer_id: 1

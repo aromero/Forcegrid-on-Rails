@@ -3,13 +3,27 @@ class UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update]
   
   def new
-    @user = User.new
-    @user.build_employer if params[:type] == 'employer'
-    @user.build_worker if params[:type] == 'worker'
+    case params[:type]
+    when 'employer'
+      @employer = Employer.new
+      @user = @employer.build_user
+    when 'worker'
+      @worker = Worker.new
+      10.times { @worker.skill_workers.build }
+      @user = @worker.build_user
+    end
   end
   
   def create
+    @owner = Employer.new(params[:employer]) if params[:employer]
+    if params[:worker]
+      @owner = Worker.new(params[:worker])
+    end
+    @owner.save
+    
     @user = User.new(params[:user])
+    @user.owner = @owner
+    
     if @user.save_without_session_maintenance
       @user.deliver_activation_instructions!
       flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"

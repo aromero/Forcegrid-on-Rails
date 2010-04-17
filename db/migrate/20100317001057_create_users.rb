@@ -15,6 +15,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :current_login_ip
       t.boolean :admin
       t.boolean :active
+      
+      t.string :owner_type
+      t.references :owner, :polymorphic => true
     end
     
     add_index :users, :email

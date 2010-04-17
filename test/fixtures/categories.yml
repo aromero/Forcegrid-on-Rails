@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  name: 'Servicios'
+  description: 'Servicios de IT'
+  category_id: 
+
+two:
+  id: 2
+  name: Productos
+  description: 'Productos'
+  category_id: 
+    
+three:
+  id: 3
+  name: 'Soporte'
+  description: 'Soporte'
+  category_id: 1
