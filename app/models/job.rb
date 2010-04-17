@@ -2,6 +2,8 @@ class Job < ActiveRecord::Base
   belongs_to :employer
   belongs_to :category
   has_one :bid
+  has_one :assigment
+  has_many :employers, :through => :assigments
   
   validates_presence_of :title, :description, :start_time, :end_time, :budget, :employer_id
   validate :time_interval

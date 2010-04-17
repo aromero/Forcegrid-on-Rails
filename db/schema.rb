@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100324021200) do
+ActiveRecord::Schema.define(:version => 20100415153309) do
+
+  create_table "assigments", :force => true do |t|
+    t.integer  "job_id"
+    t.integer  "worker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "bids", :force => true do |t|
     t.decimal  "price"

@@ -6,7 +6,6 @@ class Ability
     if user.admin?
       can :manage, :all
     else
-      can :read, :all
       if user.employer?
         can :create, Job
         can :update, Job do |job|
@@ -16,6 +15,7 @@ class Ability
       if user.worker?
         can :create, Bid
       end
+      can :read, Job
     end
   end
 end
