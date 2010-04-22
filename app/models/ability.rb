@@ -9,7 +9,7 @@ class Ability
       if user.employer?
         can :create, Job
         can :update, Job do |job|
-          job.try(:employer) == user.owner
+          job.try(:employer) == user.owner && job.draft?
         end
       end
       if user.worker?

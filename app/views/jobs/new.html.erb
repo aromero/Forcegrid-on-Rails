@@ -20,6 +20,14 @@
     <%= f.date_select :end_time %>
   </p>
   <p>
+    <%= f.label :project_start %><br />
+    <%= f.date_select :project_start %>
+  </p>
+  <p>
+    <%= f.label :project_finish %><br />
+    <%= f.date_select :project_finish %>
+  </p>
+  <p>
     <%= f.label :category %><br />
     <%= f.collection_select :category_id, Category.all, :id, :name %>
   </p>
@@ -28,7 +36,7 @@
     <%= f.text_field :location %>
   </p>
   <p>
-    <%= f.label :budget %><br />
+    <%= f.label :budget, 'Budget in Dollars' %><br />
     <%= f.text_field :budget %>
   </p>
   <p>
@@ -42,10 +50,6 @@
   <p>
     <%= f.label :buyers_support_contact %><br />
     <%= f.text_field :buyers_support_contact %>
-  </p>
-  <p>
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
   </p>
 	<% unless params[:employer_id] %>
   <p>  	

@@ -38,9 +38,9 @@ $(function() {
 			$(doc).find('category').each(function() {
 					var name = $(this).find('name').text();
 					var id = $(this).find('category-id').text();
-					$(selected).append('<option value=' + id +'>' + name + '</option>')
-					return false;
+					$(selected).append('<option value=' + id +'>' + name + '</option>');
 			});
+			return false;
 		})
 	});
 	
@@ -52,7 +52,7 @@ $(function() {
 			$(doc).find('skill').each(function() {
 					var name = $(this).find('name').text();
 					var id = $(this).find('id').text();
-					$(selected).append('<option value=' + id +'>' + name + '</option>')
+					$(selected).append('<option value=' + id +'>' + name + '</option>');
 			});
 		})
 	});

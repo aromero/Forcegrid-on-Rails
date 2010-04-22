@@ -15,3 +15,4 @@ end
 
 require 'authlogic'
 require 'cancan'
+require 'state_machine'
