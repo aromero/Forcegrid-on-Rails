@@ -1,3 +1,4 @@
+<%= 'Es Employer' if current_user.employer? %>
 <table>
   <tr>
     <th>Title</th>
@@ -23,10 +24,10 @@
     <td><%=h job.state.capitalize %></td>
 	<td><%= link_to 'Bid', new_job_bid_path(job) %></td>
 	<td><%= link_to 'Show', job %></td>
+	<% if can? :update, job -%>s
 	<% if job.draft? -%>
 	<td><%= link_to 'Publish', :controller => 'jobs', :action => 'publish', :id => job.id %></td>
 	<% end -%>
-	<% if can? :update, @jobs -%>
     <td><%= link_to 'Edit', edit_job_path(job) %></td>
     <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
     <% end -%>

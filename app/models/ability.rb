@@ -11,6 +11,9 @@ class Ability
         can :update, Job do |job|
           job.try(:employer) == user.owner && job.draft?
         end
+        can :publish, Job do |job|
+          job.try(:employer) == user.owner
+        end
       end
       if user.worker?
         can :create, Bid

@@ -52,7 +52,7 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     if @job.publish
       flash[:notice] = 'Job published successfully'
-      render root
+      redirect_to root_url
     end
   end
 end
