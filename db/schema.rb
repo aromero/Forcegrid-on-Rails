@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(:version => 20100415153309) do
     t.string   "description"
     t.date     "start_time"
     t.date     "end_time"
-    t.date     "project_start"
+    t.date     "project_begin"
     t.date     "project_finish"
     t.string   "location"
     t.decimal  "budget"

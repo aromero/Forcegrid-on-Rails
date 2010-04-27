@@ -7,10 +7,10 @@ class Job < ActiveRecord::Base
   
   validates_presence_of :title, :description, :start_time, 
       :end_time, :budget, :employer_id, 
-      :category_id, :project_start, :project_finish
+      :category_id, :project_begin, :project_finish
       
   validates_exclusion_of :state, :in => 'archived', :message => 'Job has finalized and can\'t be modified'
-  validate :time_interval, :project_start
+  validate :time_interval, :project
   
   validates_each :start_time, :end_time do |record, attr, value|
     record.errors.add attr, 'is in the past' unless value.future? || value.today?
@@ -18,12 +18,14 @@ class Job < ActiveRecord::Base
   
   def time_interval
     errors.add_to_base 'No ending date must be prior to the starting date' \
-       if (end_time.to_date <= start_time.to_date) || (project_finish.to_date <= project_start.to_date)
+       if (end_time.to_date <= start_time.to_date) || (project_finish.to_date <= project_begin.to_date)
   end
   
-  def project_start
-    errors.add_to_base 'All projects must start after the finalizing date for a job' \
-      if project_start.to_date < end_time.to_date
+  def project
+    #TO-DO ver por qué no funciona
+    #unless project_start > 2.days.from_now
+    #  errors.add_to_base 'All projects must start after the finalizing date for a job'
+    #end
   end
   
   named_scope :current, :conditions => ['start_time <= ? and end_time >= ?', Date.today, Date.today]

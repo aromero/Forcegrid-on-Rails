@@ -8,6 +8,7 @@
     <th>Location</th>
     <th>Budget</th>
     <th>Employer</th>
+    <th>Status</th>
   </tr>
 <% @jobs.each do |job| -%>
   <tr>
@@ -19,9 +20,12 @@
     <td><%=h job.location %></td>
     <td><%=h job.budget %></td>
     <td><%=h job.employer.full_name %></td>
-	<td><%= link_to "Bid", new_job_bid_path(job) %></td>
-	<td><%#= link_to "Show Assigments", show_job_assigments_path(job) %></td>
+    <td><%=h job.state.capitalize %></td>
+	<td><%= link_to 'Bid', new_job_bid_path(job) %></td>
 	<td><%= link_to 'Show', job %></td>
+	<% if job.draft? -%>
+	<td><%= link_to 'Publish', :controller => 'jobs', :action => 'publish', :id => job.id %></td>
+	<% end -%>
 	<% if can? :update, @jobs -%>
     <td><%= link_to 'Edit', edit_job_path(job) %></td>
     <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
