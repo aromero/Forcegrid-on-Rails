@@ -1,37 +1,6 @@
 <h1>Listado de Trabajos</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Category</th>
-    <th>Ends</th>
-    <th>Remaining</th>
-    <th>Location</th>
-    <th>Budget</th>
-    <th>Employer</th>
-  </tr>
-<% @jobs.each do |job| -%>
-  <tr>
-    <td><%=h job.title %></td>
-    <td><%=h job.description %></td>
-    <td><%=h job.category.name %></td>
-    <td><%=h job.end_time %></td>
-    <td><%=h distance_of_time_in_words(Time.now, job.end_time) %>
-    <td><%=h job.location %></td>
-    <td><%=h job.budget %></td>
-    <td><%=h job.status %></td>
-    <td><%=h job.employer.full_name %></td>
-	<td><%= link_to "Bid", new_job_bid_path(job) %></td>
-	<td><%#= link_to "Show Assigments", show_job_assigments_path(job) %></td>
-	<td><%= link_to 'Show', job %></td>
-	<% if can? :manage, @jobs -%>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
-    <% end -%>
-  </tr>
-<% end -%>
-</table>
+<%= render :partial => 'job_index' %>
 
 
 <% if can? :create, Job %>

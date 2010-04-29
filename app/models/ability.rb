@@ -9,6 +9,9 @@ class Ability
       if user.employer?
         can :create, Job
         can :update, Job do |job|
+          job.try(:employer) == user.owner && job.draft?
+        end
+        can :publish, Job do |job|
           job.try(:employer) == user.owner
         end
       end

@@ -32,27 +32,29 @@ $(function() {
 	
 	$('.skill select#category_category_id').change(function(e) {
 		var category_id = $(this).find('option:selected').val();
-		var selected = $(this).siblings('select:first').focus().removeAttr('disabled');
+		var selected = $(this).siblings('select:first').focus();
+		selected.removeAttr('disabled');
 		
 		$.get('../xhr/subcategories?id=' + category_id, function(doc){
 			$(doc).find('category').each(function() {
 					var name = $(this).find('name').text();
-					var id = $(this).find('category-id').text();
-					$(selected).append('<option value=' + id +'>' + name + '</option>')
-					return false;
+					var id = $(this).find('id').text();
+					$(selected).append('<option value=' + id +'>' + name + '</option>');
 			});
+			return false;
 		})
 	});
 	
 	$('.skill select#subcategory_subcategory_id').change(function(e) {
 		var category_id = $(this).find('option:selected').val();
-		var selected = $(this).siblings('select:last').focus().removeAttr('disabled');
+		var selected = $(this).siblings('select:last').focus();
+		selected.removeAttr('disabled');
 		
 		$.get('../xhr/skills?id=' + category_id, function(doc){
 			$(doc).find('skill').each(function() {
 					var name = $(this).find('name').text();
 					var id = $(this).find('id').text();
-					$(selected).append('<option value=' + id +'>' + name + '</option>')
+					$(selected).append('<option value=' + id +'>' + name + '</option>');
 			});
 		})
 	});

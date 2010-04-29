@@ -22,6 +22,7 @@ class JobsController < ApplicationController
     @job.employer ||= Employer.find(current_user.owner)
     
     if @job.save
+      @job.publish unless params[:draft]
       flash[:notice] = 'Job was successfully created.'
       redirect_to(@job)
     else
@@ -45,5 +46,13 @@ class JobsController < ApplicationController
     @job.destroy
 
     redirect_to jobs_url
+  end
+  
+  def publish
+    @job = Job.find(params[:id])
+    if @job.publish
+      flash[:notice] = 'Job published successfully'
+      redirect_to root_url
+    end
   end
 end

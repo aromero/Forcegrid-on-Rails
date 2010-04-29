@@ -1,29 +1,26 @@
 # Archivo de datos seed
 
 # Categorías
-cat = Array.new
-cat[0] = { :name => 'Servicios de Infraestructura', :description => 'Servicios de Infraestructura de IT' }
-cat[1] = { :name => 'Desarrollo', :description => 'Desarrollo de aplicaciones y sitios web' }
-categories = Category.create(cat)
+categories = Category.create([
+    { :name => 'Servicios de Infraestructura', :description => 'Servicios de Infraestructura de IT' }, 
+    { :name => 'Desarrollo', :description => 'Desarrollo de aplicaciones y sitios web' }])
 
 # Subcategorías
-sub_cat = Array.new
-sub_cat[0] = { :name => 'ITIL', :description => 'Gestión de Backups', :category_id => categories[0].id }
-sub_cat[1] = { :name => 'Virtualización', :description => 'Gestión de máquinas virtuales', :category_id => categories[0].id }
-sub_cat[2] = { :name => 'Web', :description => 'Ruby on Rails', :category_id => categories[1].id }
-sub_cat[3] = { :name => 'Desktop', :description => 'Python y Django', :category_id => categories[1].id }
-subcategories = Category.create(sub_cat)
+subcategories = Category.create([
+    { :name => 'ITIL', :description => 'Gestión de Backups', :category_id => categories[0].id }, 
+    { :name => 'Virtualización', :description => 'Gestión de máquinas virtuales', :category_id => categories[0].id }, 
+    { :name => 'Web', :description => 'Desarrollo Web', :category_id => categories[1].id }, 
+    { :name => 'Desktop', :description => 'Fat Clients', :category_id => categories[1].id }])
 
 # Skills
-skill = Array.new
-skill[0] = { :name => 'Configuration Management', :category_id => subcategories[0].id }
-skill[1] = { :name => 'Incident Management', :category_id => subcategories[0].id }
-skill[2] = { :name => 'Provisioning', :category_id => subcategories[1].id }
-skill[3] = { :name => 'Ruby on Rails', :category_id => subcategories[2].id }
-skill[4] = { :name => 'Django', :category_id => subcategories[2].id }
-skill[5] = { :name => 'Swing', :category_id => subcategories[2].id }
-skill[6] = { :name => 'Windows forms', :category_id => subcategories[2].id }
-skills = Skill.create(skill)
+skills = Skill.create([
+    { :name => 'Configuration Management', :category_id => subcategories[0].id }, 
+    { :name => 'Incident Management', :category_id => subcategories[0].id }, 
+    { :name => 'Provisioning', :category_id => subcategories[1].id }, 
+    { :name => 'Ruby on Rails', :category_id => subcategories[2].id }, 
+    { :name => 'Django', :category_id => subcategories[2].id }, 
+    { :name => 'Swing', :category_id => subcategories[3].id }, 
+    { :name => 'Windows forms', :category_id => subcategories[3].id }])
 
 # Usuario administrador
 admin = User.create(:email => 'fernando.parra@itparc.com', :password => 'itparc', :admin => true)
@@ -41,3 +38,9 @@ user2 = User.new(:email => 'accountvalidation@itparc.com', :password => 'itparc'
 user2.owner = Employer.new(:first_name => 'Ariel', :last_name => 'Romero', :company_name => 'Microstrategy', :address1 => 'Alem 1000')
 user2.save
 user2.activate!
+
+#Sample Job
+job = Job.create(:title => 'Web Site', :description => 'Necesito un website',
+      :start_time => 3.days.from_now, :end_time => 15.days.from_now,
+      :employer_id => user2.id, :category_id => Category.first.id,
+      :project_begin => 17.days.from_now, :project_finish => 22.days.from_now)
