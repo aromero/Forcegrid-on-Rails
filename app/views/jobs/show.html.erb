@@ -45,8 +45,12 @@
 
 <p>
   <b>Employer:</b>
-  <%=h @job.employer_id %>
+  <%=h @job.employer.full_name %>
 </p>
+
+<h2>Bids</h2>
+
+<%= render :partial => 'bids/bid_index', :object => @job.bids %>
 
 
 <%= link_to 'Edit', edit_job_path(@job) %> |

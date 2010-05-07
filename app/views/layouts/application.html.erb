@@ -25,5 +25,11 @@
 <%= yield %>
 
 </body>
+<% if Rails.env == 'development' %>
 <%= javascript_include_tag "jquery-1.4.2.js", "application.js", :cache => true %>
+<% else %>
+<script src="http://www.google.com/jsapi"></script>
+<script>google.load("jquery", "1.4.2");</script>
+<%= javascript_include_tag "application.js", :cache => true %>
+<% end %>
 </html>

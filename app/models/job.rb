@@ -1,8 +1,8 @@
 class Job < ActiveRecord::Base
   belongs_to :employer
   belongs_to :category
-  has_one :bid
   has_one :assigment
+  has_many :bids
   has_many :employers, :through => :assigments
   
   validates_presence_of :title, :description, :start_time, 
@@ -28,7 +28,7 @@ class Job < ActiveRecord::Base
     #end
   end
   
-  named_scope :current, :conditions => ['start_time <= ? and end_time >= ?', Date.today, Date.today]
+  named_scope :current, :conditions => ['start_time <= ? and end_time >= ?', Date.today, Date.today], :include => [:bids]
   
   state_machine :state, :initial => :draft do
     event :publish do
