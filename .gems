@@ -1,2 +1,4 @@
 rails
 authlogic
+cancan
+state_machine
