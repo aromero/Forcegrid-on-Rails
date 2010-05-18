@@ -43,4 +43,8 @@ class Job < ActiveRecord::Base
       transition :ongoing => :archived
     end
   end
+  
+  def self.search(search)
+    current.find(:all, :conditions => ['title LIKE ?', "%#{search}%"])
+  end
 end
