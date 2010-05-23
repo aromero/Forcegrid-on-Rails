@@ -11,7 +11,7 @@ Rails::Initializer.run do |config|
   config.plugins = [ :all ]
   config.time_zone = 'UTC'
   # config.i18n.default_locale = :de
-  require 'cancan'
-  require 'state_machine'
+  config.gem 'cancan'
+  config.gem 'state_machine'
 end
 require 'authlogic'
