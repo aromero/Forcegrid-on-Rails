@@ -1,3 +1,4 @@
+# coding: utf-8
 # Archivo de datos seed
 
 # Categorías
