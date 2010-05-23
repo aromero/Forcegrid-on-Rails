@@ -1,11 +1,7 @@
 <h1>ITParc Admin</h1>
-<ul>
-	<li><%= link_to "Employers Admin", employers_path %></li>
-	<li><%= link_to "Jobs Admin", jobs_path %></li>
-	<li><%= link_to "Workers Admin", workers_path %></li>
-	<%= render 'jobs/job_index' %>
-	
-	<% if can? :create, Job %>
-    <%= link_to 'New job', new_job_path %>
-    <% end %>
-</ul>
+
+<%= render 'jobs/job_index' %>
+
+<% if can? :create, Job %>
+<%= link_to 'New job', new_job_path %>
+<% end %>

@@ -41,8 +41,13 @@
 
 <p style="color: green"><%= flash[:notice] %><%= flash[:error] %></p>
 
-<%= yield %>
-
+<!-- START Content 1 col Template -->
+	<div id="content" class="singleCol clearfix">
+		<div class="firstCol">
+        <%= yield %>
+		</div>
+	</div>
+<!-- END Content 1 col Template -->
 
 <!-- START Footer -->
     <div id="footer">
