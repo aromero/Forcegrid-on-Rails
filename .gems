@@ -1,4 +1,4 @@
-rails
+rails --version 2.3.6
 authlogic
 cancan
 state_machine
