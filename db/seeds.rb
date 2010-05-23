@@ -3,14 +3,14 @@
 
 # Categorías
 categories = Category.create([
-    { :name => 'Servicios de Infraestructura', :description => 'Servicios de Infraestructura de IT' }, 
-    { :name => 'Desarrollo', :description => 'Desarrollo de aplicaciones y sitios web' }])
+    { :name => 'Infraestructure services', :description => 'IT Infrastructure services' }, 
+    { :name => 'Development', :description => 'App and web development' }])
 
 # Subcategorías
 subcategories = Category.create([
-    { :name => 'ITIL', :description => 'Gestión de Backups', :category_id => categories[0].id }, 
-    { :name => 'Virtualización', :description => 'Gestión de máquinas virtuales', :category_id => categories[0].id }, 
-    { :name => 'Web', :description => 'Desarrollo Web', :category_id => categories[1].id }, 
+    { :name => 'ITIL', :description => 'Backup Management', :category_id => categories[0].id }, 
+    { :name => 'Virtualization', :description => 'Virtual Machine Management', :category_id => categories[0].id }, 
+    { :name => 'Web', :description => 'Web development', :category_id => categories[1].id }, 
     { :name => 'Desktop', :description => 'Fat Clients', :category_id => categories[1].id }])
 
 # Skills
@@ -41,7 +41,7 @@ user2.save
 user2.activate!
 
 #Sample Job
-job = Job.create(:title => 'Web Site', :description => 'Necesito un website',
+job = Job.create(:title => 'Web Site', :description => 'I need a website',
       :start_time => 3.days.from_now, :end_time => 15.days.from_now,
       :employer_id => user2.id, :category_id => Category.first.id,
       :project_begin => 17.days.from_now, :project_finish => 22.days.from_now)
