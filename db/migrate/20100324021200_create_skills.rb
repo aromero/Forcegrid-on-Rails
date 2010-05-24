@@ -12,7 +12,7 @@ class CreateSkills < ActiveRecord::Migration
     drop_table :skills
   end
   
-  create_table :skill_workers, :id => false do |t|
+  create_table :skill_workers do |t|
     t.references :skill, :worker
     t.timestamps
   end
