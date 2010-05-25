@@ -4,6 +4,7 @@ class Job < ActiveRecord::Base
   has_one :assigment
   has_many :bids
   has_many :employers, :through => :assigments
+  has_many :milestones
   
   validates_presence_of :title, :description, :start_time, 
       :end_time, :budget, :employer_id, 

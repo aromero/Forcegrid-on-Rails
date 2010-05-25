@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
   map.activate '/activate/:id', :controller => 'activations', :action => 'create'
+  map.choose_account 'account/choose', :controller => 'users', :action => 'choose'
   
   map.root :controller => "landing"
 

@@ -16,7 +16,7 @@
 <!-- START Header -->
 	<div id="header">
 		<div class="headerTop clearfix">
-			<div class="logo"><a href="#"><img src="/images/logo_forceGrid.png" alt="ForceGrid"></a></div>
+			<div class="logo"><a href="/"><img src="/images/logo_forceGrid.png" alt="ForceGrid"></a></div>
 			<div class="headerRightContent">
 				<div class="headerSecNav clearfix">
                     <%= render :partial => 'layouts/login_menu' %>
@@ -29,20 +29,24 @@
 		<div class="headerMainNav clearfix">
 			<span class="left">&nbsp;</span>
 			<ul>
-				<li class="first"><a href="why_us.html">Why us</a></li>
-				<li><a href="how_we_work.html">How we work</a></li>
-				<li><a href="resources.html">Resources</a></li>
-				<li><a href="about_us.html">About us</a></li>
+				<li class="first"><a href="/why_us.html">Why us</a></li>
+				<li><a href="/how_we_work.html">How we work</a></li>
+				<li><a href="/resources.html">Resources</a></li>
+				<li><a href="/about_us.html">About us</a></li>
 			</ul>
 			<span class="right">&nbsp;</span>
 		</div>
 	</div>
 <!-- END Header -->
 
-<p style="color: green"><%= flash[:notice] %><%= flash[:error] %></p>
-
-<%= yield %>
-
+<!-- START Content 1 col Template -->
+	<div id="content" class="singleCol clearfix">
+		<div class="firstCol">
+		<p style="color: green"><%= flash[:notice] %><%= flash[:error] %></p>
+        <%= yield %>
+		</div>
+	</div>
+<!-- END Content 1 col Template -->
 
 <!-- START Footer -->
     <div id="footer">
