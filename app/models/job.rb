@@ -1,10 +1,14 @@
 class Job < ActiveRecord::Base
+  #fields: title, description, start_time, end_time, project_begin, project_finish, location, budget, pricing_method
+  #service_contract, buyers_support_contract, state, employer_id, category_id, visitor_count, created_at, updated_at
+  
   belongs_to :employer
   belongs_to :category
   has_one :assigment
   has_many :bids
   has_many :employers, :through => :assigments
   has_many :milestones
+  accepts_nested_attributes_for :milestones, :reject_if => proc { |attributes| attributes['title'].blank? }
   
   validates_presence_of :title, :description, :start_time, 
       :end_time, :budget, :employer_id, 

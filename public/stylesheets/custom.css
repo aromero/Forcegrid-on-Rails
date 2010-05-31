@@ -64,12 +64,17 @@ EM {
 	font-style:italic;
 }
 
-INPUT[type=text],
-INPUT[type=password],
-TEXTAREA {
+INPUT[type=text], INPUT[type=password] {
 /* setting a consistent width, 160px; */
-	width:15.25em;
-	*width:14.9em;
+	width:14.25em;
+	*width:13.9em;
+}
+
+TEXTAREA {
+	width:25.25em;
+	*width:24.9em;
+	height: 8.0em;
+	padding: 5px;
 }
 
 TABLE {
@@ -79,13 +84,17 @@ TABLE {
 INPUT[type=text],
 INPUT[type=password],
 INPUT[type=button],
-INPUT[type=submit] {
+INPUT[type=submit], SELECT {
 	border:1px solid;
 	padding: 2px 0 2px 5px;
 }
 
 INPUT[type=checkbox]{
 	margin-right:7px;
+}
+
+SELECT {
+	padding: 1px 0 1px 3px;
 }
 
 BR, .clear {
@@ -131,6 +140,12 @@ A {
 	font-weight: bold;
 }
 
+.line {
+	border-top: 1px dashed #B9B9B9;
+	height: 1px;
+	margin: 10px 0;
+}
+
 /* END General Styles */
 
 
@@ -155,6 +170,10 @@ A {
 }
 
 .headerTop .headerRightContent {
+	float: right;
+}
+
+.headerTop .headerRightContent .headerSecNav UL {
 	float: right;
 }
 
@@ -196,8 +215,14 @@ A {
 	color: #5F5F5F;
 }
 
-.headerTop .headerRightContent .search .hiliteButton {
+.headerTop .headerRightContent .search SPAN.hiliteButton {
+	margin: 0 0 5px;
+}
+
+.headerTop .headerRightContent .search SPAN.hiliteButton INPUT {
 	margin: 0!important;
+	border: none !important;
+	color: #FFF !important;
 }
 
 .headerMainNav {
@@ -390,6 +415,42 @@ A.mainButton SPAN:hover, A.mainButton:hover SPAN {
     background: transparent url(../imgs/buttons.png) no-repeat left -70px;
 }
 
+/* main buttons for INPUTS */
+SPAN.mainButton {
+    background: transparent url(../imgs/buttons.png) no-repeat right -33px;
+    color: #FFF;
+    display: block;
+    float: left;
+    height: 33px;
+	margin: 10px 6px 10px 0;
+    padding-right: 7px;
+    text-decoration: none;
+	text-transform: lowercase;
+	font-weight: bold;
+}
+
+SPAN.mainButton:hover {
+	background: transparent url(../imgs/buttons.png) no-repeat right -103px;
+}
+
+SPAN.mainButton INPUT {
+    background: transparent url(../imgs/buttons.png) no-repeat left top;
+    display: block;
+    line-height: 14px;
+    padding: 6px 8px 10px 15px;
+	height: 33px;
+	border: none;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: lowercase;
+}
+
+SPAN.mainButton INPUT:hover, SPAN.mainButton:hover INPUT {
+    background: transparent url(../imgs/buttons.png) no-repeat left -70px;
+}
+
+
 /* secondary buttons */
 A.secondaryButton {
     background: transparent url(../imgs/buttons.png) no-repeat right -163px;
@@ -397,7 +458,7 @@ A.secondaryButton {
     display: block;
     float: left;
     height: 24px;
-	margin: 10px 6px 10px 0;
+	margin: 14px 6px 6px 0;
     padding-right: 7px;
     text-decoration: none;
 	text-transform: lowercase;
@@ -420,9 +481,44 @@ A.secondaryButton SPAN:hover, A.secondaryButton:hover SPAN {
     background: transparent url(../imgs/buttons.png) no-repeat left -191px;
 }
 
+/* secondary buttons for INPUTS */
+SPAN.secondaryButton {
+    background: transparent url(../imgs/buttons.png) no-repeat right -163px;
+    color: #FFF;
+    display: block;
+    float: left;
+    height: 24px;
+	margin: 10px 6px 10px 0;
+    padding-right: 7px;
+    text-decoration: none;
+	text-transform: lowercase;
+	font-weight: bold;
+}
+
+SPAN.secondaryButton:hover {
+    background: transparent url(../imgs/buttons.png) no-repeat right -215px;
+}
+
+SPAN.secondaryButton INPUT {
+    background: transparent url(../imgs/buttons.png) no-repeat left -139px;
+    display: block;
+    line-height: 14px;
+    padding: 3px 7px 6px 13px;
+	height: 24px;
+	border: none;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: lowercase;
+}
+
+SPAN.secondaryButton INPUT:hover, SPAN.secondaryButton:hover INPUT {
+    background: transparent url(../imgs/buttons.png) no-repeat left -191px;
+}
+
 /* hilite buttons */
 A.hiliteButton {
-	 background: transparent url(../imgs/buttons.png) no-repeat right -311px;
+	background: transparent url(../imgs/buttons.png) no-repeat right -311px;
     color: #FFF;
     display: block;
     float: left;
@@ -450,6 +546,53 @@ A.hiliteButton SPAN {
 A.hiliteButton SPAN:hover, A.hiliteButton:hover SPAN {
     background: transparent url(../imgs/buttons.png) no-repeat left -277px;
 }
+
+/* hilite buttons for INPUTS */
+SPAN.hiliteButton {
+	background: transparent url(../imgs/buttons.png) no-repeat right -311px;
+    color: #FFF;
+    display: block;
+    float: left;
+    height: 34px;
+	margin: 10px 6px 10px 0;
+    padding-right: 37px;
+    text-decoration: none;
+	text-transform: lowercase;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+SPAN.hiliteButton:hover {
+    background: transparent url(../imgs/buttons.png) no-repeat right -345px;
+}
+
+SPAN.hiliteButton INPUT {
+	background: transparent url(../imgs/buttons.png) no-repeat left -243px;
+    display: block;
+    line-height: 14px;
+    padding: 7px 8px 10px 14px;
+	height: 34px;
+	border: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: lowercase;
+	font-family: Trebuchet MS,Arial,Helvetica;
+}
+
+SPAN.hiliteButton INPUT:hover, SPAN.hiliteButton:hover INPUT {
+    background: transparent url(../imgs/buttons.png) no-repeat left -277px;
+}
+
+/* General Buttons */
+.rowButton { 
+	background: #F9F8F8; 
+}
+
+.rowButton .mainButton { 
+	margin: 0 20px 20px;
+}
+
 
 /* END Buttons */
 
@@ -724,42 +867,72 @@ H5 {
    display: block !important;
 }
 
+/* General Boxes */
+
+.boxNoTitle {
+	margin-top: 32px;
+}
+
+.boxNoTitle SPAN.arrow {
+	display: none;
+}
+
 /* END Rounded Corners Boxes */
 
-/* Rails form errors and flashes */
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+/* START Forms */
+
+.form INPUT[type=text], .form INPUT[type=password], .form TEXTAREA, .form SELECT {
+	border: 1px solid #DCDBDB;
+	background: #F4F4F4;
+	margin: 5px 0;
+	color: #898989;
+	font-size: 12px;
 }
 
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+.form LABEL {
+	color: #5F5F5F;
 }
 
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
+.form INPUT, .form TEXTAREA, .form SELECT {
+	display: block;
 }
 
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
+.form .inline INPUT, .form .inline TEXTAREA, .form .inline SELECT {
+	display: inline;
 }
 
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
+.singleForm {
+	margin: 15px 0;
+	padding: 0 10px;
 }
-/* END Rails form errors and flashes */
+
+.col2Form {
+	width: 45%;
+	float: left;
+	margin: 15px 0;
+	padding: 0 10px;
+}
+
+.colMultiForm {
+	width: auto;
+	float: left;
+	margin: 15px 0;
+	padding: 0 10px;
+}
+
+
+.fixed {
+	width:25.25em;
+	*width:24.9em;
+}
+
+.fixedSmall {
+	width:3.25em !important;
+	*width:2.9em !important;
+}
+
+.fixedMedium {
+	width:9.25em !important;
+	*width:8.9em !important;
+}
+/* END Forms */
