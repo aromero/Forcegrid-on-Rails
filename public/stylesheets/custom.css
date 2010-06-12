@@ -91,6 +91,7 @@ INPUT[type=submit], SELECT {
 
 INPUT[type=checkbox]{
 	margin-right:7px;
+	border: 1px solid #DCDBDB;
 }
 
 SELECT {
@@ -166,7 +167,7 @@ A {
 }
 
 .headerTop .logo IMG {
-	margin: 25px 10px 10px 15px; 
+	margin: 34px 10px 10px 15px; 
 }
 
 .headerTop .headerRightContent {
@@ -236,7 +237,7 @@ A {
 }
 
 .headerMainNav .left {
-	background: #1CB6D2 url(../imgs/backgrounds.png) no-repeat;
+	background: #1CB6D2 url(../images/backgrounds.png) no-repeat;
 	height: 33px;
 	width: 7px;
 	left: 0;
@@ -245,7 +246,7 @@ A {
 }
 
 .headerMainNav .right {
-	background: #1CB6D2 url(../imgs/backgrounds.png) no-repeat -7px;
+	background: #1CB6D2 url(../images/backgrounds.png) no-repeat -7px;
 	height: 33px;
 	width: 7px;
 	right: 0;
@@ -329,6 +330,55 @@ A {
 	margin: 0;
 }
 
+.hiliteContent {
+  background: url(../images/bg_grayBottom.gif) repeat-x bottom;
+  min-height: 300px;
+}
+
+.hiliteContainer {
+  width:784px; 
+  margin: 20px auto 0;
+}
+
+.hiliteContainer .signUpBuyer {
+  float:left; 
+  width:380px;
+}
+
+.hiliteContainer .signUpProvider {
+  float:right; 
+  width:380px;
+}
+
+.hiliteContainer .signUpBuyer .gradientBlue, .hiliteContainer .signUpProvider .gradientDarkBlue {
+  border-bottom: none;
+}
+
+.hiliteContainer .signUpBuyer P, .hiliteContainer .signUpProvider P {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 10px;
+}
+
+.hiliteContainer .signUpBuyer P{
+  color: #1CB6D2;
+}
+
+.hiliteContainer .signUpProvider P {
+  color: #6295D5;
+}
+
+.hiliteContainer .signUpBuyer .line, .hiliteContainer .signUpProvider .line {
+  margin: 25px 0 10px 0;
+  clear: right;
+}
+
+.hiliteContainer .signUpBuyer .mainButtonLight, .hiliteContainer .signUpProvider .mainButton {
+  font-size: 14px;
+  margin: 10px 6px 30px 0;
+}
+
+
 /* END Content Styles */
 
 /* START Footer Styles */
@@ -387,7 +437,7 @@ A {
 
 /* main buttons */
 A.mainButton {
-    background: transparent url(../imgs/buttons.png) no-repeat right -33px;
+    background: transparent url(/images/buttons.png) no-repeat right -33px;
     color: #FFF;
     display: block;
     float: left;
@@ -400,11 +450,11 @@ A.mainButton {
 }
 
 A.mainButton:hover {
-    background: transparent url(../imgs/buttons.png) no-repeat right -103px;
+    background: transparent url(/images/buttons.png) no-repeat right -103px;
 }
 
 A.mainButton SPAN {
-    background: transparent url(../imgs/buttons.png) no-repeat left top;
+    background: transparent url(/images/buttons.png) no-repeat left top;
     display: block;
     line-height: 14px;
     padding: 9px 10px 8px 18px;
@@ -412,12 +462,77 @@ A.mainButton SPAN {
 }
 
 A.mainButton SPAN:hover, A.mainButton:hover SPAN {
-    background: transparent url(../imgs/buttons.png) no-repeat left -70px;
+    background: transparent url(/images/buttons.png) no-repeat left -70px;
 }
 
 /* main buttons for INPUTS */
 SPAN.mainButton {
-    background: transparent url(../imgs/buttons.png) no-repeat right -33px;
+  background: transparent url(/images/buttons.png) no-repeat right -33px;
+  color: #FFF;/images
+  display: block;
+  float: left;
+  height: 33px;
+	margin: 10px 6px 10px 0;
+  padding-right: 7px;
+  text-decoration: none;
+	text-transform: lowercase;
+	font-weight: bold;
+}
+
+SPAN.mainButton:hover {
+	background: transparent url(/images/buttons.png) no-repeat right -103px;
+}
+
+SPAN.mainButton INPUT {
+  background: transparent url(/images/buttons.png) no-repeat left top;
+  display: block;
+  line-height: 14px;
+  padding: 6px 8px 10px 15px;
+	height: 33px;
+	border: none;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: lowercase;
+}
+
+SPAN.mainButton INPUT:hover, SPAN.mainButton:hover INPUT {
+    background: transparent url(/images/buttons.png) no-repeat left -70px;
+}
+
+/* main light buttons */
+A.mainButtonLight {
+  background: transparent url(/images/buttons.png) no-repeat right -416px;
+  color: #FFF;
+  display: block;
+  float: left;
+  height: 33px;
+	margin: 10px 6px 10px 0;
+  padding-right: 7px;
+  text-decoration: none;
+	text-transform: lowercase;
+	font-weight: bold;
+}
+
+A.mainButtonLight:hover {
+    background: transparent url(/images/buttons.png) no-repeat right -485px;
+}
+
+A.mainButtonLight SPAN {
+  background: transparent url(/images/buttons.png) no-repeat left -383px;
+  display: block;
+  line-height: 14px;
+  padding: 9px 10px 8px 18px;
+	height: 33px;
+}
+
+A.mainButtonLight SPAN:hover, A.mainButtonLight:hover SPAN {
+    background: transparent url(/images/buttons.png) no-repeat left -452px;
+}
+
+/* main light buttons for INPUTS */
+SPAN.mainButtonLight {
+    background: transparent url(/images/buttons.png) no-repeat right -416px;
     color: #FFF;
     display: block;
     float: left;
@@ -429,12 +544,12 @@ SPAN.mainButton {
 	font-weight: bold;
 }
 
-SPAN.mainButton:hover {
-	background: transparent url(../imgs/buttons.png) no-repeat right -103px;
+SPAN.mainButtonLight:hover {
+	background: transparent url(/images/buttons.png) no-repeat right -485px;
 }
 
-SPAN.mainButton INPUT {
-    background: transparent url(../imgs/buttons.png) no-repeat left top;
+SPAN.mainButtonLight INPUT {
+    background: transparent url(/images/buttons.png) no-repeat left -383px;
     display: block;
     line-height: 14px;
     padding: 6px 8px 10px 15px;
@@ -446,14 +561,15 @@ SPAN.mainButton INPUT {
 	text-transform: lowercase;
 }
 
-SPAN.mainButton INPUT:hover, SPAN.mainButton:hover INPUT {
-    background: transparent url(../imgs/buttons.png) no-repeat left -70px;
+SPAN.mainButtonLight INPUT:hover, SPAN.mainButtonLight:hover INPUT {
+    background: transparent url(/images/buttons.png) no-repeat left -452px;
 }
+
 
 
 /* secondary buttons */
 A.secondaryButton {
-    background: transparent url(../imgs/buttons.png) no-repeat right -163px;
+    background: transparent url(/images/buttons.png) no-repeat right -163px;
     color: #FFF;
     display: block;
     float: left;
@@ -466,24 +582,24 @@ A.secondaryButton {
 }
 
 A.secondaryButton:hover {
-    background: transparent url(../imgs/buttons.png) no-repeat right -215px;
+    background: transparent url(/images/buttons.png) no-repeat right -215px;
 }
 
 A.secondaryButton SPAN {
-    background: transparent url(../imgs/buttons.png) no-repeat left -139px;
+    background: transparent url(/images/buttons.png) no-repeat left -139px;
     display: block;
     line-height: 14px;
     padding: 5px 10px 4px 18px;
-	height: 24px;
+  	height: 24px;
 }
 
 A.secondaryButton SPAN:hover, A.secondaryButton:hover SPAN {
-    background: transparent url(../imgs/buttons.png) no-repeat left -191px;
+    background: transparent url(/images/buttons.png) no-repeat left -191px;
 }
 
 /* secondary buttons for INPUTS */
 SPAN.secondaryButton {
-    background: transparent url(../imgs/buttons.png) no-repeat right -163px;
+    background: transparent url(/images/buttons.png) no-repeat right -163px;
     color: #FFF;
     display: block;
     float: left;
@@ -496,11 +612,11 @@ SPAN.secondaryButton {
 }
 
 SPAN.secondaryButton:hover {
-    background: transparent url(../imgs/buttons.png) no-repeat right -215px;
+    background: transparent url(/images/buttons.png) no-repeat right -215px;
 }
 
 SPAN.secondaryButton INPUT {
-    background: transparent url(../imgs/buttons.png) no-repeat left -139px;
+    background: transparent url(/images/buttons.png) no-repeat left -139px;
     display: block;
     line-height: 14px;
     padding: 3px 7px 6px 13px;
@@ -513,12 +629,12 @@ SPAN.secondaryButton INPUT {
 }
 
 SPAN.secondaryButton INPUT:hover, SPAN.secondaryButton:hover INPUT {
-    background: transparent url(../imgs/buttons.png) no-repeat left -191px;
+    background: transparent url(/images/buttons.png) no-repeat left -191px;
 }
 
 /* hilite buttons */
 A.hiliteButton {
-	background: transparent url(../imgs/buttons.png) no-repeat right -311px;
+	background: transparent url(/images/buttons.png) no-repeat right -311px;
     color: #FFF;
     display: block;
     float: left;
@@ -532,11 +648,11 @@ A.hiliteButton {
 }
 
 A.hiliteButton:hover {
-    background: transparent url(../imgs/buttons.png) no-repeat right -345px;
+    background: transparent url(/images/buttons.png) no-repeat right -345px;
 }
 
 A.hiliteButton SPAN {
-	background: transparent url(../imgs/buttons.png) no-repeat left -243px;
+	background: transparent url(/images/buttons.png) no-repeat left -243px;
     display: block;
     line-height: 14px;
     padding: 9px 10px 8px 18px;
@@ -544,12 +660,12 @@ A.hiliteButton SPAN {
 }
 
 A.hiliteButton SPAN:hover, A.hiliteButton:hover SPAN {
-    background: transparent url(../imgs/buttons.png) no-repeat left -277px;
+    background: transparent url(/images/buttons.png) no-repeat left -277px;
 }
 
 /* hilite buttons for INPUTS */
 SPAN.hiliteButton {
-	background: transparent url(../imgs/buttons.png) no-repeat right -311px;
+	background: transparent url(/images/buttons.png) no-repeat right -311px;
     color: #FFF;
     display: block;
     float: left;
@@ -563,11 +679,11 @@ SPAN.hiliteButton {
 }
 
 SPAN.hiliteButton:hover {
-    background: transparent url(../imgs/buttons.png) no-repeat right -345px;
+    background: transparent url(/images/buttons.png) no-repeat right -345px;
 }
 
 SPAN.hiliteButton INPUT {
-	background: transparent url(../imgs/buttons.png) no-repeat left -243px;
+	background: transparent url(/images/buttons.png) no-repeat left -243px;
     display: block;
     line-height: 14px;
     padding: 7px 8px 10px 14px;
@@ -581,7 +697,7 @@ SPAN.hiliteButton INPUT {
 }
 
 SPAN.hiliteButton INPUT:hover, SPAN.hiliteButton:hover INPUT {
-    background: transparent url(../imgs/buttons.png) no-repeat left -277px;
+    background: transparent url(/images/buttons.png) no-repeat left -277px;
 }
 
 /* General Buttons */
@@ -593,6 +709,10 @@ SPAN.hiliteButton INPUT:hover, SPAN.hiliteButton:hover INPUT {
 	margin: 0 20px 20px;
 }
 
+.rowButton SPAN.buttonMsg { 
+	margin-top: 11px; 
+	float: left;
+}
 
 /* END Buttons */
 
@@ -608,6 +728,12 @@ H3 {
 	color: #9E9E9E;
 	font-size: 18px;
 	padding: 5px 0;
+}
+
+H3 > SPAN {
+	color: #1CB6D2;
+	font-size: 14px;
+	font-weight: normal;
 }
 
 H4 {
@@ -635,7 +761,7 @@ H5 {
 
 .simpleGray .arrow {
 	position: absolute;
-	background: transparent url(../imgs/box_simpleGray_arrow.png) no-repeat;
+	background: transparent url(/images/box_simpleGray_arrow.png) no-repeat;
 	width: 16px;
 	height: 8px;
 	left: 15px;
@@ -652,11 +778,11 @@ H5 {
 }
 
 .simpleGray .roundtop { 
-	background: url(../imgs/box_simpleGray_tr.png) no-repeat top right; 
+	background: url(/images/box_simpleGray_tr.png) no-repeat top right; 
 }
 
 .simpleGray .roundbottom {
-	background: url(../imgs/box_simpleGray_br.png) no-repeat top right; 
+	background: url(/images/box_simpleGray_br.png) no-repeat top right; 
 }
 
 .simpleGray IMG.corner {
@@ -674,7 +800,7 @@ H5 {
 
 .simpleBlue .arrow {
 	position: absolute;
-	background: transparent url(../imgs/box_simpleBlue_arrow.png) no-repeat;
+	background: transparent url(/images/box_simpleBlue_arrow.png) no-repeat;
 	width: 16px;
 	height: 8px;
 	left: 15px;
@@ -691,11 +817,11 @@ H5 {
 }
 
 .simpleBlue .roundtop { 
-	background: url(../imgs/box_simpleBlue_tr.png) no-repeat top right; 
+	background: url(/images/box_simpleBlue_tr.png) no-repeat top right; 
 }
 
 .simpleBlue .roundbottom {
-	background: url(../imgs/box_simpleBlue_br.png) no-repeat top right; 
+	background: url(/images/box_simpleBlue_br.png) no-repeat top right; 
 }
 
 .simpleBlue IMG.corner {
@@ -715,7 +841,7 @@ H5 {
 
 .gradientBlue .arrow {
 	position: absolute;
-	background: transparent url(../imgs/box_gradientBlue_arrow.png) no-repeat;
+	background: transparent url(/images/box_gradientBlue_arrow.png) no-repeat;
 	width: 16px;
 	height: 8px;
 	left: 15px;
@@ -723,7 +849,7 @@ H5 {
 
 .gradientBlue .roundcont {
 	width: 100%;
-	background: transparent url(../imgs/box_gradientBlue_bg.png) repeat-x left top;
+	background: transparent url(/images/box_gradientBlue_bg.png) repeat-x left top;
 	color: #666;
 }
 
@@ -732,10 +858,51 @@ H5 {
 }
 
 .gradientBlue .roundtop { 
-	background: url(../imgs/box_gradientBlue_tr.png) no-repeat top right; 
+	background: url(/images/box_gradientBlue_tr.png) no-repeat top right; 
 }
 
 .gradientBlue IMG.corner {
+   width: 15px;
+   height: 81px;
+   border: none;
+   display: block !important;
+}
+
+/* Gradient Dark Blue */
+.gradientDarkBlue {
+	position: relative;
+	margin: 10px 0 35px;
+	border-bottom: 1px dashed #D3D3D3;
+	padding-bottom: 30px;
+}
+
+.gradientDarkBlue H1 {
+	color: #6295D5;
+}
+
+.gradientDarkBlue .arrow {
+	position: absolute;
+	background: transparent url(/images/box_gradientDarkBlue_arrow.png) no-repeat;
+	width: 16px;
+	height: 8px;
+	left: 15px;
+}
+
+.gradientDarkBlue .roundcont {
+	width: 100%;
+	background: transparent url(/images/box_gradientDarkBlue_bg.png) repeat-x left top;
+	color: #666;
+}
+
+.gradientDarkBlue .roundcont .boxContent {
+	margin: -45px 15px 5px;
+}
+
+.gradientDarkBlue .roundtop { 
+	background: url(/images/box_gradientDarkBlue_tr.png) no-repeat top right; 
+}
+
+.gradientDarkBlue IMG.corner {
    width: 15px;
    height: 81px;
    border: none;
@@ -752,7 +919,7 @@ H5 {
 
 .gradientGray .arrow {
 	position: absolute;
-	background: transparent url(../imgs/box_gradientGray_arrow.png) no-repeat;
+	background: transparent url(/images/box_gradientGray_arrow.png) no-repeat;
 	width: 16px;
 	height: 8px;
 	left: 15px;
@@ -760,7 +927,7 @@ H5 {
 
 .gradientGray .roundcont {
 	width: 100%;
-	background: transparent url(../imgs/box_gradientGray_bg.png) repeat-x left top;
+	background: transparent url(/images/box_gradientGray_bg.png) repeat-x left top;
 	color: #666;
 }
 
@@ -769,7 +936,7 @@ H5 {
 }
 
 .gradientGray .roundtop { 
-	background: url(../imgs/box_gradientGray_tr.png) no-repeat top right; 
+	background: url(/images/box_gradientGray_tr.png) no-repeat top right; 
 }
 
 .gradientGray IMG.corner {
@@ -787,7 +954,7 @@ H5 {
 
 .borderBgWhite .arrow {
 	position: absolute;
-	background: transparent url(../imgs/box_borderBgWhite_arrow.png) no-repeat;
+	background: transparent url(/images/box_borderBgWhite_arrow.png) no-repeat;
 	width: 16px;
 	height: 8px;
 	left: 15px;
@@ -800,7 +967,7 @@ H5 {
 
 .borderBgWhite .roundcont {
 	width: 100%;
-	background: url(../imgs/box_borderBgWhite_tr.png) no-repeat top right; 
+	background: url(/images/box_borderBgWhite_tr.png) no-repeat top right; 
 	color: #666;
 	border-left: 3px solid #F2F2F2;
 	border-bottom: 3px solid #F2F2F2;
@@ -811,7 +978,7 @@ H5 {
 }
 
 .borderBgWhite .roundbottom {
-	background: url(../imgs/box_borderBgWhite_br.png) no-repeat top right; 
+	background: url(/images/box_borderBgWhite_br.png) no-repeat top right; 
 	margin-left: -3px;
 	margin-bottom: -3px;
 }
@@ -831,7 +998,7 @@ H5 {
 
 .borderBgGray .arrow {
 	position: absolute;
-	background: transparent url(../imgs/box_borderBgGray_arrow.png) no-repeat;
+	background: transparent url(/images/box_borderBgGray_arrow.png) no-repeat;
 	width: 16px;
 	height: 8px;
 	left: 15px;
@@ -844,7 +1011,7 @@ H5 {
 
 .borderBgGray .roundcont {
 	width: 100%;
-	background: url(../imgs/box_borderBgGray_tr.png) no-repeat top right; 
+	background: url(/images/box_borderBgGray_tr.png) no-repeat top right; 
 	color: #666;
 	border-left: 3px solid #F2F2F2;
 	border-bottom: 3px solid #F2F2F2;
@@ -855,7 +1022,7 @@ H5 {
 }
 
 .borderBgGray .roundbottom {
-	background: url(../imgs/box_borderBgGray_br.png) no-repeat top right; 
+	background: url(/images/box_borderBgGray_br.png) no-repeat top right; 
 	margin-left: -3px;
 	margin-bottom: -3px;
 }
@@ -889,6 +1056,12 @@ H5 {
 	font-size: 12px;
 }
 
+.form INPUT[type=file] {
+	background-color: #F4F4F4;
+	border: 1px solid #DCDBDB;
+	margin: 5px 0;
+}
+
 .form LABEL {
 	color: #5F5F5F;
 }
@@ -909,15 +1082,25 @@ H5 {
 .col2Form {
 	width: 45%;
 	float: left;
-	margin: 15px 0;
+	/*margin: 15px 0;*/
+	margin: 3px 0;
 	padding: 0 10px;
 }
 
 .colMultiForm {
 	width: auto;
 	float: left;
-	margin: 15px 0;
+	/*margin: 15px 0;*/
+	margin: 0;
 	padding: 0 10px;
+}
+
+.colMultiForm .mainButton {
+	margin: 0!important;
+}
+
+.colMultiForm.singleAnchord {
+  padding-top: 20px;
 }
 
 
@@ -935,4 +1118,77 @@ H5 {
 	width:9.25em !important;
 	*width:8.9em !important;
 }
+
+INPUT.big {
+  width:30.25em;
+	*width:29.9em;
+	padding: 5px;	
+}
+
+.checkLabel {
+  display: inline!important;
+}
+
 /* END Forms */
+
+
+/* START Table */
+
+TABLE {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/*TR:nth-child(odd) { 
+  background: #FFF; 
+}
+
+TR:nth-child(even) { 
+  background: #F6F6F6; 
+} */
+
+TR.odd { 
+  background: #FFF; 
+}
+
+TR.even { 
+  background: #F6F6F6; 
+} 
+
+TABLE TH, TABLE TD {
+  padding: 8px 10px;
+  text-align: left;
+}
+
+TABLE TH {
+  background: #E3F7FA;
+  border-top: 1px dashed #B9B9B9;
+  border-bottom: 2px solid #FFF;
+  color: #1CB6D2;
+  font-weight: bold;
+}
+
+.pageNumber {
+  background: #F4F4F4;
+  text-align: center;
+  padding: 10px;
+  margin-top: 5px; 
+  font-size: 11px;
+}
+
+.pageNumber A {
+  border-left: 1px solid #CCC;
+  font-weight: bold;
+  padding: 0 7px 0 10px;
+}
+
+.pageNumber .first {
+  border-left: none;
+}
+
+.pageNumber .current {
+  color: #1CB6D2;
+  text-decoration: none;
+}
+
+/* END Table */
