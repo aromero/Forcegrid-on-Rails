@@ -147,6 +147,41 @@ A {
 	margin: 10px 0;
 }
 
+SPAN.notAvailableIcon {
+  background: url(/images/smallIcons.png) no-repeat -19px -6px;
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+SPAN.availableIcon {
+  background: url(/images/smallIcons.png) no-repeat -2px -2px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: -2px 4px 0;
+  padding-top: 4px;
+}
+
+SPAN.messageIcon {
+  background: url(/images/smallIcons.png) no-repeat -40px -5px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: -2px 4px 0;
+  padding-top: 4px;
+}
+
+A.iconLink {
+  text-decoration: none;
+}
+
+.breakLine {
+  display: block;
+  padding: 8px 0 0;
+}
+
 /* END General Styles */
 
 
@@ -237,7 +272,7 @@ A {
 }
 
 .headerMainNav .left {
-	background: #1CB6D2 url(../images/backgrounds.png) no-repeat;
+	background: #1CB6D2 url(/images/backgrounds.png) no-repeat;
 	height: 33px;
 	width: 7px;
 	left: 0;
@@ -246,7 +281,7 @@ A {
 }
 
 .headerMainNav .right {
-	background: #1CB6D2 url(../images/backgrounds.png) no-repeat -7px;
+	background: #1CB6D2 url(/images/backgrounds.png) no-repeat -7px;
 	height: 33px;
 	width: 7px;
 	right: 0;
@@ -281,6 +316,116 @@ A {
 }
 
 /* END Header Styles */
+
+#indexHeader {
+	width: 970px;
+	margin: auto;
+}
+
+.indexHeaderTop {
+	background: url(/images/bg_indexHeader.gif) repeat-x top;
+	min-height: 192px;
+	position: relative;
+}
+
+.indexHeaderTop .indexMessage, .indexHeaderTop .indexParagraph {
+  position: absolute;
+}
+
+.indexHeaderTop .indexMessage {
+  top: 70px;
+  color: #FFF;
+  font-size: 14px;
+  left: 25px;
+  font-weight: bold;
+}
+
+.indexHeaderTop .indexParagraph {
+  background: url(/images/box_indexHeader.png) no-repeat;
+  right: 23px;
+  top: 42px;
+  width: 466px;
+  height: 128px;
+}
+
+.indexHeaderTop .indexParagraph P {
+  color: #FFF;
+  padding: 25px 20px 0 30px;
+}
+
+.indexHeaderTop .logo {
+	float: left;
+}
+
+.indexHeaderTop .logo IMG {
+	margin: 23px 10px 10px 25px; 
+}
+
+.indexHeaderTop .indexHeaderRightContent {
+	/*float: right;*/
+}
+
+.indexHeaderTop .indexHeaderRightContent .indexHeaderSecNav UL {
+	float: right;
+	padding-right: 15px;
+}
+
+.indexHeaderTop .indexHeaderRightContent .indexHeaderSecNav UL LI {
+	float: left;
+	color: #FFF;
+	border-left: 1px solid #FFF;
+	padding: 0 8px;
+	margin: 10px 0;
+}
+
+.indexHeaderTop .indexHeaderRightContent .indexHeaderSecNav UL LI.first {
+	border-left: none;
+}
+
+.indexHeaderTop .indexHeaderRightContent .indexHeaderSecNav UL LI A {
+	font-size: 11px;
+	color: #FFF;
+	text-transform: capitals;
+	font-weight: bold;
+	text-decoration: none; 
+}
+
+.indexHeaderTop .indexHeaderRightContent .indexHeaderSecNav UL LI A:hover {
+	text-decoration: underline; 
+}
+
+.indexHeaderTop .indexHeaderRightContent .search {
+	margin: 60px 0 0 27px;
+}
+
+.indexHeaderTop .indexHeaderRightContent .search SPAN.mainHilite, .indexHeaderTop .indexHeaderRightContent .search INPUT {
+	float: left;
+}
+
+.indexHeaderTop .indexHeaderRightContent .search SPAN.mainHilite {
+	margin: 7px 0 5px;
+	color: #FFF;
+}
+
+.indexHeaderTop .indexHeaderRightContent .search INPUT {
+	margin: 7px 10px 5px;
+	border: 1px solid #1CB6D2;
+	color: #5F5F5F;
+}
+
+.indexHeaderTop .indexHeaderRightContent .search SPAN.hiliteButton {
+	margin: 0 0 5px;
+}
+
+.indexHeaderTop .indexHeaderRightContent .search SPAN.hiliteButton INPUT {
+	margin: 0!important;
+	border: none !important;
+	color: #FFF !important;
+}
+
+/* START Index Header Styles */
+
+/* END Index Header Styles */
 
 /* START Content Styles */
 
@@ -331,7 +476,7 @@ A {
 }
 
 .hiliteContent {
-  background: url(../images/bg_grayBottom.gif) repeat-x bottom;
+  background: url(/images/bg_grayBottom.gif) repeat-x bottom;
   min-height: 300px;
 }
 
@@ -468,7 +613,7 @@ A.mainButton SPAN:hover, A.mainButton:hover SPAN {
 /* main buttons for INPUTS */
 SPAN.mainButton {
   background: transparent url(/images/buttons.png) no-repeat right -33px;
-  color: #FFF;/images
+  color: #FFF;
   display: block;
   float: left;
   height: 33px;
@@ -792,6 +937,11 @@ H5 {
    display: block !important;
 }
 
+.simpleGray SELECT, .simpleGray TEXTAREA, .simpleGray INPUT[type=password], .simpleGray INPUT[type=text] {
+   background: #FFF!important;
+   max-width: 190px;
+}
+
 /* Simple Blue */
 .simpleBlue {
 	position: relative;
@@ -829,6 +979,11 @@ H5 {
    height: 15px;
    border: none;
    display: block !important;
+}
+
+.simpleBlue SELECT, .simpleBlue TEXTAREA, .simpleBlue INPUT[type=password], .simpleBlue INPUT[type=text] {
+   background: #FFF!important;
+   max-width: 190px;
 }
 
 /* Gradient Blue */
@@ -1034,13 +1189,22 @@ H5 {
    display: block !important;
 }
 
+.borderBgGray SELECT, .borderBgGray TEXTAREA, .borderBgGray INPUT[type=password], .borderBgGray INPUT[type=text] {
+   background: #FFF!important;
+   max-width: 190px; 
+}
+
 /* General Boxes */
 
 .boxNoTitle {
 	margin-top: 32px;
 }
 
-.boxNoTitle SPAN.arrow {
+.boxNoTitleIndex {
+	margin-top: 13px;
+}
+
+.boxNoTitle SPAN.arrow, .boxNoTitleIndex SPAN.arrow {
 	display: none;
 }
 
@@ -1158,6 +1322,7 @@ TR.even {
 TABLE TH, TABLE TD {
   padding: 8px 10px;
   text-align: left;
+  vertical-align: middle;
 }
 
 TABLE TH {
@@ -1166,6 +1331,10 @@ TABLE TH {
   border-bottom: 2px solid #FFF;
   color: #1CB6D2;
   font-weight: bold;
+}
+
+TABLE IMG {
+   border:1px solid #CCC;
 }
 
 .pageNumber {
@@ -1192,3 +1361,84 @@ TABLE TH {
 }
 
 /* END Table */
+
+/* START Tag Cloud Widget */
+
+.tagCloud {
+  white-space: wrap;
+}
+
+.tagCloud SPAN {
+  padding: 0 6px 0 0;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+/* END Tag Cloud Widget */
+
+/* START Case Study Widget */
+
+.caseStudy {
+  position: relative;
+}
+
+.caseStudy .commentIco {
+  position: absolute;
+  background: transparent url(/images/icons.png) no-repeat -244px -14px;
+  width: 33px;
+  height: 33px;
+  right: -5px;
+  top: -5px;
+}
+
+.caseStudy .comment {
+  background: #F4F4F4;
+  padding: 15px;
+  color: #000;
+  font-style: italic;
+  margin-bottom: 10px; 
+}
+
+.caseStudy .author {
+  margin-bottom: 10px; 
+}
+
+/* END Case Study Widget */
+
+/* START Jobs and IT Pros Widget */
+
+.jobsPros {
+  width:380px;
+}
+
+.jobsPros .jobs {
+  float:left; 
+  width: 178px;
+}
+
+.jobsPros .jobs DIV.item {
+   padding: 0 0 16px 3px;
+}
+
+.jobsPros .pros {
+  float:right; 
+  width: 178px;
+}
+
+.jobsPros .pros DIV.imageItem {
+  padding: 0 0 16px 3px;
+}
+
+.jobsPros .pros DIV.imageItem .avatarSmall {
+  width: 33px; 
+  height: 33px; 
+  float: left;
+}
+
+.jobsPros .pros DIV.imageItem .itemInfo {
+  float: right; 
+  width: 130px; 
+  margin-top: 5px;
+}
+
+/* END Jobs and IT Pros Widget */

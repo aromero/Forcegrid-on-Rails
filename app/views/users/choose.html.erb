@@ -1,2 +1,50 @@
-<div><%= link_to "Become a Buyer", new_account_path(:type => 'employer') %></div>
-<div><%= link_to "Become a Provider", new_account_path(:type => 'provider') %></div>
+<div></div>
+
+<div class="hiliteContainer clearfix">
+  <div class="signUpBuyer">
+    <div class="gradientBlue clearfix">
+			<h1>Looking for hire an IT Expert?</h1>
+			<span class="arrow"></span>
+			<div class="roundcont">
+			   <div class="roundtop">
+				 <img src="/images/box_gradientBlue_tl.png" alt="" width="15" height="81" class="corner" style="display: none" />
+			   </div>
+          <div class="boxContent">
+            <p>Fire a hire skills and tested professionals</p>
+            <p>Manage the work usgin online tools</p>
+            <p>Receive great work and pay for results</p>
+            <div class="line"></div> 
+            <div class="clearfix">
+              <%= link_to content_tag(:span, "Become a Buyer"), new_account_path(:type => 'employer'), :class => 'mainButtonLight' %>
+            </div>
+            <div>
+              <a href="#">Take a Buyer Tour  &gt;&gt;</a>
+            </div>
+          </div>
+		    </div>	
+	    </div>
+  </div>
+
+  <div class="signUpProvider">
+    <div class="gradientDarkBlue">
+			<h1>Looking for Work?</h1>
+			<span class="arrow"></span>
+			<div class="roundcont">
+			   <div class="roundtop">
+				 <img src="/images/box_gradientBlue_tl.png" alt="" width="15" height="81" class="corner" style="display: none" />
+			   </div>
+          <div class="boxContent">
+            <p>Build your profile and show off your skills</p>
+            <p>Submit proposals and meet new clients</p>
+            <p>Deliver great work and get paid for results</p>
+            <div class="line"></div> 
+            <div class="clearfix">
+              <%= link_to content_tag(:span, "Become a Provider"), new_account_path(:type => 'provider'), :class => 'mainButton' %>
+            </div>
+            <div>
+              <a href="#">Take a Provider Tour  &gt;&gt;</a>
+            </div>   
+          </div>
+		    </div>	
+	    </div>
+  </div>
