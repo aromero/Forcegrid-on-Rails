@@ -5,21 +5,22 @@
 	<span class="arrow"></span>
 	<div class="roundcont">
 	   <div class="roundtop">
-		 <img src="/images/box_borderBgWhite_tl.png" alt="" width="15" height="15" class="corner" style="display: none" />
+           <img src="/images/box_borderBgWhite_tl.png" alt="" width="15" height="15" class="corner" style="display: none" />
 	   </div>
-
 	   <div class="boxContent">
-       <% form_for @user, :url => account_path do |f| %>
-          <%= f.error_messages %>
-          <%= render :partial => "form", :object => f %>
-          <% fields_for :worker, @worker do |builder| %>
-              <%= render 'new_worker', :w => builder %>
-          <% end %>
-		  <div class="rowButton clearfix" style="">
-				<div class="line"></div>
-				<a class="mainButton" href="#"><span>Create my account</span></a>
-		  </div>
-       <% end %>
+	       <div class="form">
+           <% form_for @user, :url => account_path do |f| -%>
+               <%= f.error_messages %>
+               <%= render :partial => "form", :object => f %>
+               <% fields_for :worker, @worker do |builder| -%>
+                   <%= render 'new_worker', :w => builder %>
+               <% end -%>
+		       <div class="rowButton clearfix" style="">
+			   <div class="line"></div>
+                   <a class="mainButton" href="#"><span>Create my account</span></a>
+		       </div>
+           <% end -%>
+           </div>
        </div>
        <div class="roundbottom">
 			 <img src="/images/box_borderBgWhite_bl.png" alt="" width="15" height="15" class="corner" style="display: none" />

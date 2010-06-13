@@ -12,41 +12,46 @@
   <%= stylesheet_link_tag 'reset', 'custom' %>
 </head>
 <body>
+    
 <div id="container">
+
 <!-- START Header -->
-	<div id="header">
-		<div class="headerTop clearfix">
-			<div class="logo"><a href="/"><img src="/images/logo_forceGrid.png" alt="ForceGrid"></a></div>
-			<div class="headerRightContent">
-				<div class="headerSecNav clearfix">
+	<div id="indexHeader">
+		<div class="indexHeaderTop clearfix">
+			<div class="logo"><a href="#"><img src="/images/logo_forceGrid_index.png" alt="ForceGrid"></a></div>
+			<div class="indexHeaderRightContent">
+				<div class="indexHeaderSecNav clearfix">
                     <%= render :partial => 'layouts/login_menu' %>
 				</div>
 				<div class="search clearfix">
                     <%= render :partial => 'layouts/search_box' %>
 				</div>
 			</div>
+			<p class="indexMessage">Hire and Manage IT Professionals Anywhere</p>
+			<div class="indexParagraph">
+        <p>We are the leading IT services marketplace that allows you to <strong>hire and manage professionals online</strong> to get your IT chalanges done.
+</p>  <p>We match your needs with a qualified workforce of <strong>thousands of certified and rated professionals.</strong></p>
+      </div>
 		</div>
 		<div class="headerMainNav clearfix">
 			<span class="left">&nbsp;</span>
 			<ul>
-				<li class="first"><a href="/why_us.html">Why us</a></li>
-				<li><a href="/how_we_work.html">How we work</a></li>
-				<li><a href="/resources.html">Resources</a></li>
-				<li><a href="/about_us.html">About us</a></li>
+				<li class="first"><a href="#">Why us</a></li>
+				<li><a href="#">How we work</a></li>
+				<li><a href="#">Resources</a></li>
+				<li><a href="#">About us</a></li>
 			</ul>
 			<span class="right">&nbsp;</span>
 		</div>
 	</div>
 <!-- END Header -->
 
-<!-- START Content 1 col Template -->
-	<div id="content" class="singleCol clearfix">
-		<div class="firstCol hiliteContent">
+<!-- START Content 3 col Template -->
+	<div id="content" class="col3 clearfix">
 		<p style="color: green"><%= flash[:notice] %><%= flash[:error] %></p>
         <%= yield %>
-		</div>
 	</div>
-<!-- END Content 1 col Template -->
+<!-- END Content 3 col Template -->
 
 <!-- START Footer -->
     <div id="footer">
