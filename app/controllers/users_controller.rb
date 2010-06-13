@@ -3,24 +3,24 @@ class UsersController < ApplicationController
   before_filter :require_user, :only => [:show, :edit, :update]
   
   #layout 'two_col', :only => [:new]
-  
   def new
-    case params[:type]
-    when 'employer'
-      @employer = Employer.new
-      @user = @employer.build_user
-    when 'worker'
-      @worker = Worker.new
-      10.times { @worker.skill_workers.build }
-      @user = @worker.build_user
-    end    
+    render :action => :choose
+  end
+  
+  def worker_signup
+    @worker = Worker.new
+    10.times { @worker.skill_workers.build }
+    @user = @worker.build_user
+  end
+  
+  def employer_signup
+    @employer = Employer.new
+    @user = @employer.build_user
   end
   
   def create
     @owner = Employer.new(params[:employer]) if params[:employer]
-    if params[:worker]
-      @owner = Worker.new(params[:worker])
-    end
+    @owner = Worker.new(params[:worker]) if params[:worker]
     @owner.save
     
     @user = User.new(params[:user])
@@ -31,7 +31,8 @@ class UsersController < ApplicationController
       flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
       redirect_to root_path
     else
-      redirect_to :action => :new, :params => { :type => @owner.class.to_s.downcase }
+      render :action => :worker_signup if params[:worker]
+      render :action => :employer_signup if params[:employer]
     end
   end
   

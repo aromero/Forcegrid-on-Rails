@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :employers, :has_many => :jobs
   map.resources :workers, :has_many => [:jobs, :bids]
   
-  map.resource :account, :controller => 'users'
+  map.resource :account, :controller => 'users', :collection => { :worker_signup => :get, :employer_signup => :get }
   map.resources :users
   map.resource :user_session
   
