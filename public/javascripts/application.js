@@ -1,4 +1,10 @@
 $(function() {
+	// bind "click" event for links with type="submit" 
+	$("a.mainButton").click( function(){
+	  // it submits the form it is contained within
+	  $(this).parents("form").submit();
+	});
+	
 	$('.skill').hide();
 	
 	$('a.add').click(function(e) {

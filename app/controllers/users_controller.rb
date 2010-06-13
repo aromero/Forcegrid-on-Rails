@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
   before_filter :require_user, :only => [:show, :edit, :update]
   
+  #layout 'two_col', :only => [:new]
+  
   def new
     case params[:type]
     when 'employer'
@@ -11,7 +13,7 @@ class UsersController < ApplicationController
       @worker = Worker.new
       10.times { @worker.skill_workers.build }
       @user = @worker.build_user
-    end
+    end    
   end
   
   def create
@@ -29,7 +31,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
       redirect_to root_path
     else
-      render :action => :new
+      redirect_to :action => :new, :params => { :type => @owner.class.to_s.downcase }
     end
   end
   

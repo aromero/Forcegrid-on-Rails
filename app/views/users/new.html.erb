@@ -1,16 +1,101 @@
-<h1>Register as <%= params[:type].capitalize %></h1>
+<div id="content" class="col2 clearfix">
+	<div class="firstCol">
+	<div class="borderBgWhite">
+    <h1>IT Service <%= params[:type].capitalize %> Sign Up</h1>
+	<span class="arrow"></span>
+	<div class="roundcont">
+	   <div class="roundtop">
+		 <img src="/images/box_borderBgWhite_tl.png" alt="" width="15" height="15" class="corner" style="display: none" />
+	   </div>
 
-<% form_for @user, :url => account_path do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
-  <% unless @employer.nil? %>
-      <% fields_for :employer do |builder| %>
-         <%= render 'new_employer', :e => builder %>
-      <% end %>
-  <% else %>
-      <% fields_for :worker, @worker do |builder| %>
-         <%= render 'new_worker', :w => builder %>
-      <% end %>
-  <% end %>
-  <%= f.submit "Unirse" %>
-<% end %>
+	   <div class="boxContent">
+       <% form_for @user, :url => account_path do |f| %>
+          <%= f.error_messages %>
+          <%= render :partial => "form", :object => f %>
+          <% unless @employer.nil? %>
+              <% fields_for :employer do |builder| %>
+                 <%= render 'new_employer', :e => builder %>
+              <% end %>
+          <% else %>
+              <% fields_for :worker, @worker do |builder| %>
+                 <%= render 'new_worker', :w => builder %>
+              <% end %>
+          <% end %>
+		  <div class="rowButton clearfix" style="">
+				<div class="line"></div>
+				<a class="mainButton" href="#"><span>Create my account</span></a>
+		  </div>
+       <% end %>
+       </div>
+       <div class="roundbottom">
+			 <img src="/images/box_borderBgWhite_bl.png" alt="" width="15" height="15" class="corner" style="display: none" />
+       </div>
+	</div>	
+	</div>
+	</div>
+	<div class="lastCol">
+	</div>
+</div>
+
+
+
+		   <!-- START Content Form Model -->
+			<div class="form">
+			
+				<div class="clearfix">
+					<div class="col2Form">
+						<label>First name:</label><input type="text" />
+					</div>
+					<div class="col2Form">
+					  <label>Last name:</label><input type="text" />
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="col2Form">
+						<label>Email:</label><input type="text" />
+					</div>
+					<div class="col2Form">
+					  <label>Phone:</label><input type="text" />
+					</div>
+				</div>
+				<div class="singleForm">
+					<label>Country:</label>
+					<select name="select">
+					  <option>United States</option>
+					  <option>England</option>
+					  <option>Argentina</option>
+					  <option>Trinidad y Tobago</option>
+					  <option selected>Select a Country</option>
+					</select>
+				</div>
+				<div class="line"></div>
+				<div class="clearfix">
+					<div class="col2Form">
+						<label>User:</label><input type="text" />
+					</div>
+					<div class="col2Form">
+					  
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="col2Form">
+						<label>Password:</label><input type="password" />
+					</div>
+					<div class="col2Form">
+					  <label>Re-enter password:</label><input type="password" />  
+					</div>
+				</div>
+			
+				<div class="line"></div>
+				
+				<div class="singleForm">
+					<input type="checkbox" class="checkLabel" /><label class="checkLabel">I have read and agree to all <a href="#">Terms and Conditions</a></label>
+				</div>
+		
+				<div class="rowButton clearfix" style="">
+					<div class="line"></div>
+					<a class="mainButton" href="login.html"><span>Create my account</span></a>
+				</div>
+				
+			</div>
+		   <!-- END Content Form Model -->

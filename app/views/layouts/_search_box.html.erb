@@ -1,5 +1,5 @@
 <% form_tag jobs_path, :method => 'get' do %>
     <span class="mainHilite">Search:</span>
     <%= text_field_tag :search, "Search Prefessional" %>
-    <%= submit_tag "Search", :name => nil, :class => 'hiliteButton' %>
+    <span class="hiliteButton"><input type="submit" value="search" /></span>
 <% end %>
