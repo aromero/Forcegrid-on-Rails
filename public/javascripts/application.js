@@ -1,4 +1,16 @@
 $(function() {
+	
+	// hacer un clear del campo de search cuando tiene foco
+	$("input[name='search-textbox']").focus(function() {
+		if( this.value == this.defaultValue ) {
+			this.value = "";
+		}
+	}).blur(function() {
+		if( !this.value.length ) {
+			this.value = this.defaultValue;
+		}
+	});
+	
 	// bind "click" event for links with type="submit" 
 	$("a.mainButton").click( function(){
 	  // it submits the form it is contained within
