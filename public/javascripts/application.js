@@ -11,6 +11,13 @@ $(function() {
 		}
 	});
 	
+	$('.category_jobs_container').first().show();
+	
+	$('a.show_category_jobs').click( function(){
+		$('.category_jobs_container:visible').hide();
+		$('#category-' + this.id).show();
+	});
+	
 	// bind "click" event for links with type="submit" 
 	$("a.mainButton").click( function(){
 	  // it submits the form it is contained within
