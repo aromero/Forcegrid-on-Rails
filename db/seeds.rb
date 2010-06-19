@@ -43,5 +43,5 @@ user2.activate!
 #Sample Job
 job = Job.create(:title => 'Web Site', :description => 'I need a website',
       :start_time => 3.days.from_now, :end_time => 15.days.from_now,
-      :employer_id => user2.id, :category_id => Category.first.id,
-      :project_begin => 17.days.from_now, :project_finish => 22.days.from_now)
+      :employer_id => user2.owner.id, :category_id => Category.first.id,
+      :project_begin => 17.days.from_now, :project_finish => 22.days.from_now, :budget => 10000.0)
