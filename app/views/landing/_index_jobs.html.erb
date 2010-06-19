@@ -1,6 +1,6 @@
 <h3>Jobs >></h3>
 <div class="line"></div>
-<% if !@jobs.blank? -%>
+<% unless @jobs.empty? -%>
     <% @jobs.each_pair do |category, jobs| %>
         <% content_tag :div, :class => 'category', :id => category.id do -%>
             <% for item in jobs -%>
@@ -12,5 +12,5 @@
         <% end -%>
     <% end -%>
 <% else -%>
-    <p>No Jobs Currently Available</p>
+    <p>No Jobs submitted yet</p>
 <% end -%>
