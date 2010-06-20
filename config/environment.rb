@@ -1,18 +1,5 @@
-# Be sure to restart your server when you modify this file
+# Load the rails application
+require File.expand_path('../application', __FILE__)
 
-# Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
-Encoding.default_external = Encoding::UTF_8 if RUBY_VERSION > "1.9"
-
-# Bootstrap the Rails environment, frameworks, and default configuration
-require File.join(File.dirname(__FILE__), 'boot')
-
-Rails::Initializer.run do |config|
-
-  config.plugins = [ :all ]
-  config.time_zone = 'UTC'
-  # config.i18n.default_locale = :de
-  config.gem 'cancan'
-  config.gem 'state_machine'
-end
-require 'authlogic'
+# Initialize the rails application
+ITPARC::Application.initialize!
