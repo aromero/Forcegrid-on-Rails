@@ -9,10 +9,10 @@
 	   </div>
 	   <div class="boxContent">
 	       <div class="form">
-           <% form_for @user, :url => account_path do |f| -%>
+           <%= form_for @user, :url => account_path do |f| -%>
                <%= f.error_messages %>
                <%= render :partial => "form", :object => f %>
-               <% fields_for :worker, @worker do |builder| -%>
+               <%= fields_for :worker, @worker do |builder| -%>
                    <%= render 'new_worker', :w => builder %>
                <% end -%>
 		       <div class="rowButton clearfix" style="">

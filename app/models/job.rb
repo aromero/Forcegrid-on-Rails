@@ -33,7 +33,7 @@ class Job < ActiveRecord::Base
     #end
   end
   
-  named_scope :current, :conditions => ['start_time <= ? and end_time >= ?', Date.today, Date.today], :include => [:bids]
+  scope :current, :conditions => ['start_time <= ? and end_time >= ?', Date.today, Date.today], :include => [:bids]
   
   state_machine :state, :initial => :draft do
     event :publish do
@@ -50,6 +50,6 @@ class Job < ActiveRecord::Base
   end
   
   def self.search(search)
-    current.find(:all, :conditions => ['title LIKE ?', "%#{search}%"])
+    current.all.where(['title LIKE ?', "%#{search}%"])
   end
 end

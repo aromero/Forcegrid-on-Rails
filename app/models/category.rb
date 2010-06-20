@@ -6,6 +6,6 @@ class Category < ActiveRecord::Base
   has_many :subcategories
   has_many :subcategories, :class_name => 'Category', :foreign_key => 'category_id'
   
-  named_scope :main, :conditions => { :category_id => nil }
+  scope :main, :conditions => { :category_id => nil }
   
 end

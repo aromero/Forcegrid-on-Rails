@@ -9,7 +9,7 @@
 		   </div>
 		   <div class="boxContent">
 		       <div class="form">
-               <% form_for @user_session, :url => user_session_path do |f| %>
+               <%= form_for @user_session, :url => user_session_path do |f| %>
                    <%= f.error_messages %>
                    <div class="singleForm"><%= f.label :email %><%= f.text_field :email %>
                     <%= f.label :password %><%= f.password_field :password %>

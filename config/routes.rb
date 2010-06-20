@@ -1,19 +1,27 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :bids
-  map.resources :jobs, :has_one => [:employer, :bid]
-  map.resources :employers, :has_many => :jobs
-  map.resources :workers, :has_many => [:jobs, :bids]
+ITPARC::Application.routes.draw do |map|
+  resources :jobs do
+    resources :bids
+  end
   
-  map.resource :account, :controller => 'users', :collection => { :worker_signup => :get, :employer_signup => :get }
-  map.resources :users
-  map.resource :user_session
+  resources :employers do
+    resources :jobs
+  end
   
-  map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
-  map.activate '/activate/:id', :controller => 'activations', :action => 'create'
-  map.choose_account 'account/choose', :controller => 'users', :action => 'choose'
+  resources :workers do
+    resources :jobs
+  end
   
-  map.root :controller => "landing"
-
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  resource :account, :controller => 'users'
+  resource :user_session
+  
+  
+  match 'register/:activation_code' => 'activations#new', :as => :register
+  match 'activate/:id' => 'activations#create', :as => :activate
+  
+  #flujo de login
+  match 'account/choose' => 'users#choose', :as => :choose_acount
+  match 'account/worker_signup' => 'users#worker_signup'
+  match 'account/employer_singup' => 'users#employer_signup'
+    
+  root :to => "landing#index"
 end

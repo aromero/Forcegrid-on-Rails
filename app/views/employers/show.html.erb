@@ -38,7 +38,7 @@
 	    <th>End time</th>
 	  </tr>
 
-	<% @employer.jobs.each do |job| %>
+	<%= @employer.jobs.each do |job| %>
 	  <tr>
 	    <td><%=h job.title %></td>
 	    <td><%=h job.description %></td>
