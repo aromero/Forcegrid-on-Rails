@@ -4,11 +4,15 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :employers, :has_many => :jobs
   map.resources :workers, :has_many => [:jobs, :bids]
   
-  map.resource :account, :controller => 'users'
+  map.resource :account, :controller => 'users', :collection => { :worker_signup => :get, :employer_signup => :get }
   map.resources :users
   map.resource :user_session
   
-  map.root :controller => "main/home"
+  map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
+  map.activate '/activate/:id', :controller => 'activations', :action => 'create'
+  map.choose_account 'account/choose', :controller => 'users', :action => 'choose'
+  
+  map.root :controller => "landing"
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

@@ -1,2 +1,5 @@
-rails
+rails --version 2.3.8
 authlogic
+cancan
+state_machine
+pg

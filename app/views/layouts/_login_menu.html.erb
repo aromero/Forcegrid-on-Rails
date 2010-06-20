@@ -1,0 +1,9 @@
+<ul>
+    <% unless current_user_session %>
+    <li class="first"><%= link_to "Login", new_user_session_path %></li>
+    <li><%= link_to "Signup",  choose_account_path %></li>
+    <% else %>
+    <li class="first"><%= link_to "Logout", current_user_session, :method => :delete %></li>
+    <li>Edit Profile</li>
+    <% end %>
+</ul>

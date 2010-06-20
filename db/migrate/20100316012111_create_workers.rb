@@ -19,7 +19,6 @@ class CreateWorkers < ActiveRecord::Migration
       t.string :company_logo
       t.text :company_background
       t.text :detailed_service_desc
-      t.integer :user_id
 
       t.timestamps
     end

@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100317001057) do
+ActiveRecord::Schema.define(:version => 20100523010133) do
+
+  create_table "assigments", :force => true do |t|
+    t.integer  "job_id"
+    t.integer  "worker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "bids", :force => true do |t|
     t.decimal  "price"
@@ -17,6 +24,14 @@ ActiveRecord::Schema.define(:version => 20100317001057) do
     t.text     "comments"
     t.integer  "job_id"
     t.integer  "worker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,13 +58,41 @@ ActiveRecord::Schema.define(:version => 20100317001057) do
     t.string   "description"
     t.date     "start_time"
     t.date     "end_time"
+    t.date     "project_begin"
+    t.date     "project_finish"
     t.string   "location"
     t.decimal  "budget"
     t.string   "pricing_method"
     t.string   "service_contact"
     t.string   "buyers_support_contact"
-    t.integer  "status"
+    t.string   "state"
     t.integer  "employer_id"
+    t.integer  "category_id"
+    t.integer  "visitor_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "milestones", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.decimal  "budget_porcentage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skill_workers", :force => true do |t|
+    t.integer  "skill_id"
+    t.integer  "worker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.string   "name"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,12 +104,17 @@ ActiveRecord::Schema.define(:version => 20100317001057) do
     t.string   "crypted_password",                 :null => false
     t.string   "password_salt",                    :null => false
     t.string   "persistence_token",                :null => false
+    t.string   "perishable_token"
     t.integer  "login_count",       :default => 0, :null => false
     t.datetime "last_request_at"
     t.datetime "last_login_at"
     t.datetime "current_login_at"
     t.string   "last_login_ip"
     t.string   "current_login_ip"
+    t.boolean  "admin"
+    t.boolean  "active"
+    t.string   "owner_type"
+    t.integer  "owner_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
@@ -92,7 +140,6 @@ ActiveRecord::Schema.define(:version => 20100317001057) do
     t.string   "company_logo"
     t.text     "company_background"
     t.text     "detailed_service_desc"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,17 +1,75 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>ITParc - <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <meta name="Generator" content="EditPlus" />
+  <meta name="Author" content="" />
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <title>Forcegrid - <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'reset', 'custom' %>
 </head>
 <body>
+<div id="container">
+<!-- START Header -->
+	<div id="header">
+		<div class="headerTop clearfix">
+			<div class="logo"><a href="/"><img src="/images/logo_forceGrid.png" alt="ForceGrid"></a></div>
+			<div class="headerRightContent">
+				<div class="headerSecNav clearfix">
+                    <%= render :partial => 'layouts/login_menu' %>
+				</div>
+				<div class="search clearfix">
+                    <%= render :partial => 'layouts/search_box' %>
+				</div>
+			</div>
+		</div>
+		<div class="headerMainNav clearfix">
+			<span class="left">&nbsp;</span>
+			<ul>
+				<li class="first"><a href="/why_us.html">Why us</a></li>
+				<li><a href="/how_we_work.html">How we work</a></li>
+				<li><a href="/resources.html">Resources</a></li>
+				<li><a href="/about_us.html">About us</a></li>
+			</ul>
+			<span class="right">&nbsp;</span>
+		</div>
+	</div>
+<!-- END Header -->
 
-<p style="color: green"><%= flash[:notice] %></p>
+<!-- START Content 1 col Template -->
+	<div id="content" class="singleCol clearfix">
+		<div class="firstCol hiliteContent">
+		<p style="color: green"><%= flash[:notice] %><%= flash[:error] %></p>
+        <%= yield %>
+		</div>
+	</div>
+<!-- END Content 1 col Template -->
 
-<%= yield %>
-
+<!-- START Footer -->
+    <div id="footer">
+    	<div class="footerNav clearfix">
+    		<ul>
+    			<li class="first"><a href="about_us.html">About Us</a></li>
+    			<li><a href="#">Contact</a></li>
+    			<li><a href="#">Blog</a></li>
+    			<li><a href="#">Community</a></li>
+    			<li><a href="#">Careers</a></li>
+    			<li><a href="#">Terms and Conditions</a></li>
+    		</ul>
+    	</div>
+    	<div class="legal">CompanyName. Inc. All rights Reserved</div>
+    </div>
+<!-- END Footer -->
+</div>
 </body>
+<% if Rails.env == 'development' -%>
+<%= javascript_include_tag "jquery-1.4.2.js", "application.js", :cache => true %>
+<% else -%>
+<script src="http://www.google.com/jsapi"></script>
+<script>google.load("jquery", "1.4.2");</script>
+<%= javascript_include_tag "application.js", :cache => true %>
+<% end -%>
 </html>

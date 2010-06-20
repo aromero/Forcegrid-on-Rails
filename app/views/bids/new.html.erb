@@ -14,20 +14,8 @@
     <%= f.label :comments %><br />
     <%= f.text_area :comments %>
   </p>
-<% unless params[:worker_id] || params[:job_id] %>
-  <p>
-    <%= f.label :job_id %><br />
-    <%= f.text_field :job_id %>
-  </p>
-  <p>
-    <%= f.label :worker_id %><br />
-    <%= f.text_field :worker_id %>
-  </p>
-<% else %>
-	<%= hidden_field_tag 'bid[worker_id]', params[:worker_id] %>
 	<%= hidden_field_tag 'bid[job_id]', params[:job_id] %>
-	
-<% end %>
+	<%= hidden_field_tag 'bid[worker_id]', current_user.owner.id %>
   <p>
     <%= f.submit 'Create' %>
   </p>

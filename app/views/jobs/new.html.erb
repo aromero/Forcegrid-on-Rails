@@ -20,11 +20,23 @@
     <%= f.date_select :end_time %>
   </p>
   <p>
+    <%= f.label :project_begin %><br />
+    <%= f.date_select :project_begin %>
+  </p>
+  <p>
+    <%= f.label :project_finish %><br />
+    <%= f.date_select :project_finish %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </p>
+  <p>
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </p>
   <p>
-    <%= f.label :budget %><br />
+    <%= f.label :budget, 'Budget in Dollars' %><br />
     <%= f.text_field :budget %>
   </p>
   <p>
@@ -39,17 +51,16 @@
     <%= f.label :buyers_support_contact %><br />
     <%= f.text_field :buyers_support_contact %>
   </p>
-  <p>
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
+	<% unless params[:employer_id] -%>
+  <p>  	
+	<% if current_user && current_user.admin? -%>
+	<%= f.label :employer_id %><br />
+	<%= select("job", "employer_id", Employer.all.collect {|p| [ p.full_name, p.id ] }, { :include_blank => false }) %>
+	<% end -%>
   </p>
-	<% unless params[:employer_id] %>
+	<% end -%>
   <p>
-    	<%= f.label :employer_id %><br />
-   		<%= select("job", "employer_id", Employer.all.collect {|p| [ p.full_name, p.id ] }, { :include_blank => false }) %>
-  </p>
-	<% end %>
-  <p>
+    <%= label_tag 'draft?' %><%= check_box_tag 'draft', 'yes', true %>
     <%= f.submit 'Create' %>
   </p>
 <% end %>

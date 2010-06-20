@@ -1,14 +1,35 @@
-<h1>Login</h1>
-
-<% form_for @user_session, :url => user_session_path do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :email %><br />
-  <%= f.text_field :email %><br />
-  <br />
-  <%= f.label :password %><br />
-  <%= f.password_field :password %><br />
-  <br />
-  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
-  <br />
-  <%= f.submit "Login" %>
-<% end %>
+<div id="content" class="col2 clearfix">
+	<div class="firstCol">
+	<div class="borderBgWhite">
+		<h1>Login</h1>
+		<span class="arrow"></span>
+		<div class="roundcont">
+		   <div class="roundtop">
+			 <img src="/images/box_borderBgWhite_tl.png" alt="" width="15" height="15" class="corner" style="display: none" />
+		   </div>
+		   <div class="boxContent">
+		       <div class="form">
+               <% form_for @user_session, :url => user_session_path do |f| %>
+                   <%= f.error_messages %>
+                   <div class="singleForm"><%= f.label :email %><%= f.text_field :email %>
+                    <%= f.label :password %><%= f.password_field :password %>
+                    <%= f.check_box :remember_me, :class => "checkLabel" %><%= f.label :remember_me %>
+                   </div>
+                   <div class="rowButton clearfix" style="">
+				       <div class="line"></div>
+				       <a class="mainButton" href="#"><span>Login</span></a>
+				       <span class="buttonMsg">Don’t have an account? <%= link_to "Sign up now!",  choose_account_path %></span>
+                   </div>
+                <% end %>
+                </div>
+            </div>
+			  
+			   <div class="roundbottom">
+				 <img src="/images/box_borderBgWhite_bl.png" alt="" width="15" height="15" class="corner" style="display: none" />
+			   </div>
+			</div>	
+		</div>
+  </div>
+	<div class="lastCol">
+	</div>
+</div>

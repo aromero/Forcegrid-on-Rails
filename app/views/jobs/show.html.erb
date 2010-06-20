@@ -44,14 +44,13 @@
 </p>
 
 <p>
-  <b>Status:</b>
-  <%=h @job.status %>
+  <b>Employer:</b>
+  <%=h @job.employer.full_name %>
 </p>
 
-<p>
-  <b>Employer:</b>
-  <%=h @job.employer_id %>
-</p>
+<h2>Bids</h2>
+
+<%= render :partial => 'bids/bid_index', :object => @job.bids %>
 
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
