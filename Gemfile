@@ -5,10 +5,10 @@ gem 'rails', '3.0.0.beta4'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Webserver
-gem 'mongrel'
+gem 'unicorn'
 
 # To use debugger
-gem 'ruby-debug'
+#gem 'ruby-debug'
 
 # Bundle the extra gems:
 # gem 'bj'
