@@ -1,4 +1,4 @@
-ITPARC::Application.routes.draw do |map|
+Rails.application.routes do |map|
   resources :jobs do
     resources :bids
   end
