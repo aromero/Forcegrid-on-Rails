@@ -8,7 +8,7 @@ group :development, :test do
   gem 'awesome_print', :require => 'ap'
 end
 
-gem 'authlogic'
+gem 'authlogic', :git => 'git://github.com/exceed/authlogic.git'
 gem 'cancan'
 gem 'state_machine'
 gem 'friendly_id'

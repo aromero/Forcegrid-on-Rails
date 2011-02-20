@@ -1,4 +1,4 @@
-Rails.application.routes do |map|
+Rails::Application.routes.draw do
   resources :jobs do
     resources :bids
   end

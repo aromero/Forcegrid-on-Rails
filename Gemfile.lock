@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/exceed/authlogic.git
+  revision: f0ac00aef1957748f3cc484e7da3e54cb8b26ba7
+  specs:
+    authlogic (2.1.6)
+      activesupport
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -29,8 +36,6 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     arel (2.0.8)
-    authlogic (2.1.6)
-      activesupport
     awesome_print (0.3.2)
     babosa (0.2.2)
     builder (2.1.2)
@@ -79,7 +84,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  authlogic
+  authlogic!
   awesome_print
   cancan
   friendly_id
