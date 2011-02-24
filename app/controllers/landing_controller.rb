@@ -1,7 +1,8 @@
 class LandingController < ApplicationController
-  layout 'landing'
   def index
-    #@jobs = Job.current.find(:all, :include => :category).group_by(&:category)
-    @jobs = Job.joins(:category).group_by(&:category)
+    @sub_categories = ['Web Development', 'Desktop Development', 'Corporate Website', 'iPhone/iPad Application',
+                       'ERP Deployment', 'Business Intelligence', 'Content Management',
+                       'VPN Setup', 'Firewall&Security Setup', 'LAN/Wireless Network Setup',
+                       'Software Developers', 'Web/UI Designers']
   end
 end

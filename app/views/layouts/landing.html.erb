@@ -7,98 +7,67 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Forcegrid - <%= controller.action_name %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Forcegrid | Making IT Services easy for Small and Medium Business" %></title>
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="canonical" href="http://www.forcegrid.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <%= stylesheet_link_tag 'reset', 'custom' %>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    
+    <%= stylesheet_link_tag 'style' %>
     <%= csrf_meta_tag %>
-    
     <%= javascript_include_tag "modernizr-1.6.min.js" %>
-  </head>
-  <body lang="en">
     
-  <div id="container">
-  <!-- START Header -->
-  	<div id="indexHeader">
-  		<div class="indexHeaderTop clearfix">
-  			<div class="logo"><a href="#"><img src="/images/logo_forceGrid_index.png" alt="ForceGrid"></a></div>
-  			<div class="indexHeaderRightContent">
-  				<div class="indexHeaderSecNav clearfix">
-                      <%= render :partial => 'layouts/login_menu' %>
-  				</div>
-  				<div class="search clearfix">
-                      <%= render :partial => 'layouts/search_box' %>
-  				</div>
-  			</div>
-  			<p class="indexMessage">Hire and Manage IT Professionals Anywhere</p>
-  			<div class="indexParagraph">
-          <p>We are the leading IT services marketplace that allows you to <strong>hire and manage professionals online</strong> to get your IT chalanges done.
-  </p>  <p>We match your needs with a qualified workforce of <strong>thousands of certified and rated professionals.</strong></p>
-        </div>
-  		</div>
-  		<div class="headerMainNav clearfix">
-  			<span class="left">&nbsp;</span>
-  			<ul>
-  				<li class="first"><a href="/why_us.html">Why us</a></li>
-  				<li><a href="/how_we_work.htm">How we work</a></li>
-  				<li><a href="/resources.html">Resources</a></li>
-  				<li><a href="/about_us.html">About us</a></li>
-  			</ul>
-  			<span class="right">&nbsp;</span>
-  		</div>
-  	</div>
-  <!-- END Header -->
-
-  <!-- START Content 3 col Template -->
-  	<div id="content" class="col3 clearfix">
-  		<p style="color: green"><%= flash[:notice] %><%= flash[:error] %></p>
-          <%= yield %>
-  	</div>
-  <!-- END Content 3 col Template -->
-
-  <!-- START Footer -->
-      <div id="footer">
-      	<div class="footerNav clearfix">
-      		<ul>
-      			<li class="first"><a href="about_us.html">About Us</a></li>
-      			<li><a href="#">Contact</a></li>
-      			<li><a href="#">Blog</a></li>
-      			<li><a href="#">Community</a></li>
-      			<li><a href="#">Careers</a></li>
-      			<li><a href="#">Terms and Conditions</a></li>
-      		</ul>
-      	</div>
-      	<div class="legal">CompanyName. Inc. All rights Reserved</div>
-      </div>
-  <!-- END Footer -->
-  </div>
-  <% if Rails.env == 'development' -%>
-  <%= javascript_include_tag "jquery-1.5.js", "application.js" %>
-  <% else -%>
-  <script src="http://www.google.com/jsapi"></script>
-  <script>google.load("jquery", "1.5");</script>
-  <%= javascript_include_tag "application.js" %>
-  <% end -%>
+    <%= yield(:head) %>
+  </head>
+  <style> 
+    body	{ width: 600px; margin: 20px auto; /* center */ padding: 20px;
+    		    border: 1px solid black; }
+  </style>
+  <body lang="en">
+    <header>
+      <hgroup>
+        <h1>Making IT Services easy for Small and Medium Business"</h1>
+        <h2>Find the solution, see what is included, get proposals and manage your team online.</h2>
+      </hgroup>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+    </header>
+    
+    <div id="main" role="main">
+      <%= yield %>
+    </div>
+    
+    <footer>
+      <p>Forcegrid 2011 - ARR </p>
+    </footer>
+   
+    <% if Rails.env == 'development' -%>
+    <%= javascript_include_tag "jquery-1.5.1.js", "application.js" %>
+    <% else -%>
+    <script src="http://www.google.com/jsapi"></script>
+    <script>google.load("jquery", "1.5.1");</script>
+    <%= javascript_include_tag "application.js" %>
+    <% end -%>
   
-  <!--[if lt IE 7 ]>
-    <script src="js/libs/dd_belatedpng.js"></script>
-    <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-  <![endif]-->
+    <!--[if lt IE 7 ]>
+      <script src="js/libs/dd_belatedpng.js"></script>
+      <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+    <![endif]-->
   
-  <!-- TODO: obtener código Google Analytics
-  <script>
-   var _gaq = [['_setAccount', ''], ['_trackPageview']];
-   (function(d, t) {
-    var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-    g.async = true;
-    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g, s);
-   })(document, 'script');
-  </script>
-  -->
+    <!-- TODO: obtener código Google Analytics
+    <script>
+     var _gaq = [['_setAccount', ''], ['_trackPageview']];
+     (function(d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+     })(document, 'script');
+    </script>
+    -->
   </body>
 </html>
