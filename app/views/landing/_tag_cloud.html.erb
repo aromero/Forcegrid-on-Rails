@@ -1,7 +1,0 @@
-<% unless @jobs.empty? %>
-<% @jobs.each_key do |category| %>
-    <span><a href="#" class="show_category_jobs" id="<%= category.id %>"><%= category.name %></a></span>&nbsp;
-<% end %>
-<% else %>
-    <span>No Jobs submitted yet</span>
-<% end %>
