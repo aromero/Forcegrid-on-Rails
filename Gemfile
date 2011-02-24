@@ -6,6 +6,7 @@ gem 'pg'
 group :development, :test do
   gem 'heroku'
   gem 'taps'
+  gem "nifty-generators"
   gem 'awesome_print', :require => 'ap'
 end
 
