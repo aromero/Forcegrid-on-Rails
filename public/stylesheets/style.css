@@ -166,71 +166,99 @@ button {  width: auto; overflow: visible; }
  * Author: Fernando Parra
  */
  
- #flash_notice, #flash_error, #flash_alert {
-   padding: 5px 8px;
-   margin: 10px 0;
- }
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
 
- #flash_notice {
-   background-color: #CFC;
-   border: solid 1px #6C6;
- }
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
 
- #flash_error, #flash_alert {
-   background-color: #FCC;
-   border: solid 1px #C66;
- }
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
 
- .fieldWithErrors {
-   display: inline;
- }
+.fieldWithErrors {
+  display: inline;
+}
 
- .error_messages {
-   width: 400px;
-   border: 2px solid #CF0000;
-   padding: 0px;
-   padding-bottom: 12px;
-   margin-bottom: 20px;
-   background-color: #f0f0f0;
-   font-size: 12px;
- }
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
 
- .error_messages h2 {
-   text-align: left;
-   font-weight: bold;
-   padding: 5px 10px;
-   font-size: 12px;
-   margin: 0;
-   background-color: #c00;
-   color: #fff;
- }
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
 
- .error_messages p {
-   margin: 8px 10px;
- }
+.error_messages p {
+  margin: 8px 10px;
+}
 
- .error_messages ul {
-   margin: 0;
- }
- 
- h1 {
- 	font-family: 'Droid Serif', Georgia, Times, serif;
- 	font-size: 49px;
- 	line-height: 65px;
- 	f
- }
+.error_messages ul {
+  margin: 0;
+}
 
- h2 {
- 	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
- 	font-size: 36px;
- 	line-height: 40px;
- }
- 
- p {
- 	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
- 	font-size: 14px;
- 	line-height: 25px;
- }
+h1 {
+  font-family: 'Droid Serif', Georgia, Times, serif;
+	font-size: 49px;
+	line-height: 65px;
+}
+
+h4, p, ul, a {
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+}
+
+#container	{
+  width: 960px;
+  margin: 20px auto; /* centrar */
+  padding: 20px;
+  border: none; 
+}
+
+nav {
+  padding: 15px;
+  text-align: right;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+ul, p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+}
+
 
 /**
  * Non-semantic helper classes: please define your styles before this section.

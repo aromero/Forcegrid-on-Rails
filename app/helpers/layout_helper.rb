@@ -17,6 +17,6 @@ module LayoutHelper
   end
 
   def javascript(*args)
-    content_for(:head) { javascript_include_tag(*args) }
+    content_for(:custom_scripts) { javascript_include_tag(*args) }
   end
 end

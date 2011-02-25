@@ -21,36 +21,40 @@
     
     <%= yield(:head) %>
   </head>
-  <style> 
-    body	{ width: 600px; margin: 20px auto; /* center */ padding: 20px;
-    		    border: 1px solid black; }
-  </style>
   <body lang="en">
-    <header>
-      <hgroup>
-        <h1>Making IT Services easy for Small and Medium Business"</h1>
-        <h2>Find the solution, see what is included, get proposals and manage your team online.</h2>
-      </hgroup>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-    </header>
+    <nav>
+      <a href="#">What is Forcegrid?</a>
+      <a href="#">Contact Us</a>
+    <nav>
     
-    <div id="main" role="main">
-      <%= yield %>
+    <div id="container">
+      <header>
+        <hgroup>
+          <h1>Making IT Services easy for Small and Medium Business</h1>
+          <h4>Find the solution, see what is included, get proposals and manage your team online.</h4>
+        </hgroup>
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+      </header>
+    
+      <div id="main" role="main">
+        <%= yield %>
+      </div>
     </div>
     
-    <footer>
+    <footer id="main-footer">
       <p>Forcegrid 2011 - ARR </p>
     </footer>
    
     <% if Rails.env == 'development' -%>
-    <%= javascript_include_tag "jquery-1.5.1.js", "application.js" %>
+    <%= javascript_include_tag "jquery-1.5.1.js" %>
     <% else -%>
     <script src="http://www.google.com/jsapi"></script>
     <script>google.load("jquery", "1.5.1");</script>
-    <%= javascript_include_tag "application.js" %>
     <% end -%>
+    <%= javascript_include_tag "landing.js" %>
+    <%= yield(:custom_scripts) %>
   
     <!--[if lt IE 7 ]>
       <script src="js/libs/dd_belatedpng.js"></script>
