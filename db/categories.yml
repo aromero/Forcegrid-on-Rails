@@ -1,0 +1,227 @@
+-
+    id: 1
+    category_id: null
+    name: 'Software Development'
+    description: 'Servicios de IT'
+
+-
+    id: 2
+    category_id: null
+    name: 'Enterprise Applications'
+    description: 'Enterprise Applications'
+  
+-
+    id: 3
+    category_id: null
+    name: 'Network & Infrastructure'
+    description: 'Network & Infrastructure'
+
+-
+    id: 4
+    category_id: null
+    name: 'Network & Infrastructure'
+    description: 'Network & Infrastructure'
+
+-
+    id: 5
+    category_id: null
+    name: 'Staffing & Training'
+    description: 'Staffing & Training'
+  
+-
+    id: 6
+    category_id: 1
+    name: 'Web Development'
+    description: 'Web Development'
+  
+-
+    id: 7
+    category_id: 1
+    name: 'Desktop Software Development'
+    description: 'Desktop Software Development'
+  
+-
+    id: 8
+    category_id: 1
+    name: 'Corporate Website'
+    description: 'Corporate Website'
+    
+-
+    id: 9
+    category_id: 1
+    name: 'Mobile Application'
+    description: 'Mobile Application'
+    
+-
+    id: 10
+    category_id: 1
+    name: 'WordPress Website&Blog'
+    description: 'WordPress Website&Blog'
+    
+-
+    id: 11
+    category_id: 1
+    name: 'Joomla Application'
+    description: 'Joomla Application'
+    
+-
+    id: 12
+    category_id: 1
+    name: 'Facebook Fan Page'
+    description: 'Facebook Fan Page'
+    
+-
+    id: 13
+    category_id: 1
+    name: 'Twitter Application'
+    description: 'Twitter Application'
+    
+-
+    id: 14
+    category_id: 1
+    name: 'Ecommerce Solution'
+    description: 'Ecommerce Solution'
+    
+-
+    id: 15
+    category_id: 2
+    name: 'ERP Deployment'
+    description: 'ERP Deployment'
+
+-
+    id: 16
+    category_id: 2
+    name: 'Business Intelligence'
+    description: 'Business Intelligence'
+    
+-
+    id: 17
+    category_id: 2
+    name: 'Content Management'
+    description: 'Content Management'
+    
+-
+    id: 18
+    category_id: 2
+    name: 'Portals&Collaboration'
+    description: 'Portals&Collaboration'
+    
+-
+    id: 19
+    category_id: 2
+    name: 'Other Enterprise Application'
+    description: 'Other Enterprise Application'
+    
+-
+    id: 20
+    category_id: 3
+    name: 'VPN Setup'
+    description: 'VPN Setup'
+      
+-
+    id: 21
+    category_id: 3
+    name: 'Firewall&Security Setup'
+    description: 'Firewall&Security Setup'
+      
+-
+    id: 22
+    category_id: 3
+    name: 'LAN/Wireless Network Setup'
+    description: 'LAN/Wireless Network Setup'
+      
+-
+    id: 23
+    category_id: 3
+    name: 'Unix/Linux Server Administration'
+    description: 'Unix/Linux Server Administration'
+      
+-
+    id: 24
+    category_id: 3
+    name: 'Windows Server Administration'
+    description: 'Windows Server Administration'
+      
+-
+    id: 25
+    category_id: 3
+    name: 'Software&Patch Deployment'
+    description: 'Software&Patch Deployment'
+      
+-
+    id: 26
+    category_id: 3
+    name: 'Cabling Solution'
+    description: 'Cabling Solution'
+      
+-
+    id: 27
+    category_id: 3
+    name: 'Backup&Recovery'
+    description: 'Backup&Recovery'
+      
+-
+    id: 28
+    category_id: 3
+    name: 'Cloud Computing Advisory'
+    description: 'Cloud Computing Advisory'
+          
+-
+    id: 29
+    category_id: 4
+    name: 'Software Developers'
+    description: 'Software Developers'
+      
+-
+    id: 30
+    category_id: 4
+    name: 'Web/UI Designers'
+    description: 'Web/UI Designers'
+      
+-
+    id: 31
+    category_id: 4
+    name: 'Testing&QA'
+    description: 'Testing&QA'
+      
+-
+    id: 32
+    category_id: 4
+    name: 'Game Developers'
+    description: 'Game Developers'
+      
+-
+    id: 33
+    category_id: 4
+    name: 'Database Administrators'
+    description: 'Database Administrators'
+      
+-
+    id: 34
+    category_id: 4
+    name: 'Server Administrators'
+    description: 'Server Administrators'
+      
+-
+    id: 35
+    category_id: 4
+    name: 'Project Managers'
+    description: 'Project Managers'
+    
+-
+    id: 36
+    category_id: 4
+    name: 'SAP Professionals'
+    description: 'SAP Professionals'
+    
+-
+    id: 37
+    category_id: 4
+    name: 'Oracle E-Business Suite Professionals'
+    description: 'Oracle E-Business Suite Professionals'
+      
+-
+    id: 38
+    category_id: 4
+    name: 'Microsoft Dynamics Professionals'
+    description: 'Microsoft Dynamics Professionals'
