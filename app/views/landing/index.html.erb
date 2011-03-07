@@ -1,5 +1,14 @@
+<hr />
+<h4>What can we help you with?</h4>
+<p>Post your job. We will soon launch Forcegrid in your location</p>
 <ul>
   <% @sub_categories.each do |sc| %>
-  <li><%= sc %></li>
+  <li><%= link_to sc, new_job_path(:sub_category => sc) %></li>
   <% end %>
 </ul>
+<hr />
+<h4>Become a Forcegrid Professional</h4>
+<p>Be the first to know about the grid. If you are the best and brightest IT Pro, create your profile.
+Get hired, deliver solutions and get paid for your work. It’s free to join.</p>
+
+<a href="#" id="join-button">Join Now</a>

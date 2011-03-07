@@ -1,0 +1,95 @@
+@import "compass/css3";
+@import "blueprint/buttons";
+
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+
+body, select, input, textarea {
+  color: $font-color;
+  // Set your base font here, to apply evenly
+  font-family: $droid-sans;
+}
+
+//Headers (h1, h2, etc) have no default font-size or margin; define those yourself
+h1, h2, h3, h4, h5, h6 {
+  // Bold might not be the best choice if you are
+  // embedding a @font-face that's already bold
+  font-family: $droid-serif;
+  font-weight: bold;
+}
+
+a, a:active, a:visited { color: $link-color; text-decoration: none;}
+a:hover { color: $link-hover-color; }
+
+strong, th {
+  font-weight: bold;
+}
+
+small {
+  // Use font-size mixin to convert to percentage for YUI
+  // http://developer.yahoo.com/yui/3/cssfonts/#fontsize
+  @include font-size(11px);  // approx 85% when base-font-size eq 13px
+}
+
+// Add the 'required' attribute on your
+// inputs if you want to use these
+input:valid, textarea:valid {}
+input:invalid, textarea:invalid {
+  @include border-radius(1px);
+  @include box-shadow(red, 0, 0, 5px, 0);
+}
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+
+
+@mixin centrado-820px {
+  margin: 0 auto 30px;
+  width: 820px;
+  padding: 0px;
+}
+
+body {
+  font-size: 1.2em;
+}
+
+#top-nav {
+  padding: 15px;
+  text-align: right;
+}
+
+#container {
+  @include centrado-820px;
+  ul {
+    @include column-count(3);
+    padding: 20px;
+    list-style: none;
+  }
+}
+
+header {
+  text-align: center;
+  h1 {
+    color: #000;
+    font-size: 2.8em;
+  }
+}
+
+#main {
+  padding: 20px;
+  p { font-size: 0.8em;}
+  
+  #join-button {
+    @include anchor-button;
+  }
+}
+
+footer {
+  @include centrado-820px;
+}
