@@ -3,7 +3,7 @@
 <p>Post your job. We will soon launch Forcegrid in your location</p>
 <ul>
   <% @sub_categories.each do |sc| %>
-  <li><%= link_to sc, new_job_path(:sub_category => sc) %></li>
+  <li><%= link_to sc.name, new_job_path(:category => sc.name) %></li>
   <% end %>
 </ul>
 <hr />
