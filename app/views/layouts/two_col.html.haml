@@ -4,14 +4,17 @@
   = render :partial => 'layouts/head'
   %body{ :lang => 'en', :class => "#{controller.controller_name}" }
     %nav#top-nav
-      = render :partial => 'landing/top_nav'
+      = render :partial => 'layouts/two_col_partials/top_nav'
     #container
       %header#header
-        = render :partial => 'landing/header'
+        = render :partial => 'layouts/two_col_partials/header'
       #main{ :role => 'main' }
-        = render :partial => 'layouts/flashes'
-        = yield
+        .firstCol
+          = render :partial => 'layouts/flashes'
+          = yield
+        %aside.lastCol
+          = yield :aside
       %footer#footer
-        = render :partial => 'landing/footer'
+        = render :partial => 'layouts/two_col_partials/footer'
     -# Javascript at the bottom for fast page loading
     = render :partial => 'layouts/javascripts'

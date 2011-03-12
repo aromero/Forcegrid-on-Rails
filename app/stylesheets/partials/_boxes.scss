@@ -1,0 +1,198 @@
+/* START Rounded Corners Boxes */
+
+.boxIcon {
+	position: absolute;
+	right:15px;
+  .statistics {
+  .projects {
+  	background: transparent url(../images/icons.png) -45px;
+  	width: 30px;
+  	height: 46px;
+  	/*top: 10px;*/
+  	top: 0;
+  }
+  .bids {
+  .awardedJobs {
+  .funds {
+  	background: transparent url(../images/icons.png) -190px;
+  	width: 30px;
+  	height: 49px;
+  	top: 0;
+  }
+}
+/* Simple Gray */
+.simpleGray {
+	position: relative;
+	margin: 10px 0 20px;
+  .arrow {
+  	position: absolute;
+  	background: transparent url(../images/box_simpleGray_arrow.png) no-repeat;
+  	width: 16px;
+  	height: 8px;
+  	left: 15px;
+  }
+  .roundcont {
+  	width: 100%;
+  	background: #F4F4F4;
+  	color: #666;
+    .boxContent {
+  	  margin: 20px 15px 5px 15px;
+    }
+  }
+  .roundtop { 
+  	background: url(../images/box_simpleGray_tr.png) no-repeat top right; 
+  }
+  .roundbottom {
+  	background: url(../images/box_simpleGray_br.png) no-repeat top right; 
+  }
+  IMG.corner {
+     width: 15px;
+     height: 15px;
+     border: none;
+     display: block !important;
+  }
+  SELECT, TEXTAREA, INPUT[type=password], INPUT[type=text] {
+     background: #FFF!important;
+     max-width: 190px;
+  }
+}
+/* Simple Blue */
+.simpleBlue {
+/* Gradient Blue */
+.gradientBlue {
+	position: relative;
+	margin: 10px 0 35px;
+	border-bottom: 1px dashed #D3D3D3;
+	padding-bottom: 30px;
+  .arrow {
+  	position: absolute;
+  	background: transparent url(../images/box_gradientBlue_arrow.png) no-repeat;
+  	width: 16px;
+  	height: 8px;
+  	left: 15px;
+  }
+  .roundcont {
+  	width: 100%;
+  	background: transparent url(../images/box_gradientBlue_bg.png) repeat-x left top;
+  	color: #666;
+    .boxContent {
+    	margin: -45px 15px 5px;
+    }
+  }
+  .roundtop { 
+  	background: url(../images/box_gradientBlue_tr.png) no-repeat top right; 
+  }
+  IMG.corner {
+     width: 15px;
+     height: 81px;
+     border: none;
+     display: block !important;
+  }
+}
+/* Gradient Dark Blue */
+.gradientDarkBlue {
+/* Gradient Gray */
+.gradientGray {
+/* Border Background White */
+.borderBgWhite {
+	position: relative;
+	margin: 10px 0 20px;
+  .arrow {
+	position: absolute;
+	background: transparent url(../images/box_borderBgWhite_arrow.png) no-repeat;
+	width: 16px;
+	height: 8px;
+	left: 15px;
+}
+  .roundtop {
+  	margin-left: -3px;
+  	margin-bottom: -3px;
+  }
+  .roundcont {
+  	width: 100%;
+  	background: url(../images/box_borderBgWhite_tr.png) no-repeat top right; 
+  	color: #666;
+  	border-left: 3px solid #F2F2F2;
+  	border-bottom: 3px solid #F2F2F2;
+    .boxContent {
+    	margin: 20px 15px 5px 12px;
+    }
+  }
+
+  .roundbottom {
+  	background: url(../images/box_borderBgWhite_br.png) no-repeat top right; 
+  	margin-left: -3px;
+  	margin-bottom: -3px;
+  }
+
+  IMG.corner {
+     width: 15px;
+     height: 15px;
+     border: none;
+     display: block !important;
+  }
+}
+/* Border Background Gray */
+.borderBgGray {
+	position: relative;
+	margin: 10px 0 20px;
+}
+
+.borderBgGray .arrow {
+	position: absolute;
+	background: transparent url(../images/box_borderBgGray_arrow.png) no-repeat;
+	width: 16px;
+	height: 8px;
+	left: 15px;
+}
+
+.borderBgGray .roundtop {
+	margin-left: -3px;
+	margin-bottom: -3px;
+}
+
+.borderBgGray .roundcont {
+	width: 100%;
+	background: url(../images/box_borderBgGray_tr.png) no-repeat top right; 
+	color: #666;
+	border-left: 3px solid #F2F2F2;
+	border-bottom: 3px solid #F2F2F2;
+}
+
+.borderBgGray .roundcont .boxContent {
+	margin: 20px 15px 5px 12px;
+}
+
+.borderBgGray .roundbottom {
+	background: url(../images/box_borderBgGray_br.png) no-repeat top right; 
+	margin-left: -3px;
+	margin-bottom: -3px;
+}
+
+.borderBgGray IMG.corner {
+   width: 15px;
+   height: 15px;
+   border: none;
+   display: block !important;
+}
+
+.borderBgGray SELECT, .borderBgGray TEXTAREA, .borderBgGray INPUT[type=password], .borderBgGray INPUT[type=text] {
+   background: #FFF!important;
+   max-width: 190px; 
+}
+
+/* General Boxes */
+
+.boxNoTitle {
+	margin-top: 32px;
+}
+
+.boxNoTitleIndex {
+	margin-top: 13px;
+}
+
+.boxNoTitle SPAN.arrow, .boxNoTitleIndex SPAN.arrow {
+	display: none;
+}
+
+/* END Rounded Corners Boxes */
