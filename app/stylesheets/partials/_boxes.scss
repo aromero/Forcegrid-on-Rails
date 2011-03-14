@@ -97,13 +97,14 @@
 .borderBgWhite {
 	position: relative;
 	margin: 10px 0 20px;
+
   .arrow {
-	position: absolute;
-	background: transparent url(../images/box_borderBgWhite_arrow.png) no-repeat;
-	width: 16px;
-	height: 8px;
-	left: 15px;
-}
+  	position: absolute;
+  	background: transparent url(../images/box_borderBgWhite_arrow.png) no-repeat;
+  	width: 16px;
+  	height: 8px;
+  	left: 15px;
+  }
   .roundtop {
   	margin-left: -3px;
   	margin-bottom: -3px;
@@ -136,49 +137,34 @@
 .borderBgGray {
 	position: relative;
 	margin: 10px 0 20px;
-}
 
-.borderBgGray .arrow {
-	position: absolute;
-	background: transparent url(../images/box_borderBgGray_arrow.png) no-repeat;
-	width: 16px;
-	height: 8px;
-	left: 15px;
-}
-
-.borderBgGray .roundtop {
-	margin-left: -3px;
-	margin-bottom: -3px;
-}
-
-.borderBgGray .roundcont {
-	width: 100%;
-	background: url(../images/box_borderBgGray_tr.png) no-repeat top right; 
-	color: #666;
-	border-left: 3px solid #F2F2F2;
-	border-bottom: 3px solid #F2F2F2;
-}
-
-.borderBgGray .roundcont .boxContent {
-	margin: 20px 15px 5px 12px;
-}
-
-.borderBgGray .roundbottom {
-	background: url(../images/box_borderBgGray_br.png) no-repeat top right; 
-	margin-left: -3px;
-	margin-bottom: -3px;
-}
-
-.borderBgGray IMG.corner {
-   width: 15px;
-   height: 15px;
-   border: none;
-   display: block !important;
-}
-
-.borderBgGray SELECT, .borderBgGray TEXTAREA, .borderBgGray INPUT[type=password], .borderBgGray INPUT[type=text] {
-   background: #FFF!important;
-   max-width: 190px; 
+  .arrow {
+  	position: absolute;
+  	background: transparent url(../images/box_borderBgGray_arrow.png) no-repeat;
+  	width: 16px;
+  	height: 8px;
+  	left: 15px;
+  }
+  .roundtop {
+  	margin-left: -3px;
+  	margin-bottom: -3px;
+  }
+  .roundcont {
+  	width: 100%;
+  	background: url(../images/box_borderBgGray_tr.png) no-repeat top right; 
+  	color: #666;
+  	border-left: 3px solid #F2F2F2;
+  	border-bottom: 3px solid #F2F2F2;
+    .boxContent {
+    	margin: 20px 15px 5px 12px;
+    }
+  }
+  .roundbottom {
+  IMG.corner {
+  SELECT, TEXTAREA, INPUT[type=password], INPUT[type=text] {
+     background: #FFF!important;
+     max-width: 190px; 
+  }
 }
 
 /* General Boxes */
@@ -186,11 +172,9 @@
 .boxNoTitle {
 	margin-top: 32px;
 }
-
 .boxNoTitleIndex {
 	margin-top: 13px;
 }
-
 .boxNoTitle SPAN.arrow, .boxNoTitleIndex SPAN.arrow {
 	display: none;
 }

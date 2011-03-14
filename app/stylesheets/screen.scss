@@ -32,7 +32,7 @@ form.bp {
   @include blueprint-form; }
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
-body.two-col {
+/*body.two-col {
   #container {
     @include container; }
   #header, #footer {
@@ -46,4 +46,4 @@ body.two-col {
     // With 24 cols, this is 16.
     $content-columns: ceil(2 * $blueprint-grid-columns / 3);
     // true means it's the last column in the row
-    @include column($content-columns, true); } }
+    @include column($content-columns, true); } }*/
