@@ -55,10 +55,6 @@ input:invalid, textarea:invalid {
   padding: 0px;
 }
 
-body {
-  font-size: 1.2em;
-}
-
 #top-nav {
   padding: 15px;
   text-align: right;
@@ -84,12 +80,245 @@ body {
   min-height: 450px;
 }
 
+.clearfix {
+  display: block;
+}
+
+
+/* START General Styles */
+
+BODY {
+	font-size:14px;
+	position: relative;
+	width: 100%; 
+	margin: 0;
+	height: 100%;
+	color: #5F5F5F;
+}
+
+TABLE {
+	font-size:inherit;
+	font:100%;
+}
+
+PRE,
+CODE,
+KBD,
+SAMP,
+TT {
+/* Bump up IE to get to 13px equivalent */
+	font-family:monospace;
+	*font-size:108%;
+	line-height:100%;
+}
+
+H1 {
+	/*18px*/
+	font-size:138.5%;  
+}
+
+H2 {
+	/*16px*/
+	font-size:123.1%; 
+}
+
+H3 {
+	/*14px*/
+	font-size:108%;  
+}
+
+H4 {
+	font-size:100%;  
+}
+
+H5 {
+	font-size:100%;  
+}
+
+H1, H2, H3, H4, H5, H6, strong {
+	font-weight:bold; 
+}
+
+EM {
+	font-style:italic;
+}
+
+UL LI, OL LI {
+  padding: 5px 0;
+}
+
+INPUT[type=password] {
+/* setting a consistent width, 160px; */
+	width:14.25em;
+}
+
+INPUT[type=text] {
+	/* setting a consistent width, 160px; */
+	width: 14.25em;
+}
+
+TEXTAREA {
+	width:25.25em;
+	*width:24.9em;
+	height: 8.0em;
+	padding: 5px;
+}
+
+TABLE {
+	border-collapse:collapse;
+}
+
+INPUT[type=text],
+INPUT[type=password],
+INPUT[type=button],
+INPUT[type=submit], SELECT {
+	border:1px solid;
+	padding: 2px 0 2px 5px;
+}
+
+INPUT[type=checkbox]{
+	margin-right:7px;
+	border: 1px solid #DCDBDB;
+}
+
+SELECT {
+	padding: 1px 0 1px 3px;
+}
+
+BR, .clear {
+	/*clear:both;*/
+	font-size:1px;
+	line-height:1px;
+}
+
+IMG {
+	border:0;
+}
+
+FORM {
+	margin:0;
+	padding:0;
+}
+
+TEXTAREA {
+	font:1em Trebuchet, Helvetica, sans-serif;
+}
+
+A {
+	color: #1C6DD2;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.mainHilite {
+	font-size: 18px;
+	color: #1CB6D2;
+	font-weight: bold;
+}
+
+.mainNormal {
+	font-size: 18px;
+	color: #9E9E9E;
+	font-weight: bold;
+}
+
+.line {
+	border-top: 1px dashed #B9B9B9;
+	height: 1px;
+	margin: 10px 0;
+}
+
+SPAN.notAvailableIcon {
+  background: url(../images/smallIcons.png) no-repeat -19px -6px;
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+SPAN.availableIcon {
+  background: url(../images/smallIcons.png) no-repeat -2px -2px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: -2px 4px 0;
+  padding-top: 4px;
+}
+
+SPAN.messageIcon {
+  background: url(../images/smallIcons.png) no-repeat -40px -5px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: -2px 4px 0;
+  padding-top: 4px;
+}
+
+A.iconLink {
+  text-decoration: none;
+}
+
+.breakLine {
+  display: block;
+  padding: 8px 0 0;
+}
+
+ol, ul {
+  list-style: none outside none;
+}
+
+.freeContent {
+  padding: 10px 0 20px;
+}
+
+.steps {
+  padding: 0 4px 20px;
+}
+
+OL.steps {
+ list-style-type:decimal;
+ color: #1CB6D2;
+ font-weight: bold; 
+ list-style-position: inside;
+}
+
+OL.steps LI SPAN {
+  color: #666;
+  font-weight: normal;
+}
+
+P {
+  padding: 2px 0;
+}
+
+.txtModel {
+  padding: 0 20px;
+}
+
+.txtModel P {
+  text-align: justify;
+  padding: 8px 0;
+}
+
+.txtModel H2 {
+  padding: 20px 0 0;
+}
+
+.activeStatus {
+  text-transform: uppercase;
+  color: #08A800;
+  font-weight: bold;
+  font-style: italic; 
+}
+
+/* END General Styles */
+
 /* START Header Styles */
 
 .headerTop {
 	border-bottom: 4px solid #6295D5;
 	padding-bottom: 5px;
-	background-image: url('../images/box_gradientBlue_bg.png');
+	background-image: url('/images/box_gradientBlue_bg.png');
 }
 
 .headerTop .logo {
@@ -125,7 +354,7 @@ body {
 }
 
 .headerTop .headerRightContent .headerSecNav.noLogued UL LI.first.login {
-	background: url(../images/smallIcons.png) no-repeat -63px -5px;
+	background: url(/images/smallIcons.png) no-repeat -63px -5px;
 	padding-left: 15px;
 }
 
@@ -181,7 +410,7 @@ body {
 }
 
 .headerMainNav .left {
-	background: #1CB6D2 url(../images/backgrounds.png) no-repeat;
+	background: #1CB6D2 url(/images/backgrounds.png) no-repeat;
 	height: 33px;
 	width: 7px;
 	left: 0;
@@ -190,7 +419,7 @@ body {
 }
 
 .headerMainNav .right {
-	background: #1CB6D2 url(../images/backgrounds.png) no-repeat -7px;
+	background: #1CB6D2 url(/images/backgrounds.png) no-repeat -7px;
 	height: 33px;
 	width: 7px;
 	right: 0;
@@ -293,7 +522,7 @@ body {
 }
 
 .hiliteContent {
-  background: url(../images/bg_grayBottom.gif) repeat-x bottom;
+  background: url(/images/bg_grayBottom.gif) repeat-x bottom;
   min-height: 300px;
 }
 
@@ -346,7 +575,7 @@ body {
 
 /* START Footer Styles */
 
-#footer {
+#footerNav {
 	width: 100%;
 	margin: 20px auto 0;
 	background: #F4F4F4;
@@ -400,7 +629,7 @@ body {
 
 /* main buttons */
 A.mainButton {
-    background: transparent url(../images/buttons.png) no-repeat right -33px;
+    background: transparent url(/images/buttons.png) no-repeat right -33px;
     color: #FFF;
     display: block;
     float: left;
@@ -413,11 +642,11 @@ A.mainButton {
 }
 
 A.mainButton:hover {
-    background: transparent url(../images/buttons.png) no-repeat right -103px;
+    background: transparent url(/images/buttons.png) no-repeat right -103px;
 }
 
 A.mainButton SPAN {
-    background: transparent url(../images/buttons.png) no-repeat left top;
+    background: transparent url(/images/buttons.png) no-repeat left top;
     display: block;
     line-height: 14px;
     padding: 9px 10px 8px 18px;
@@ -425,12 +654,12 @@ A.mainButton SPAN {
 }
 
 A.mainButton SPAN:hover, A.mainButton:hover SPAN {
-    background: transparent url(../images/buttons.png) no-repeat left -70px;
+    background: transparent url(/images/buttons.png) no-repeat left -70px;
 }
 
 /* main buttons for INPUTS */
 SPAN.mainButton {
-  background: transparent url(../images/buttons.png) no-repeat right -33px;
+  background: transparent url(/images/buttons.png) no-repeat right -33px;
   color: #FFF;
   display: block;
   float: left;
@@ -443,11 +672,11 @@ SPAN.mainButton {
 }
 
 SPAN.mainButton:hover {
-	background: transparent url(../images/buttons.png) no-repeat right -103px;
+	background: transparent url(/images/buttons.png) no-repeat right -103px;
 }
 
 SPAN.mainButton INPUT {
-  background: transparent url(../images/buttons.png) no-repeat left top;
+  background: transparent url(/images/buttons.png) no-repeat left top;
   display: block;
   line-height: 14px;
   padding: 6px 8px 10px 15px;
@@ -460,12 +689,12 @@ SPAN.mainButton INPUT {
 }
 
 SPAN.mainButton INPUT:hover, SPAN.mainButton:hover INPUT {
-    background: transparent url(../images/buttons.png) no-repeat left -70px;
+    background: transparent url(/images/buttons.png) no-repeat left -70px;
 }
 
 /* main light buttons */
 A.mainButtonLight {
-  background: transparent url(../images/buttons.png) no-repeat right -416px;
+  background: transparent url(/images/buttons.png) no-repeat right -416px;
   color: #FFF;
   display: block;
   float: left;
@@ -478,11 +707,11 @@ A.mainButtonLight {
 }
 
 A.mainButtonLight:hover {
-    background: transparent url(../images/buttons.png) no-repeat right -485px;
+    background: transparent url(/images/buttons.png) no-repeat right -485px;
 }
 
 A.mainButtonLight SPAN {
-  background: transparent url(../images/buttons.png) no-repeat left -383px;
+  background: transparent url(/images/buttons.png) no-repeat left -383px;
   display: block;
   line-height: 14px;
   padding: 9px 10px 8px 18px;
@@ -490,12 +719,12 @@ A.mainButtonLight SPAN {
 }
 
 A.mainButtonLight SPAN:hover, A.mainButtonLight:hover SPAN {
-    background: transparent url(../images/buttons.png) no-repeat left -452px;
+    background: transparent url(/images/buttons.png) no-repeat left -452px;
 }
 
 /* main light buttons for INPUTS */
 SPAN.mainButtonLight {
-    background: transparent url(../images/buttons.png) no-repeat right -416px;
+    background: transparent url(/images/buttons.png) no-repeat right -416px;
     color: #FFF;
     display: block;
     float: left;
@@ -508,11 +737,11 @@ SPAN.mainButtonLight {
 }
 
 SPAN.mainButtonLight:hover {
-	background: transparent url(../images/buttons.png) no-repeat right -485px;
+	background: transparent url(/images/buttons.png) no-repeat right -485px;
 }
 
 SPAN.mainButtonLight INPUT {
-    background: transparent url(../images/buttons.png) no-repeat left -383px;
+    background: transparent url(/images/buttons.png) no-repeat left -383px;
     display: block;
     line-height: 14px;
     padding: 6px 8px 10px 15px;
@@ -525,14 +754,14 @@ SPAN.mainButtonLight INPUT {
 }
 
 SPAN.mainButtonLight INPUT:hover, SPAN.mainButtonLight:hover INPUT {
-    background: transparent url(../images/buttons.png) no-repeat left -452px;
+    background: transparent url(/images/buttons.png) no-repeat left -452px;
 }
 
 
 
 /* secondary buttons */
 A.secondaryButton {
-    background: transparent url(../images/buttons.png) no-repeat right -163px;
+    background: transparent url(/images/buttons.png) no-repeat right -163px;
     color: #FFF;
     display: block;
     float: left;
@@ -545,11 +774,11 @@ A.secondaryButton {
 }
 
 A.secondaryButton:hover {
-    background: transparent url(../images/buttons.png) no-repeat right -215px;
+    background: transparent url(/images/buttons.png) no-repeat right -215px;
 }
 
 A.secondaryButton SPAN {
-    background: transparent url(../images/buttons.png) no-repeat left -139px;
+    background: transparent url(/images/buttons.png) no-repeat left -139px;
     display: block;
     line-height: 14px;
     padding: 5px 10px 4px 18px;
@@ -557,12 +786,12 @@ A.secondaryButton SPAN {
 }
 
 A.secondaryButton SPAN:hover, A.secondaryButton:hover SPAN {
-    background: transparent url(../images/buttons.png) no-repeat left -191px;
+    background: transparent url(/images/buttons.png) no-repeat left -191px;
 }
 
 /* secondary buttons for INPUTS */
 SPAN.secondaryButton {
-    background: transparent url(../images/buttons.png) no-repeat right -163px;
+    background: transparent url(/images/buttons.png) no-repeat right -163px;
     color: #FFF;
     display: block;
     float: left;
@@ -575,11 +804,11 @@ SPAN.secondaryButton {
 }
 
 SPAN.secondaryButton:hover {
-    background: transparent url(../images/buttons.png) no-repeat right -215px;
+    background: transparent url(/images/buttons.png) no-repeat right -215px;
 }
 
 SPAN.secondaryButton INPUT {
-    background: transparent url(../images/buttons.png) no-repeat left -139px;
+    background: transparent url(/images/buttons.png) no-repeat left -139px;
     display: block;
     line-height: 14px;
     padding: 3px 7px 6px 13px;
@@ -592,12 +821,12 @@ SPAN.secondaryButton INPUT {
 }
 
 SPAN.secondaryButton INPUT:hover, SPAN.secondaryButton:hover INPUT {
-    background: transparent url(../images/buttons.png) no-repeat left -191px;
+    background: transparent url(/images/buttons.png) no-repeat left -191px;
 }
 
 /* hilite buttons */
 A.hiliteButton {
-	background: transparent url(../images/buttons.png) no-repeat right -311px;
+	background: transparent url(/images/buttons.png) no-repeat right -311px;
     color: #FFF;
     display: block;
     float: left;
@@ -610,11 +839,11 @@ A.hiliteButton {
 }
 
 A.hiliteButton:hover {
-    background: transparent url(../images/buttons.png) no-repeat right -345px;
+    background: transparent url(/images/buttons.png) no-repeat right -345px;
 }
 
 A.hiliteButton SPAN {
-	background: transparent url(../images/buttons.png) no-repeat left -243px;
+	background: transparent url(/images/buttons.png) no-repeat left -243px;
     display: block;
     line-height: 14px;
     padding: 9px 10px 8px 18px;
@@ -622,12 +851,12 @@ A.hiliteButton SPAN {
 }
 
 A.hiliteButton SPAN:hover, A.hiliteButton:hover SPAN {
-    background: transparent url(../images/buttons.png) no-repeat left -277px;
+    background: transparent url(/images/buttons.png) no-repeat left -277px;
 }
 
 /* hilite buttons for INPUTS */
 SPAN.hiliteButton {
-	background: transparent url(../images/buttons.png) no-repeat right -311px;
+	background: transparent url(/images/buttons.png) no-repeat right -311px;
     color: #FFF;
     display: block;
     float: left;
@@ -640,11 +869,11 @@ SPAN.hiliteButton {
 }
 
 SPAN.hiliteButton:hover {
-    background: transparent url(../images/buttons.png) no-repeat right -345px;
+    background: transparent url(/images/buttons.png) no-repeat right -345px;
 }
 
 SPAN.hiliteButton INPUT {
-	background: transparent url(../images/buttons.png) no-repeat left -243px;
+	background: transparent url(/images/buttons.png) no-repeat left -243px;
     display: block;
     line-height: 14px;
     padding: 7px 8px 10px 14px;
@@ -658,7 +887,7 @@ SPAN.hiliteButton INPUT {
 }
 
 SPAN.hiliteButton INPUT:hover, SPAN.hiliteButton:hover INPUT {
-    background: transparent url(../images/buttons.png) no-repeat left -277px;
+    background: transparent url(/images/buttons.png) no-repeat left -277px;
 }
 
 /* General Buttons */
