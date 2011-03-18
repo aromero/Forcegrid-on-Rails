@@ -319,6 +319,8 @@ P {
 	border-bottom: 4px solid #6295D5;
 	padding-bottom: 5px;
 	background-image: url('/images/box_gradientBlue_bg.png');
+	// TO-DO evaluar por qué se tuvo que fijar el tamaño en altura
+	height: 76px;
 }
 
 .headerTop .logo {
@@ -574,6 +576,14 @@ P {
 
 
 /* START Footer Styles */
+
+#footer {
+    background: none repeat scroll 0 0 #F4F4F4;
+    border-top: 4px solid #E1E1E1;
+    margin: 20px auto 0;
+    min-height: 83px;
+    width: 100%;
+}
 
 #footerNav {
 	width: 100%;
@@ -948,8 +958,23 @@ H5 {
     font-size: 1.2em;
   }
 
+  .logo {
+    margin: {
+      bottom: 15px;
+    }
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $droid-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  
+  h2, h3, h4 {
+    color: 	#202020;
+  }
+  
   #top-nav {
-    font-size: 0.75em;
     padding: 15px;
     text-align: right;
   }
@@ -973,15 +998,11 @@ H5 {
 
   #main {
     padding: 20px;
-    p { font-size: 0.8em;}
-  
-    #join-button {
-      @include anchor-button;
-    }
+    p { font-size: 1.1em;}
   }
 
-  footer {
-    @include centrado-970px;
+  #footer {
+   margin-top: 70px; 
   }
 }
 

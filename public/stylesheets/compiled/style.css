@@ -668,34 +668,35 @@ P {
   border-bottom: 4px solid #6295D5;
   padding-bottom: 5px;
   background-image: url("/images/box_gradientBlue_bg.png");
+  height: 76px;
 }
 
-/* line 324, ../../../app/stylesheets/partials/_page.scss */
+/* line 326, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .logo {
   float: left;
 }
 
-/* line 328, ../../../app/stylesheets/partials/_page.scss */
+/* line 330, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .logo IMG {
   margin: 10px 10px 10px 15px;
 }
 
-/* line 332, ../../../app/stylesheets/partials/_page.scss */
+/* line 334, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent {
   float: right;
 }
 
-/* line 336, ../../../app/stylesheets/partials/_page.scss */
+/* line 338, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .headerSecNav {
   height: 52px;
 }
 
-/* line 340, ../../../app/stylesheets/partials/_page.scss */
+/* line 342, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .headerSecNav UL {
   float: right;
 }
 
-/* line 344, ../../../app/stylesheets/partials/_page.scss */
+/* line 346, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .headerSecNav UL LI {
   float: left;
   color: #959595;
@@ -704,18 +705,18 @@ P {
   margin: 20px 0;
 }
 
-/* line 352, ../../../app/stylesheets/partials/_page.scss */
+/* line 354, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .headerSecNav UL LI.first {
   border-left: none;
 }
 
-/* line 356, ../../../app/stylesheets/partials/_page.scss */
+/* line 358, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .headerSecNav.noLogued UL LI.first.login {
   background: url(/images/smallIcons.png) no-repeat -63px -5px;
   padding-left: 15px;
 }
 
-/* line 361, ../../../app/stylesheets/partials/_page.scss */
+/* line 363, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .headerSecNav UL LI A {
   font-size: 11px;
   color: #9E9E9E;
@@ -724,47 +725,47 @@ P {
   text-decoration: none;
 }
 
-/* line 369, ../../../app/stylesheets/partials/_page.scss */
+/* line 371, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .headerSecNav.noLogued UL LI A {
   font-weight: bold;
   text-transform: capitalize;
 }
 
-/* line 374, ../../../app/stylesheets/partials/_page.scss */
+/* line 376, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .headerSecNav UL LI A:hover {
   text-decoration: underline;
 }
 
-/* line 378, ../../../app/stylesheets/partials/_page.scss */
+/* line 380, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .search SPAN.mainHilite, .headerTop .headerRightContent .search INPUT {
   float: left;
 }
 
-/* line 382, ../../../app/stylesheets/partials/_page.scss */
+/* line 384, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .search SPAN.mainHilite {
   margin: 7px 0 5px;
 }
 
-/* line 386, ../../../app/stylesheets/partials/_page.scss */
+/* line 388, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .search INPUT {
   margin: 7px 10px 5px;
   border: 1px solid #1CB6D2;
   color: #5F5F5F;
 }
 
-/* line 392, ../../../app/stylesheets/partials/_page.scss */
+/* line 394, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .search SPAN.hiliteButton {
   margin: 0 0 5px;
 }
 
-/* line 396, ../../../app/stylesheets/partials/_page.scss */
+/* line 398, ../../../app/stylesheets/partials/_page.scss */
 .headerTop .headerRightContent .search SPAN.hiliteButton INPUT {
   margin: 0!important;
   border: none !important;
   color: #FFF !important;
 }
 
-/* line 402, ../../../app/stylesheets/partials/_page.scss */
+/* line 404, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav {
   width: 100%;
   background: #1CB6D2;
@@ -775,7 +776,7 @@ P {
   position: relative;
 }
 
-/* line 412, ../../../app/stylesheets/partials/_page.scss */
+/* line 414, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav .left {
   background: #1cb6d2 url(/images/backgrounds.png) no-repeat;
   height: 33px;
@@ -785,7 +786,7 @@ P {
   bottom: 0;
 }
 
-/* line 421, ../../../app/stylesheets/partials/_page.scss */
+/* line 423, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav .right {
   background: #1cb6d2 url(/images/backgrounds.png) no-repeat -7px;
   height: 33px;
@@ -795,12 +796,12 @@ P {
   bottom: 0;
 }
 
-/* line 430, ../../../app/stylesheets/partials/_page.scss */
+/* line 432, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav UL {
   margin: 10px;
 }
 
-/* line 434, ../../../app/stylesheets/partials/_page.scss */
+/* line 436, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav UL LI {
   float: left;
   color: #FFF;
@@ -809,24 +810,24 @@ P {
   font-weight: bold;
 }
 
-/* line 442, ../../../app/stylesheets/partials/_page.scss */
+/* line 444, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav UL LI A {
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-/* line 448, ../../../app/stylesheets/partials/_page.scss */
+/* line 450, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav UL LI A:hover {
   text-decoration: underline;
 }
 
-/* line 452, ../../../app/stylesheets/partials/_page.scss */
+/* line 454, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav UL LI.first {
   border-left: none;
 }
 
-/* line 456, ../../../app/stylesheets/partials/_page.scss */
+/* line 458, ../../../app/stylesheets/partials/_page.scss */
 .headerMainNav P {
   margin: 10px 20px;
   color: #FFF;
@@ -835,7 +836,7 @@ P {
 
 /* END Header Styles */
 /* START Content Styles */
-/* line 466, ../../../app/stylesheets/partials/_page.scss */
+/* line 468, ../../../app/stylesheets/partials/_page.scss */
 #content {
   width: 970px;
   margin: auto;
@@ -843,119 +844,119 @@ P {
   min-height: 450px;
 }
 
-/* line 473, ../../../app/stylesheets/partials/_page.scss */
+/* line 475, ../../../app/stylesheets/partials/_page.scss */
 .firstCol, .lastCol, .midCol {
   padding: 20px 0;
 }
 
-/* line 477, ../../../app/stylesheets/partials/_page.scss */
+/* line 479, ../../../app/stylesheets/partials/_page.scss */
 .singleCol .firstCol {
   width: 970px;
   display: block;
 }
 
-/* line 482, ../../../app/stylesheets/partials/_page.scss */
+/* line 484, ../../../app/stylesheets/partials/_page.scss */
 .col2 .firstCol {
   width: 700px;
   margin: 0 20px 0 0;
   float: left;
 }
 
-/* line 488, ../../../app/stylesheets/partials/_page.scss */
+/* line 490, ../../../app/stylesheets/partials/_page.scss */
 .col2 .lastCol {
   width: 250px;
   float: left;
   margin: 0;
 }
 
-/* line 494, ../../../app/stylesheets/partials/_page.scss */
+/* line 496, ../../../app/stylesheets/partials/_page.scss */
 .col2b .firstCol {
   width: 250px;
   margin: 0 20px 0 0;
   float: left;
 }
 
-/* line 500, ../../../app/stylesheets/partials/_page.scss */
+/* line 502, ../../../app/stylesheets/partials/_page.scss */
 .col2b .lastCol {
   width: 700px;
   float: left;
   margin: 0;
 }
 
-/* line 506, ../../../app/stylesheets/partials/_page.scss */
+/* line 508, ../../../app/stylesheets/partials/_page.scss */
 .col3 .firstCol {
   width: 250px;
   float: left;
   margin: 0;
 }
 
-/* line 512, ../../../app/stylesheets/partials/_page.scss */
+/* line 514, ../../../app/stylesheets/partials/_page.scss */
 .col3 .midCol {
   width: 430px;
   margin: 0 20px 0;
   float: left;
 }
 
-/* line 518, ../../../app/stylesheets/partials/_page.scss */
+/* line 520, ../../../app/stylesheets/partials/_page.scss */
 .col3 .lastCol {
   width: 250px;
   float: left;
   margin: 0;
 }
 
-/* line 524, ../../../app/stylesheets/partials/_page.scss */
+/* line 526, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContent {
   background: url(/images/bg_grayBottom.gif) repeat-x bottom;
   min-height: 300px;
 }
 
-/* line 529, ../../../app/stylesheets/partials/_page.scss */
+/* line 531, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer {
   width: 784px;
   margin: 20px auto 0;
 }
 
-/* line 534, ../../../app/stylesheets/partials/_page.scss */
+/* line 536, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer .signUpBuyer {
   float: left;
   width: 380px;
 }
 
-/* line 539, ../../../app/stylesheets/partials/_page.scss */
+/* line 541, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer .signUpProvider {
   float: right;
   width: 380px;
 }
 
-/* line 544, ../../../app/stylesheets/partials/_page.scss */
+/* line 546, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer .signUpBuyer .gradientBlue, .hiliteContainer .signUpProvider .gradientDarkBlue {
   border-bottom: none;
 }
 
-/* line 548, ../../../app/stylesheets/partials/_page.scss */
+/* line 550, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer .signUpBuyer P, .hiliteContainer .signUpProvider P {
   font-size: 14px;
   font-weight: bold;
   padding: 4px 10px;
 }
 
-/* line 554, ../../../app/stylesheets/partials/_page.scss */
+/* line 556, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer .signUpBuyer P {
   color: #1CB6D2;
 }
 
-/* line 558, ../../../app/stylesheets/partials/_page.scss */
+/* line 560, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer .signUpProvider P {
   color: #6295D5;
 }
 
-/* line 562, ../../../app/stylesheets/partials/_page.scss */
+/* line 564, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer .signUpBuyer .line, .hiliteContainer .signUpProvider .line {
   margin: 25px 0 10px 0;
   clear: right;
 }
 
-/* line 567, ../../../app/stylesheets/partials/_page.scss */
+/* line 569, ../../../app/stylesheets/partials/_page.scss */
 .hiliteContainer .signUpBuyer .mainButtonLight, .hiliteContainer .signUpProvider .mainButton {
   font-size: 14px;
   margin: 10px 6px 30px 0;
@@ -963,7 +964,16 @@ P {
 
 /* END Content Styles */
 /* START Footer Styles */
-/* line 578, ../../../app/stylesheets/partials/_page.scss */
+/* line 580, ../../../app/stylesheets/partials/_page.scss */
+#footer {
+  background: none repeat scroll 0 0 #F4F4F4;
+  border-top: 4px solid #E1E1E1;
+  margin: 20px auto 0;
+  min-height: 83px;
+  width: 100%;
+}
+
+/* line 588, ../../../app/stylesheets/partials/_page.scss */
 #footerNav {
   width: 100%;
   margin: 20px auto 0;
@@ -972,20 +982,20 @@ P {
   border-top: 4px solid #E1E1E1;
 }
 
-/* line 586, ../../../app/stylesheets/partials/_page.scss */
+/* line 596, ../../../app/stylesheets/partials/_page.scss */
 .footerNav {
   margin: auto;
   width: 970px;
   text-align: center;
 }
 
-/* line 593, ../../../app/stylesheets/partials/_page.scss */
+/* line 603, ../../../app/stylesheets/partials/_page.scss */
 .footerNav UL {
   margin: 15px auto 0;
   width: 500px;
 }
 
-/* line 598, ../../../app/stylesheets/partials/_page.scss */
+/* line 608, ../../../app/stylesheets/partials/_page.scss */
 .footerNav UL LI {
   color: #9E9E9E;
   border-left: 1px solid #9E9E9E;
@@ -994,12 +1004,12 @@ P {
   float: left;
 }
 
-/* line 606, ../../../app/stylesheets/partials/_page.scss */
+/* line 616, ../../../app/stylesheets/partials/_page.scss */
 .footerNav UL LI.first {
   border-left: none;
 }
 
-/* line 610, ../../../app/stylesheets/partials/_page.scss */
+/* line 620, ../../../app/stylesheets/partials/_page.scss */
 .footerNav UL LI A {
   font-size: 10px;
   color: #9E9E9E;
@@ -1008,7 +1018,7 @@ P {
   text-decoration: none;
 }
 
-/* line 618, ../../../app/stylesheets/partials/_page.scss */
+/* line 628, ../../../app/stylesheets/partials/_page.scss */
 .legal {
   margin: auto;
   width: 970px;
@@ -1020,7 +1030,7 @@ P {
 /* END Footer Styles */
 /* START Buttons */
 /* main buttons */
-/* line 631, ../../../app/stylesheets/partials/_page.scss */
+/* line 641, ../../../app/stylesheets/partials/_page.scss */
 A.mainButton {
   background: transparent url(/images/buttons.png) no-repeat right -33px;
   color: #FFF;
@@ -1034,12 +1044,12 @@ A.mainButton {
   font-weight: bold;
 }
 
-/* line 644, ../../../app/stylesheets/partials/_page.scss */
+/* line 654, ../../../app/stylesheets/partials/_page.scss */
 A.mainButton:hover {
   background: transparent url(/images/buttons.png) no-repeat right -103px;
 }
 
-/* line 648, ../../../app/stylesheets/partials/_page.scss */
+/* line 658, ../../../app/stylesheets/partials/_page.scss */
 A.mainButton SPAN {
   background: transparent url(/images/buttons.png) no-repeat left top;
   display: block;
@@ -1048,13 +1058,13 @@ A.mainButton SPAN {
   height: 33px;
 }
 
-/* line 656, ../../../app/stylesheets/partials/_page.scss */
+/* line 666, ../../../app/stylesheets/partials/_page.scss */
 A.mainButton SPAN:hover, A.mainButton:hover SPAN {
   background: transparent url(/images/buttons.png) no-repeat left -70px;
 }
 
 /* main buttons for INPUTS */
-/* line 661, ../../../app/stylesheets/partials/_page.scss */
+/* line 671, ../../../app/stylesheets/partials/_page.scss */
 SPAN.mainButton {
   background: transparent url(/images/buttons.png) no-repeat right -33px;
   color: #FFF;
@@ -1068,12 +1078,12 @@ SPAN.mainButton {
   font-weight: bold;
 }
 
-/* line 674, ../../../app/stylesheets/partials/_page.scss */
+/* line 684, ../../../app/stylesheets/partials/_page.scss */
 SPAN.mainButton:hover {
   background: transparent url(/images/buttons.png) no-repeat right -103px;
 }
 
-/* line 678, ../../../app/stylesheets/partials/_page.scss */
+/* line 688, ../../../app/stylesheets/partials/_page.scss */
 SPAN.mainButton INPUT {
   background: transparent url(/images/buttons.png) no-repeat left top;
   display: block;
@@ -1087,13 +1097,13 @@ SPAN.mainButton INPUT {
   text-transform: lowercase;
 }
 
-/* line 691, ../../../app/stylesheets/partials/_page.scss */
+/* line 701, ../../../app/stylesheets/partials/_page.scss */
 SPAN.mainButton INPUT:hover, SPAN.mainButton:hover INPUT {
   background: transparent url(/images/buttons.png) no-repeat left -70px;
 }
 
 /* main light buttons */
-/* line 696, ../../../app/stylesheets/partials/_page.scss */
+/* line 706, ../../../app/stylesheets/partials/_page.scss */
 A.mainButtonLight {
   background: transparent url(/images/buttons.png) no-repeat right -416px;
   color: #FFF;
@@ -1107,12 +1117,12 @@ A.mainButtonLight {
   font-weight: bold;
 }
 
-/* line 709, ../../../app/stylesheets/partials/_page.scss */
+/* line 719, ../../../app/stylesheets/partials/_page.scss */
 A.mainButtonLight:hover {
   background: transparent url(/images/buttons.png) no-repeat right -485px;
 }
 
-/* line 713, ../../../app/stylesheets/partials/_page.scss */
+/* line 723, ../../../app/stylesheets/partials/_page.scss */
 A.mainButtonLight SPAN {
   background: transparent url(/images/buttons.png) no-repeat left -383px;
   display: block;
@@ -1121,13 +1131,13 @@ A.mainButtonLight SPAN {
   height: 33px;
 }
 
-/* line 721, ../../../app/stylesheets/partials/_page.scss */
+/* line 731, ../../../app/stylesheets/partials/_page.scss */
 A.mainButtonLight SPAN:hover, A.mainButtonLight:hover SPAN {
   background: transparent url(/images/buttons.png) no-repeat left -452px;
 }
 
 /* main light buttons for INPUTS */
-/* line 726, ../../../app/stylesheets/partials/_page.scss */
+/* line 736, ../../../app/stylesheets/partials/_page.scss */
 SPAN.mainButtonLight {
   background: transparent url(/images/buttons.png) no-repeat right -416px;
   color: #FFF;
@@ -1141,12 +1151,12 @@ SPAN.mainButtonLight {
   font-weight: bold;
 }
 
-/* line 739, ../../../app/stylesheets/partials/_page.scss */
+/* line 749, ../../../app/stylesheets/partials/_page.scss */
 SPAN.mainButtonLight:hover {
   background: transparent url(/images/buttons.png) no-repeat right -485px;
 }
 
-/* line 743, ../../../app/stylesheets/partials/_page.scss */
+/* line 753, ../../../app/stylesheets/partials/_page.scss */
 SPAN.mainButtonLight INPUT {
   background: transparent url(/images/buttons.png) no-repeat left -383px;
   display: block;
@@ -1160,13 +1170,13 @@ SPAN.mainButtonLight INPUT {
   text-transform: lowercase;
 }
 
-/* line 756, ../../../app/stylesheets/partials/_page.scss */
+/* line 766, ../../../app/stylesheets/partials/_page.scss */
 SPAN.mainButtonLight INPUT:hover, SPAN.mainButtonLight:hover INPUT {
   background: transparent url(/images/buttons.png) no-repeat left -452px;
 }
 
 /* secondary buttons */
-/* line 763, ../../../app/stylesheets/partials/_page.scss */
+/* line 773, ../../../app/stylesheets/partials/_page.scss */
 A.secondaryButton {
   background: transparent url(/images/buttons.png) no-repeat right -163px;
   color: #FFF;
@@ -1180,12 +1190,12 @@ A.secondaryButton {
   font-weight: bold;
 }
 
-/* line 776, ../../../app/stylesheets/partials/_page.scss */
+/* line 786, ../../../app/stylesheets/partials/_page.scss */
 A.secondaryButton:hover {
   background: transparent url(/images/buttons.png) no-repeat right -215px;
 }
 
-/* line 780, ../../../app/stylesheets/partials/_page.scss */
+/* line 790, ../../../app/stylesheets/partials/_page.scss */
 A.secondaryButton SPAN {
   background: transparent url(/images/buttons.png) no-repeat left -139px;
   display: block;
@@ -1194,13 +1204,13 @@ A.secondaryButton SPAN {
   height: 24px;
 }
 
-/* line 788, ../../../app/stylesheets/partials/_page.scss */
+/* line 798, ../../../app/stylesheets/partials/_page.scss */
 A.secondaryButton SPAN:hover, A.secondaryButton:hover SPAN {
   background: transparent url(/images/buttons.png) no-repeat left -191px;
 }
 
 /* secondary buttons for INPUTS */
-/* line 793, ../../../app/stylesheets/partials/_page.scss */
+/* line 803, ../../../app/stylesheets/partials/_page.scss */
 SPAN.secondaryButton {
   background: transparent url(/images/buttons.png) no-repeat right -163px;
   color: #FFF;
@@ -1214,12 +1224,12 @@ SPAN.secondaryButton {
   font-weight: bold;
 }
 
-/* line 806, ../../../app/stylesheets/partials/_page.scss */
+/* line 816, ../../../app/stylesheets/partials/_page.scss */
 SPAN.secondaryButton:hover {
   background: transparent url(/images/buttons.png) no-repeat right -215px;
 }
 
-/* line 810, ../../../app/stylesheets/partials/_page.scss */
+/* line 820, ../../../app/stylesheets/partials/_page.scss */
 SPAN.secondaryButton INPUT {
   background: transparent url(/images/buttons.png) no-repeat left -139px;
   display: block;
@@ -1233,13 +1243,13 @@ SPAN.secondaryButton INPUT {
   text-transform: lowercase;
 }
 
-/* line 823, ../../../app/stylesheets/partials/_page.scss */
+/* line 833, ../../../app/stylesheets/partials/_page.scss */
 SPAN.secondaryButton INPUT:hover, SPAN.secondaryButton:hover INPUT {
   background: transparent url(/images/buttons.png) no-repeat left -191px;
 }
 
 /* hilite buttons */
-/* line 828, ../../../app/stylesheets/partials/_page.scss */
+/* line 838, ../../../app/stylesheets/partials/_page.scss */
 A.hiliteButton {
   background: transparent url(/images/buttons.png) no-repeat right -311px;
   color: #FFF;
@@ -1253,12 +1263,12 @@ A.hiliteButton {
   font-weight: bold;
 }
 
-/* line 841, ../../../app/stylesheets/partials/_page.scss */
+/* line 851, ../../../app/stylesheets/partials/_page.scss */
 A.hiliteButton:hover {
   background: transparent url(/images/buttons.png) no-repeat right -345px;
 }
 
-/* line 845, ../../../app/stylesheets/partials/_page.scss */
+/* line 855, ../../../app/stylesheets/partials/_page.scss */
 A.hiliteButton SPAN {
   background: transparent url(/images/buttons.png) no-repeat left -243px;
   display: block;
@@ -1267,13 +1277,13 @@ A.hiliteButton SPAN {
   height: 17px;
 }
 
-/* line 853, ../../../app/stylesheets/partials/_page.scss */
+/* line 863, ../../../app/stylesheets/partials/_page.scss */
 A.hiliteButton SPAN:hover, A.hiliteButton:hover SPAN {
   background: transparent url(/images/buttons.png) no-repeat left -277px;
 }
 
 /* hilite buttons for INPUTS */
-/* line 858, ../../../app/stylesheets/partials/_page.scss */
+/* line 868, ../../../app/stylesheets/partials/_page.scss */
 SPAN.hiliteButton {
   background: transparent url(/images/buttons.png) no-repeat right -311px;
   color: #FFF;
@@ -1287,12 +1297,12 @@ SPAN.hiliteButton {
   font-weight: bold;
 }
 
-/* line 871, ../../../app/stylesheets/partials/_page.scss */
+/* line 881, ../../../app/stylesheets/partials/_page.scss */
 SPAN.hiliteButton:hover {
   background: transparent url(/images/buttons.png) no-repeat right -345px;
 }
 
-/* line 875, ../../../app/stylesheets/partials/_page.scss */
+/* line 885, ../../../app/stylesheets/partials/_page.scss */
 SPAN.hiliteButton INPUT {
   background: transparent url(/images/buttons.png) no-repeat left -243px;
   display: block;
@@ -1307,23 +1317,23 @@ SPAN.hiliteButton INPUT {
   font-family: Trebuchet MS,Arial,Helvetica;
 }
 
-/* line 889, ../../../app/stylesheets/partials/_page.scss */
+/* line 899, ../../../app/stylesheets/partials/_page.scss */
 SPAN.hiliteButton INPUT:hover, SPAN.hiliteButton:hover INPUT {
   background: transparent url(/images/buttons.png) no-repeat left -277px;
 }
 
 /* General Buttons */
-/* line 894, ../../../app/stylesheets/partials/_page.scss */
+/* line 904, ../../../app/stylesheets/partials/_page.scss */
 .rowButton {
   background: #F9F8F8;
 }
 
-/* line 898, ../../../app/stylesheets/partials/_page.scss */
+/* line 908, ../../../app/stylesheets/partials/_page.scss */
 .rowButton .mainButton {
   margin: 0 20px 20px;
 }
 
-/* line 902, ../../../app/stylesheets/partials/_page.scss */
+/* line 912, ../../../app/stylesheets/partials/_page.scss */
 .rowButton SPAN.buttonMsg {
   margin-top: 11px;
   float: left;
@@ -1331,35 +1341,35 @@ SPAN.hiliteButton INPUT:hover, SPAN.hiliteButton:hover INPUT {
 
 /* END Buttons */
 /* START Titles */
-/* line 911, ../../../app/stylesheets/partials/_page.scss */
+/* line 921, ../../../app/stylesheets/partials/_page.scss */
 H1, H2 {
   color: #1CB6D2;
   font-size: 18px;
   padding: 0 0 5px 0;
 }
 
-/* line 917, ../../../app/stylesheets/partials/_page.scss */
+/* line 927, ../../../app/stylesheets/partials/_page.scss */
 H3 {
   color: #9E9E9E;
   font-size: 18px;
   padding: 5px 0;
 }
 
-/* line 923, ../../../app/stylesheets/partials/_page.scss */
+/* line 933, ../../../app/stylesheets/partials/_page.scss */
 H3 > SPAN, H2 > SPAN {
   color: #1CB6D2;
   font-size: 14px;
   font-weight: normal;
 }
 
-/* line 929, ../../../app/stylesheets/partials/_page.scss */
+/* line 939, ../../../app/stylesheets/partials/_page.scss */
 H4 {
   color: #1CB6D2;
   font-size: 14px;
   padding: 5px 0;
 }
 
-/* line 935, ../../../app/stylesheets/partials/_page.scss */
+/* line 945, ../../../app/stylesheets/partials/_page.scss */
 H5 {
   color: #9E9E9E;
   font-size: 14px;
@@ -1368,23 +1378,36 @@ H5 {
 
 /* END Titles */
 /* START Landing Page */
-/* line 947, ../../../app/stylesheets/partials/_page.scss */
+/* line 957, ../../../app/stylesheets/partials/_page.scss */
 .landing body {
   font-size: 1.2em;
 }
-/* line 951, ../../../app/stylesheets/partials/_page.scss */
+/* line 961, ../../../app/stylesheets/partials/_page.scss */
+.landing .logo {
+  margin-bottom: 15px;
+}
+/* line 967, ../../../app/stylesheets/partials/_page.scss */
+.landing h1, .landing h2, .landing h3, .landing h4, .landing h5, .landing h6 {
+  font-family: "droid-serif-1", "droid-serif-2", serif;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+/* line 973, ../../../app/stylesheets/partials/_page.scss */
+.landing h2, .landing h3, .landing h4 {
+  color: #202020;
+}
+/* line 977, ../../../app/stylesheets/partials/_page.scss */
 .landing #top-nav {
-  font-size: 0.75em;
   padding: 15px;
   text-align: right;
 }
-/* line 957, ../../../app/stylesheets/partials/_page.scss */
+/* line 982, ../../../app/stylesheets/partials/_page.scss */
 .landing #container {
   margin: 0 auto 30px;
   width: 970px;
   padding: 0px;
 }
-/* line 959, ../../../app/stylesheets/partials/_page.scss */
+/* line 984, ../../../app/stylesheets/partials/_page.scss */
 .landing #container ul {
   -moz-column-count: 3;
   -webkit-column-count: 3;
@@ -1393,59 +1416,26 @@ H5 {
   padding: 20px;
   list-style: none;
 }
-/* line 966, ../../../app/stylesheets/partials/_page.scss */
+/* line 991, ../../../app/stylesheets/partials/_page.scss */
 .landing header {
   text-align: center;
 }
-/* line 968, ../../../app/stylesheets/partials/_page.scss */
+/* line 993, ../../../app/stylesheets/partials/_page.scss */
 .landing header h1 {
   color: #000;
   font-size: 2.8em;
 }
-/* line 974, ../../../app/stylesheets/partials/_page.scss */
+/* line 999, ../../../app/stylesheets/partials/_page.scss */
 .landing #main {
   padding: 20px;
 }
-/* line 976, ../../../app/stylesheets/partials/_page.scss */
+/* line 1001, ../../../app/stylesheets/partials/_page.scss */
 .landing #main p {
-  font-size: 0.8em;
+  font-size: 1.1em;
 }
-/* line 978, ../../../app/stylesheets/partials/_page.scss */
-.landing #main #join-button {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  margin: 0.7em 0.5em 0.7em 0;
-  border-width: 1px;
-  border-style: solid;
-  font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-  font-size: 100%;
-  line-height: 130%;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 5px 10px 5px 7px;
-}
-/* line 7, ../../../../../../../.rvm/gems/ruby-1.9.2-p136@forcegrid/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-.landing #main #join-button {
-  *display: inline;
-}
-/* line 75, ../../../../../../../.rvm/gems/ruby-1.9.2-p136@forcegrid/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-.landing #main #join-button img {
-  margin: 0 3px -3px 0 !important;
-  padding: 0;
-  border: none;
-  width: 16px;
-  height: 16px;
-  float: none;
-}
-/* line 983, ../../../app/stylesheets/partials/_page.scss */
-.landing footer {
-  margin: 0 auto 30px;
-  width: 970px;
-  padding: 0px;
+/* line 1004, ../../../app/stylesheets/partials/_page.scss */
+.landing #footer {
+  margin-top: 70px;
 }
 
 /* END Landing Page */
