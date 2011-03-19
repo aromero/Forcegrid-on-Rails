@@ -271,68 +271,54 @@ P
   background-image: url("/images/box_gradientBlue_bg.png")
   // TO-DO evaluar por qué se tuvo que fijar el tamaño en altura
   height: 76px
+  .logo
+    float: left
+    IMG
+      margin: 10px 10px 10px 15px
+  .headerRightContent
+    float: right
+    .headerSecNav
+      height: 52px
+      UL
+        float: right
+        LI
+          float: left
+          color: #959595
+          border-left: 1px solid #9E9E9E
+          padding: 0 8px
+          margin: 20px 0
+          A
+            font-size: 11px
+            color: #9E9E9E
+            text-transform: uppercase
+            font-weight: normal
+            text-decoration: none
+            &:hover
+              text-decoration: underline
+        .first
+          border-left: none
+      .noLogued UL LI.first.login
+        background: url(/images/smallIcons.png) no-repeat -63px -5px
+        padding-left: 15px
+      .noLogued UL LI A
+        font-weight: bold
+        text-transform: capitalize
 
-.headerTop .logo
-  float: left
-
-.headerTop .logo IMG
-  margin: 10px 10px 10px 15px
-
-.headerTop .headerRightContent
-  float: right
-
-.headerTop .headerRightContent .headerSecNav
-  height: 52px
-
-.headerTop .headerRightContent .headerSecNav UL
-  float: right
-
-.headerTop .headerRightContent .headerSecNav UL LI
-  float: left
-  color: #959595
-  border-left: 1px solid #9E9E9E
-  padding: 0 8px
-  margin: 20px 0
-
-.headerTop .headerRightContent .headerSecNav UL LI.first
-  border-left: none
-
-.headerTop .headerRightContent .headerSecNav.noLogued UL LI.first.login
-  background: url(/images/smallIcons.png) no-repeat -63px -5px
-  padding-left: 15px
-
-.headerTop .headerRightContent .headerSecNav UL LI A
-  font-size: 11px
-  color: #9E9E9E
-  text-transform: uppercase
-  font-weight: normal
-  text-decoration: none
-
-.headerTop .headerRightContent .headerSecNav.noLogued UL LI A
-  font-weight: bold
-  text-transform: capitalize
-
-.headerTop .headerRightContent .headerSecNav UL LI A:hover
-  text-decoration: underline
-
-.headerTop .headerRightContent .search SPAN.mainHilite, .headerTop .headerRightContent .search INPUT
-  float: left
-
-.headerTop .headerRightContent .search SPAN.mainHilite
-  margin: 7px 0 5px
-
-.headerTop .headerRightContent .search INPUT
-  margin: 7px 10px 5px
-  border: 1px solid #1CB6D2
-  color: #5F5F5F
-
-.headerTop .headerRightContent .search SPAN.hiliteButton
-  margin: 0 0 5px
-
-.headerTop .headerRightContent .search SPAN.hiliteButton INPUT
-  margin: 0!important
-  border: none !important
-  color: #FFF !important
+    .search 
+      SPAN.mainHilite, .headerTop .headerRightContent .search INPUT
+        float: left
+      SPAN.mainHilite
+        margin: 7px 0 5px
+      INPUT
+        margin: 7px 10px 5px
+        border: 1px solid #1CB6D2
+        color: #5F5F5F
+      SPAN.hiliteButton
+        margin: 0 0 5px
+        INPUT
+          margin: 0!important
+          border: none !important
+          color: #FFF !important
 
 .headerMainNav
   width: 100%
@@ -342,48 +328,40 @@ P
   border-top: 1px solid #FFF
   min-height: 33px
   position: relative
-
-.headerMainNav .left
-  background: #1cb6d2 url(/images/backgrounds.png) no-repeat
-  height: 33px
-  width: 7px
-  left: 0
-  position: absolute
-  bottom: 0
-
-.headerMainNav .right
-  background: #1cb6d2 url(/images/backgrounds.png) no-repeat -7px
-  height: 33px
-  width: 7px
-  right: 0
-  position: absolute
-  bottom: 0
-
-.headerMainNav UL
-  margin: 10px
-
-.headerMainNav UL LI
-  float: left
-  color: #FFF
-  border-left: 1px solid #FFF
-  padding: 0 12px
-  font-weight: bold
-
-.headerMainNav UL LI A
-  color: #FFF
-  text-transform: uppercase
-  text-decoration: none
-
-.headerMainNav UL LI A:hover
-  text-decoration: underline
-
-.headerMainNav UL LI.first
-  border-left: none
-
-.headerMainNav P
-  margin: 10px 20px
-  color: #FFF
-  font-size: 12px
+  .left
+    background: #1cb6d2 url(/images/backgrounds.png) no-repeat
+    height: 33px
+    width: 7px
+    left: 0
+    position: absolute
+    bottom: 0
+  .right
+    background: #1cb6d2 url(/images/backgrounds.png) no-repeat -7px
+    height: 33px
+    width: 7px
+    right: 0
+    position: absolute
+    bottom: 0
+  UL
+    margin: 10px
+    LI
+      float: left
+      color: #FFF
+      border-left: 1px solid #FFF
+      padding: 0 12px
+      font-weight: bold
+      A
+        color: #FFF
+        text-transform: uppercase
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+    .first
+      border-left: none
+  P
+    margin: 10px 20px
+    color: #FFF
+    font-size: 12px
 
 /* END Header Styles
 
@@ -444,36 +422,28 @@ P
 .hiliteContainer
   width: 784px
   margin: 20px auto 0
-
-.hiliteContainer .signUpBuyer
-  float: left
-  width: 380px
-
-.hiliteContainer .signUpProvider
-  float: right
-  width: 380px
-
-.hiliteContainer .signUpBuyer .gradientBlue, .hiliteContainer .signUpProvider .gradientDarkBlue
-  border-bottom: none
-
-.hiliteContainer .signUpBuyer P, .hiliteContainer .signUpProvider P
-  font-size: 14px
-  font-weight: bold
-  padding: 4px 10px
-
-.hiliteContainer .signUpBuyer P
-  color: #1CB6D2
-
-.hiliteContainer .signUpProvider P
-  color: #6295D5
-
-.hiliteContainer .signUpBuyer .line, .hiliteContainer .signUpProvider .line
-  margin: 25px 0 10px 0
-  clear: right
-
-.hiliteContainer .signUpBuyer .mainButtonLight, .hiliteContainer .signUpProvider .mainButton
-  font-size: 14px
-  margin: 10px 6px 30px 0
+  .signUpBuyer
+    float: left
+    width: 380px
+  .signUpProvider
+    float: right
+    width: 380px
+  .signUpBuyer .gradientBlue, .hiliteContainer .signUpProvider .gradientDarkBlue
+    border-bottom: none
+  .signUpBuyer P, .hiliteContainer .signUpProvider P
+    font-size: 14px
+    font-weight: bold
+    padding: 4px 10px
+  .signUpBuyer P
+    color: #1CB6D2
+  .signUpProvider P
+    color: #6295D5
+  .signUpBuyer .line, .hiliteContainer .signUpProvider .line
+    margin: 25px 0 10px 0
+    clear: right
+  .signUpBuyer .mainButtonLight, .hiliteContainer .signUpProvider .mainButton
+    font-size: 14px
+    margin: 10px 6px 30px 0
 
 /* END Content Styles
 
@@ -497,27 +467,23 @@ P
   margin: auto
   width: 970px
   text-align: center
-
-.footerNav UL
-  margin: 15px auto 0
-  width: 500px
-
-.footerNav UL LI
-  color: #9E9E9E
-  border-left: 1px solid #9E9E9E
-  padding: 0 8px
-  margin: 10px 0
-  float: left
-
-.footerNav UL LI.first
-  border-left: none
-
-.footerNav UL LI A
-  font-size: 10px
-  color: #9E9E9E
-  text-transform: uppercase
-  font-weight: normal
-  text-decoration: none
+  UL
+    margin: 15px auto 0
+    width: 500px
+    LI
+      color: #9E9E9E
+      border-left: 1px solid #9E9E9E
+      padding: 0 8px
+      margin: 10px 0
+      float: left
+      A
+        font-size: 10px
+        color: #9E9E9E
+        text-transform: uppercase
+        font-weight: normal
+        text-decoration: none
+    .first
+      border-left: none
 
 .legal
   margin: auto
@@ -542,19 +508,16 @@ A.mainButton
   text-decoration: none
   text-transform: lowercase
   font-weight: bold
-
-A.mainButton:hover
-  background: transparent url(/images/buttons.png) no-repeat right -103px
-
-A.mainButton SPAN
-  background: transparent url(/images/buttons.png) no-repeat left top
-  display: block
-  line-height: 14px
-  padding: 9px 10px 8px 18px
-  height: 33px
-
-A.mainButton SPAN:hover, A.mainButton:hover SPAN
-  background: transparent url(/images/buttons.png) no-repeat left -70px
+  &:hover
+    background: transparent url(/images/buttons.png) no-repeat right -103px
+  SPAN
+    background: transparent url(/images/buttons.png) no-repeat left top
+    display: block
+    line-height: 14px
+    padding: 9px 10px 8px 18px
+    height: 33px
+  SPAN:hover, SPAN
+    background: transparent url(/images/buttons.png) no-repeat left -70px
 
 /* main buttons for INPUTS
 SPAN.mainButton
@@ -568,24 +531,21 @@ SPAN.mainButton
   text-decoration: none
   text-transform: lowercase
   font-weight: bold
-
-SPAN.mainButton:hover
-  background: transparent url(/images/buttons.png) no-repeat right -103px
-
-SPAN.mainButton INPUT
-  background: transparent url(/images/buttons.png) no-repeat left top
-  display: block
-  line-height: 14px
-  padding: 6px 8px 10px 15px
-  height: 33px
-  border: none
-  font-size: 11px
-  font-weight: bold
-  color: #FFF
-  text-transform: lowercase
-
-SPAN.mainButton INPUT:hover, SPAN.mainButton:hover INPUT
-  background: transparent url(/images/buttons.png) no-repeat left -70px
+  &:hover
+    background: transparent url(/images/buttons.png) no-repeat right -103px
+  INPUT
+    background: transparent url(/images/buttons.png) no-repeat left top
+    display: block
+    line-height: 14px
+    padding: 6px 8px 10px 15px
+    height: 33px
+    border: none
+    font-size: 11px
+    font-weight: bold
+    color: #FFF
+    text-transform: lowercase
+  INPUT:hover, INPUT
+    background: transparent url(/images/buttons.png) no-repeat left -70px
 
 /* main light buttons
 A.mainButtonLight
@@ -599,19 +559,16 @@ A.mainButtonLight
   text-decoration: none
   text-transform: lowercase
   font-weight: bold
-
-A.mainButtonLight:hover
-  background: transparent url(/images/buttons.png) no-repeat right -485px
-
-A.mainButtonLight SPAN
-  background: transparent url(/images/buttons.png) no-repeat left -383px
-  display: block
-  line-height: 14px
-  padding: 9px 10px 8px 18px
-  height: 33px
-
-A.mainButtonLight SPAN:hover, A.mainButtonLight:hover SPAN
-  background: transparent url(/images/buttons.png) no-repeat left -452px
+  &:hover
+    background: transparent url(/images/buttons.png) no-repeat right -485px
+  SPAN
+    background: transparent url(/images/buttons.png) no-repeat left -383px
+    display: block
+    line-height: 14px
+    padding: 9px 10px 8px 18px
+    height: 33px
+  SPAN:hover, &:hover SPAN
+    background: transparent url(/images/buttons.png) no-repeat left -452px
 
 /* main light buttons for INPUTS
 SPAN.mainButtonLight
@@ -625,24 +582,21 @@ SPAN.mainButtonLight
   text-decoration: none
   text-transform: lowercase
   font-weight: bold
-
-SPAN.mainButtonLight:hover
-  background: transparent url(/images/buttons.png) no-repeat right -485px
-
-SPAN.mainButtonLight INPUT
-  background: transparent url(/images/buttons.png) no-repeat left -383px
-  display: block
-  line-height: 14px
-  padding: 6px 8px 10px 15px
-  height: 33px
-  border: none
-  font-size: 11px
-  font-weight: bold
-  color: #FFF
-  text-transform: lowercase
-
-SPAN.mainButtonLight INPUT:hover, SPAN.mainButtonLight:hover INPUT
-  background: transparent url(/images/buttons.png) no-repeat left -452px
+  &:hover
+    background: transparent url(/images/buttons.png) no-repeat right -485px
+  INPUT
+    background: transparent url(/images/buttons.png) no-repeat left -383px
+    display: block
+    line-height: 14px
+    padding: 6px 8px 10px 15px
+    height: 33px
+    border: none
+    font-size: 11px
+    font-weight: bold
+    color: #FFF
+    text-transform: lowercase
+  INPUT:hover, &:hover INPUT
+    background: transparent url(/images/buttons.png) no-repeat left -452px
 
 /* secondary buttons
 A.secondaryButton
@@ -656,19 +610,16 @@ A.secondaryButton
   text-decoration: none
   text-transform: lowercase
   font-weight: bold
-
-A.secondaryButton:hover
-  background: transparent url(/images/buttons.png) no-repeat right -215px
-
-A.secondaryButton SPAN
-  background: transparent url(/images/buttons.png) no-repeat left -139px
-  display: block
-  line-height: 14px
-  padding: 5px 10px 4px 18px
-  height: 24px
-
-A.secondaryButton SPAN:hover, A.secondaryButton:hover SPAN
-  background: transparent url(/images/buttons.png) no-repeat left -191px
+  &:hover
+    background: transparent url(/images/buttons.png) no-repeat right -215px
+  SPAN
+    background: transparent url(/images/buttons.png) no-repeat left -139px
+    display: block
+    line-height: 14px
+    padding: 5px 10px 4px 18px
+    height: 24px
+  SPAN:hover, &:hover SPAN
+    background: transparent url(/images/buttons.png) no-repeat left -191px
 
 /* secondary buttons for INPUTS
 SPAN.secondaryButton
@@ -682,24 +633,21 @@ SPAN.secondaryButton
   text-decoration: none
   text-transform: lowercase
   font-weight: bold
-
-SPAN.secondaryButton:hover
-  background: transparent url(/images/buttons.png) no-repeat right -215px
-
-SPAN.secondaryButton INPUT
-  background: transparent url(/images/buttons.png) no-repeat left -139px
-  display: block
-  line-height: 14px
-  padding: 3px 7px 6px 13px
-  height: 24px
-  border: none
-  font-size: 11px
-  font-weight: bold
-  color: #FFF
-  text-transform: lowercase
-
-SPAN.secondaryButton INPUT:hover, SPAN.secondaryButton:hover INPUT
-  background: transparent url(/images/buttons.png) no-repeat left -191px
+  &:hover
+    background: transparent url(/images/buttons.png) no-repeat right -215px
+  INPUT
+    background: transparent url(/images/buttons.png) no-repeat left -139px
+    display: block
+    line-height: 14px
+    padding: 3px 7px 6px 13px
+    height: 24px
+    border: none
+    font-size: 11px
+    font-weight: bold
+    color: #FFF
+    text-transform: lowercase
+  INPUT:hover, &:hover INPUT
+    background: transparent url(/images/buttons.png) no-repeat left -191px
 
 /* hilite buttons
 A.hiliteButton
@@ -739,36 +687,31 @@ SPAN.hiliteButton
   text-decoration: none
   text-transform: lowercase
   font-weight: bold
-
-SPAN.hiliteButton:hover
-  background: transparent url(/images/buttons.png) no-repeat right -345px
-
-SPAN.hiliteButton INPUT
-  background: transparent url(/images/buttons.png) no-repeat left -243px
-  display: block
-  line-height: 14px
-  padding: 7px 8px 10px 14px
-  height: 34px
-  border: none
-  font-size: 14px
-  font-weight: bold
-  color: #FFF
-  text-transform: lowercase
-  font-family: Trebuchet MS,Arial,Helvetica
-
-SPAN.hiliteButton INPUT:hover, SPAN.hiliteButton:hover INPUT
-  background: transparent url(/images/buttons.png) no-repeat left -277px
+  &:hover
+    background: transparent url(/images/buttons.png) no-repeat right -345px
+  INPUT
+    background: transparent url(/images/buttons.png) no-repeat left -243px
+    display: block
+    line-height: 14px
+    padding: 7px 8px 10px 14px
+    height: 34px
+    border: none
+    font-size: 14px
+    font-weight: bold
+    color: #FFF
+    text-transform: lowercase
+    font-family: Trebuchet MS,Arial,Helvetica
+  INPUT:hover, &:hover INPUT
+    background: transparent url(/images/buttons.png) no-repeat left -277px
 
 /* General Buttons
 .rowButton
   background: #F9F8F8
-
-.rowButton .mainButton
-  margin: 0 20px 20px
-
-.rowButton SPAN.buttonMsg
-  margin-top: 11px
-  float: left
+  .mainButton
+    margin: 0 20px 20px
+  SPAN.buttonMsg
+    margin-top: 11px
+    float: left
 
 /* END Buttons
 
