@@ -6,6 +6,8 @@ gem 'haml'
 gem 'compass'
 gem 'html5-boilerplate'
 
+gem 'simple_form'
+
 group :development, :test do
   gem 'heroku'
   gem 'taps'
