@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100523010133) do
+ActiveRecord::Schema.define(:version => 20110319160422) do
 
   create_table "assigments", :force => true do |t|
     t.integer  "job_id"
@@ -99,28 +99,26 @@ ActiveRecord::Schema.define(:version => 20100523010133) do
   end
 
   create_table "users", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "email",                            :null => false
-    t.string   "crypted_password",                 :null => false
-    t.string   "password_salt",                    :null => false
-    t.string   "persistence_token",                :null => false
-    t.string   "perishable_token"
-    t.integer  "login_count",       :default => 0, :null => false
-    t.datetime "last_request_at"
-    t.datetime "last_login_at"
-    t.datetime "current_login_at"
-    t.string   "last_login_ip"
-    t.string   "current_login_ip"
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.boolean  "admin"
-    t.boolean  "active"
     t.string   "owner_type"
     t.integer  "owner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], :name => "index_users_on_email"
-  add_index "users", ["last_request_at"], :name => "index_users_on_last_request_at"
-  add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "workers", :force => true do |t|
     t.string   "first_name"
