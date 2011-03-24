@@ -1,12 +1,19 @@
-require 'authlogic'
-
 class User < ActiveRecord::Base
-  acts_as_authentic do |c|
-    c.validates_length_of_password_field_options = {:on => :update, :minimum => 4, :if => :require_password?}
-    c.validates_length_of_password_confirmation_field_options = {:on => :update, :minimum => 4, :if => :require_password?}
-  end
-  
+  devise :database_authenticatable, :omniauthable
+
+  attr_accessible :email, :password, :password_confirmation, :remember_me, 
+                  :owner_type, :owner_id, :admin
+                  
   belongs_to :owner, :polymorphic => true
+  
+  def self.find_for_oauth(access_token, signed_in_resource=nil)
+    user_info = access_token['user_info']
+    if user = User.find_by_email(user_info['email'])
+      user
+    else # Create an user with a stub password. 
+      User.create!(:email => user_info["email"], :password => Devise.friendly_token[0,20]) 
+    end
+  end
   
   def worker?
     true unless owner_type != 'Worker'
@@ -17,21 +24,10 @@ class User < ActiveRecord::Base
   end
   
   def guest?
-    true unless owner_type && active
+    true unless owner_type
   end
   
-  def activate!
-    self.active = true
-    save    
+  def admin?
+    true unless !admin
   end
-  
-  def deliver_activation_instructions!
-    self.reset_perishable_token!
-    ActivationMailer.deliver_activation_instructions(self)
-  end
-  
-  def deliver_activation_confirmation!
-     self.reset_perishable_token!
-     ActivationMailer.deliver_activation_confirmation(self)
-   end
 end

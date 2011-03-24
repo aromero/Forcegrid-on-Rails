@@ -1,4 +1,6 @@
 Rails::Application.routes.draw do
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   resources :jobs do
     resources :bids
   end
@@ -10,18 +12,6 @@ Rails::Application.routes.draw do
   resources :workers do
     resources :jobs
   end
-  
-  resource :account, :controller => 'users'
-  resource :user_session
-  
-  
-  match 'register/:activation_code' => 'activations#new', :as => :register
-  match 'activate/:id' => 'activations#create', :as => :activate
-  
-  #flujo de login
-  match 'account/choose' => 'users#choose', :as => :choose_acount
-  match 'account/worker_signup' => 'users#worker_signup'
-  match 'account/employer_singup' => 'users#employer_signup'
     
   root :to => "landing#index"
 end
