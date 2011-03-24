@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/intridea/omniauth.git
+  revision: 7b3644fd629117f10aeab52823cbb24a8970a0d6
+  specs:
+    oa-core (0.2.0)
+      rack (~> 1.1)
+    oa-oauth (0.2.0)
+      multi_json (~> 0.0.2)
+      nokogiri (~> 1.4.2)
+      oa-core (= 0.2.0)
+      oauth (~> 0.4.0)
+      oauth2 (~> 0.1.1)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: b23e2e807a3dc350f724b0f23320394ff006857c
   specs:
@@ -80,14 +93,6 @@ GEM
     multipart-post (1.1.0)
     nifty-generators (0.4.5)
     nokogiri (1.4.4)
-    oa-core (0.2.0)
-      rack (~> 1.1)
-    oa-oauth (0.2.0)
-      multi_json (~> 0.0.2)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.2.0)
-      oauth (~> 0.4.0)
-      oauth2 (~> 0.1.1)
     oauth (0.4.4)
     oauth2 (0.1.1)
       faraday (~> 0.5.0)
@@ -164,7 +169,7 @@ DEPENDENCIES
   hpricot
   html5-boilerplate
   nifty-generators
-  oa-oauth
+  oa-oauth!
   pg
   rails (= 3.0.5)
   ruby-debug19
