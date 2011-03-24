@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
                   
   belongs_to :owner, :polymorphic => true
   
-  def self.find_for_google_oauth(access_token, signed_in_resource=nil)
+  def self.find_for_oauth(access_token, signed_in_resource=nil)
     user_info = access_token['user_info']
     if user = User.find_by_email(user_info['email'])
       user
