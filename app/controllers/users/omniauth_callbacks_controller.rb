@@ -1,27 +1,25 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  def google
-    # You need to implement the method below in your model
-    @user = User.find_for_oauth(env["omniauth.auth"], current_user)
+  def method_missing(method, *args)
+      raise "Unknown Provider Method: #{method}" unless method.to_s.downcase =~ /(google|facebook)/
 
-    if @user.persisted?
-      flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Google"
-      sign_in_and_redirect @user, :event => :authentication
-    else
-      session["devise.google_data"] = env["omniauth.auth"]
-      redirect_to new_user_registration_url
-    end
-  end
-  
-  def facebook
-    # You need to implement the method below in your model
-    @user = User.find_for_oauth(env["omniauth.auth"], current_user)
+      omniauth = request.env['omniauth.auth']
+      @user = User.includes(:authentications).merge(Authentication.where(:provider => omniauth['provider'], :uid => omniauth['uid'])).first
 
-    if @user.persisted?
-      flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Facebook"
-      sign_in_and_redirect @user, :event => :authentication
-    else
-      session["devise.facebook_data"] = env["omniauth.auth"]
-      redirect_to new_user_registration_url
-    end
-  end
+      if @user
+        sign_in_and_redirect(:user, @user)
+
+      elsif current_user
+        current_user.authentications.create(:provider => omniauth['provider'], :uid => omniauth['uid'])
+        redirect_to(redirect_location(:user, @user))
+      else
+        @user = User.new
+        @user.password = Devise.friendly_token[0,20])
+        @user.email = omniauth['user_info']['email']
+        @user.authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+        @user.save!
+        
+        sign_in_and_redirect(:user, @user)
+      end
+    end  
+
 end

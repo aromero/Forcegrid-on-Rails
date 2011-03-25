@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
                   :owner_type, :owner_id, :admin
                   
   belongs_to :owner, :polymorphic => true
+  has_many :authentications
   
   def self.find_for_oauth(access_token, signed_in_resource=nil)
     user_info = access_token['user_info']
