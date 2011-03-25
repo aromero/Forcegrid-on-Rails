@@ -13,7 +13,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         redirect_to(redirect_location(:user, @user))
       else
         @user = User.new
-        @user.password = Devise.friendly_token[0,20])
+        @user.password = Devise.friendly_token[0,20]
         @user.email = omniauth['user_info']['email']
         @user.authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
         @user.save!
