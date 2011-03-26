@@ -270,7 +270,7 @@ P
   padding-bottom: 5px
   background-image: url("/images/box_gradientBlue_bg.png")
   // TO-DO evaluar por qué se tuvo que fijar el tamaño en altura
-  height: 76px
+  height: 61px
   .logo
     float: left
     IMG
@@ -297,13 +297,16 @@ P
               text-decoration: underline
         .first
           border-left: none
-      .noLogued UL LI.first.login
-        background: url(/images/smallIcons.png) no-repeat -63px -5px
-        padding-left: 15px
-      .noLogued UL LI A
-        font-weight: bold
-        text-transform: capitalize
-
+    .noLogued
+      UL
+        LI
+          &.first
+            background: url(/images/smallIcons.png) no-repeat -63px -5px
+            padding-left: 15px
+          A
+            font-weight: bold
+            text-transform: capitalize
+            
     .search 
       SPAN.mainHilite, .headerTop .headerRightContent .search INPUT
         float: left
