@@ -4,7 +4,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
       omniauth = request.env['omniauth.auth']
       @user = User.includes(:authentications).merge(Authentication.where(:provider => omniauth['provider'], :uid => omniauth['uid'])).first
-
+      debugger
+      
       if @user
         sign_in_and_redirect(:user, @user)
 

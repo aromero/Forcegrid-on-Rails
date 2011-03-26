@@ -10,11 +10,11 @@ YAML::load_file(cat_file).each do |cat|
 end
 
 # Usuario administrador
-admin = User.create(:email => 'fernando.parra@forcegrid.com', :password => 'forcegrid', :admin => true)
+admin = User.create(:email => 'dev@forcegrid.com', :password => 'forcegrid', :admin => true)
 admin.save
 
 # Worker
-user1 = User.new(:email => 'ferparra83@gmail.com', :password => 'forcegrid')
+user1 = User.new(:email => 'fparra@forcegrid.com', :password => 'forcegrid')
 user1.owner = Worker.new(:first_name => 'Fernando', :last_name => 'Parra', :address1 => 'Raffo 2976')
 # TODO: agregar skills
 #user1.owner.skills << skills[3]
