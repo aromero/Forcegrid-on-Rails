@@ -10,13 +10,14 @@ gem 'html5-boilerplate'
 
 gem 'simple_form'
 
-group :development, :test do  
+group :development do  
   gem 'heroku'
   gem 'taps'
   gem 'nifty-generators'
   gem 'awesome_print', :require => 'ap'
   gem 'ruby_parser'
   gem 'ruby-debug19'
+  gem 'fancy-buttons'
 end
 
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
