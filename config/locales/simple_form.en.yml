@@ -1,7 +1,5 @@
 en:
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
     required:
       text: 'required'
       mark: '*'
@@ -10,6 +8,7 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Some errors were found, please take a look:"
+      
     # Labels and hints examples
     # labels:
     #   password: 'Password'
@@ -21,4 +20,3 @@ en:
     # hints:
     #   username: 'User name to sign in.'
     #   password: 'No special characters, please.'
-
