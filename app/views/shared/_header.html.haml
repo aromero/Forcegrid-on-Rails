@@ -3,20 +3,26 @@
     %a{:href => root_url }
       %img{:alt => "ForceGrid", :src => "/images/logo_forceGrid.png"}/
   .headerRightContent
-    .headerSecNav
-      %ul
-        %li.first
-          %a{:href => "#"} Dashboard
-        %li
-          %a{:href => "#"} Inbox
-        %li
-          %a{:href => "#"} My Settings
-        %li
-          %a{:href => "#"} Blog
-        %li
-          %a{:href => "#"} Help
-        %li
-          %a{:href => "#"} Logout
+    - unless current_user
+      .headerSecNav.noLogued.clearfix  
+        %ul
+          %li.first
+            %a{:href => new_user_session_path} Login
+    - else
+      .headerSecNav.clearfix
+        %ul.clearfix
+          %li.first
+            %a{:href => "#"} Dashboard
+          %li
+            %a{:href => "#"} Inbox
+          %li
+            %a{:href => "#"} My Settings
+          %li
+            %a{:href => "#"} Blog
+          %li
+            %a{:href => "#"} Help
+          %li
+            %a{:href => "#"} Logout
 .headerMainNav.clearfix
   %span.left  
   %ul

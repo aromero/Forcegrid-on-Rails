@@ -5,15 +5,7 @@ class User < ActiveRecord::Base
                   :owner_type, :owner_id, :admin
                   
   belongs_to :owner, :polymorphic => true
-  
-  def self.find_for_oauth(access_token, signed_in_resource=nil)
-    user_info = access_token['user_info']
-    if user = User.find_by_email(user_info['email'])
-      user
-    else # Create an user with a stub password. 
-      User.create!(:email => user_info["email"], :password => Devise.friendly_token[0,20]) 
-    end
-  end
+  has_many :authentications
   
   def worker?
     true unless owner_type != 'Worker'
