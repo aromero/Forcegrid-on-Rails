@@ -11,9 +11,9 @@ class Job < ActiveRecord::Base
   accepts_nested_attributes_for :milestones, :reject_if => proc { |attributes| attributes['title'].blank? }
   
   validates_presence_of :title, :description, :start_time, 
-      :end_time, :budget, :employer_id, 
-      :category_id, :project_begin, :project_finish
-      
+        :end_time, :budget, :employer_id, 
+        :category_id, :project_begin, :project_finish
+        
   validates_exclusion_of :state, :in => 'archived', :message => 'Job has finalized and can\'t be modified'
   validate :time_interval, :project
   
