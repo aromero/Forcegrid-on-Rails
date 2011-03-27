@@ -1,8 +1,10 @@
 class Job < ActiveRecord::Base
-  #fields: title, description, start_time, end_time, project_begin, project_finish, location, budget, pricing_method
-  #service_contract, buyers_support_contract, state, employer_id, category_id, visitor_count, created_at, updated_at
+  attr_accessible :title, :description, :start_time, :end_time, :project_begin, :project_finish, :location, :budget,
+                  :pricing_method, :service_contract, :buyers_support_contract, :state, :employer_id, :category_id,
+                  :visitor_count
   
   belongs_to :employer
+  
   belongs_to :category
   has_one :assigment
   has_many :bids
@@ -14,8 +16,8 @@ class Job < ActiveRecord::Base
         :end_time, :budget, :employer_id, 
         :category_id, :project_begin, :project_finish
         
-  validates_exclusion_of :state, :in => 'archived', :message => 'Job has finalized and can\'t be modified'
-  validate :time_interval, :project
+  #validates_exclusion_of :state, :in => 'archived', :message => 'Job has finalized and can\'t be modified'
+  validate :time_interval
   
   validates_each :start_time, :end_time do |record, attr, value|
     record.errors.add attr, 'is in the past' unless value.future? || value.today?
@@ -26,28 +28,8 @@ class Job < ActiveRecord::Base
        if (end_time.to_date <= start_time.to_date) || (project_finish.to_date <= project_begin.to_date)
   end
   
-  def project
-    #TO-DO ver por qué no funciona
-    #unless project_start > 2.days.from_now
-    #  errors.add_to_base 'All projects must start after the finalizing date for a job'
-    #end
-  end
-  
   scope :current, :conditions => ['start_time <= ? and end_time >= ?', Date.today, Date.today], :include => [:bids]
   
-  state_machine :state, :initial => :draft do
-    event :publish do
-      transition :draft => :published
-    end
-    
-    #TO-DO generar nuevo Project (en tabla projects)
-    event :execute do
-      transition :published => :ongoing
-    end
-    event :finish do
-      transition :ongoing => :archived
-    end
-  end
   
   def self.search(search)
     current.all.where(['title LIKE ?', "%#{search}%"])

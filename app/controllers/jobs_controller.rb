@@ -1,6 +1,4 @@
-class JobsController < ApplicationController
-  #load_and_authorize_resource
-  
+class JobsController < ApplicationController  
   def index
     if params[:search]
       @jobs = Job.search(params[:search])
@@ -22,16 +20,19 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.new(params[:job])
-    @job.employer ||= Employer.find(current_user.owner)
-    
-    if @job.save
-      @job.publish unless params[:draft]
-      flash[:notice] = 'Job was successfully created.'
-      redirect_to(@job)
-    else
-      render :action => "new"
+    unless current_user
+      @job = Job.new(params[:job])
+      flash[:notice] = 'Please sign-in to let us know who you are.'
+      session[:job] = @job
+      redirect_to new_user_session_path
     end
+    
+    # if @job.save
+    #   flash[:notice] = 'Job was successfully created.'
+    #   redirect_to(@job)
+    # else
+    #   render :action => "new"
+    # end
   end
 
   def update

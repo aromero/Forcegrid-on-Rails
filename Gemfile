@@ -24,5 +24,4 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'oa-oauth', :require => 'omniauth/oauth', :git => 'git://github.com/intridea/omniauth.git'
 
 gem 'cancan'
-gem 'state_machine'
 gem 'friendly_id'

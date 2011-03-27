@@ -11,18 +11,10 @@
     - else
       .headerSecNav.clearfix
         %ul.clearfix
-          %li.first
-            %a{:href => "#"} Dashboard
+          %li.first 
+            Hello #{h current_user.owner.first_name} #{h current_user.owner.last_name}
           %li
-            %a{:href => "#"} Inbox
-          %li
-            %a{:href => "#"} My Settings
-          %li
-            %a{:href => "#"} Blog
-          %li
-            %a{:href => "#"} Help
-          %li
-            %a{:href => "#"} Logout
+            %a{:href => destroy_user_session_path} Logout
 .headerMainNav.clearfix
   %span.left  
   %ul
