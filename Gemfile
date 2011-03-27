@@ -6,6 +6,7 @@ gem 'haml'
 gem 'hpricot'
 
 gem 'compass'
+gem 'fancy-buttons'
 gem 'html5-boilerplate'
 
 gem 'simple_form'
@@ -17,7 +18,6 @@ group :development do
   gem 'awesome_print', :require => 'ap'
   gem 'ruby_parser'
   gem 'ruby-debug19'
-  gem 'fancy-buttons'
 end
 
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
