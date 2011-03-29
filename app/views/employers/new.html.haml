@@ -1,0 +1,22 @@
+= simple_form_for @employer do |employer|
+  %h3 Please, fill in your company information
+  = employer.input     :first_name
+  = employer.input     :last_name
+  = employer.input     :company_name
+  = employer.input     :address1
+  %h3 Next, fill in the job details
+  = employer.association :jobs do |job|
+    = job.input       :title
+    = job.input       :description
+    = job.input       :start_time
+    = job.input       :end_time
+    = job.input       :project_begin
+    = job.input       :project_finish
+    = job.input       :category_id, :collection => Category.all
+    = job.input       :location
+    = job.input       :budget
+    = job.input       :pricing_method
+    = job.input       :service_contact
+    = job.input       :buyers_support_contact
+
+  = employer.button :submit

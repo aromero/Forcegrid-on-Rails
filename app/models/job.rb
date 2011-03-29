@@ -1,8 +1,4 @@
 class Job < ActiveRecord::Base
-  attr_accessible :title, :description, :start_time, :end_time, :project_begin, :project_finish, :location, :budget,
-                  :pricing_method, :service_contract, :buyers_support_contract, :state, :employer_id, :category_id,
-                  :visitor_count
-  
   belongs_to :employer
   
   belongs_to :category
@@ -13,10 +9,8 @@ class Job < ActiveRecord::Base
   accepts_nested_attributes_for :milestones, :reject_if => proc { |attributes| attributes['title'].blank? }
   
   validates_presence_of :title, :description, :start_time, 
-        :end_time, :budget, :employer_id, 
-        :category_id, :project_begin, :project_finish
+        :end_time, :budget, :category_id, :project_begin, :project_finish
         
-  #validates_exclusion_of :state, :in => 'archived', :message => 'Job has finalized and can\'t be modified'
   validate :time_interval
   
   validates_each :start_time, :end_time do |record, attr, value|
@@ -29,7 +23,6 @@ class Job < ActiveRecord::Base
   end
   
   scope :current, :conditions => ['start_time <= ? and end_time >= ?', Date.today, Date.today], :include => [:bids]
-  
   
   def self.search(search)
     current.all.where(['title LIKE ?', "%#{search}%"])

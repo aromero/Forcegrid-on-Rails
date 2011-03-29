@@ -8,14 +8,12 @@ class User < ActiveRecord::Base
   has_many :authentications, :dependent => :destroy
     
   # Validar que tenga owner si el usuario no es admin
-  validates_presence_of :owner_type, :on => :create, :if => Proc.new {|user| !user.admin }
+  #validates_presence_of :owner_type, :on => :create, :if => Proc.new {|user| !user.admin }
   
   def apply_omniauth(omniauth)
     self.password = Devise.friendly_token[0,20] if self.password.blank?
     self.email = omniauth['user_info']['email'] if self.email.blank?
     self.authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
-    self.owner = Employer.new(:first_name => 'Fernando', 
-                    :last_name => 'Parra', :company_name => 'Microstrategy', :address1 => 'Alem 1134')
   end
   
   def worker?

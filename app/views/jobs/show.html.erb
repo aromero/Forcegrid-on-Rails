@@ -48,10 +48,9 @@
   <%=h @job.employer.full_name %>
 </p>
 
+<% unless @job.bids.empty? %>
 <h2>Bids</h2>
-
 <%= render :partial => 'bids/bid_index', :object => @job.bids %>
+<% end %>
 
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<%= link_to 'Adjust details', edit_job_path(@job) %>

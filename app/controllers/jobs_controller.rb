@@ -13,6 +13,7 @@ class JobsController < ApplicationController
 
   def new
     @job = Job.new
+    @job.build_employer
   end
 
   def edit
@@ -20,19 +21,12 @@ class JobsController < ApplicationController
   end
 
   def create
-    unless current_user
-      @job = Job.new(params[:job])
-      flash[:notice] = 'Please sign-in to let us know who you are.'
-      session[:job] = @job
-      redirect_to new_user_session_path
+    if @job.save
+      flash[:notice] = 'Job was successfully created.'
+      redirect_to(@job)
+    else
+      render :action => "new"
     end
-    
-    # if @job.save
-    #   flash[:notice] = 'Job was successfully created.'
-    #   redirect_to(@job)
-    # else
-    #   render :action => "new"
-    # end
   end
 
   def update

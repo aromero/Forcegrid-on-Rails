@@ -1,16 +1,22 @@
-%h1 New Job
-
 = simple_form_for @job do |f|
-    = f.input :title
-    = f.input :description
-    = f.input :start_time
-    = f.input :end_time
-    = f.input :project_begin
-    = f.input :project_finish
-    = f.input :category_id, :collection => Category.all
-    = f.input :location
-    = f.input :budget
-    = f.input :pricing_method
-    = f.input :service_contact
-    = f.input :buyers_support_contact
-    = f.button :submit
+  %h3 Please, fill in your company information
+  = f.association :employer do |e|
+    = e.input     :first_name
+    = e.input     :last_name
+    = e.input     :company_name
+    = e.input     :address1
+  %h3 Next, fill in the job details
+  = f.input       :title
+  = f.input       :description
+  = f.input       :start_time
+  = f.input       :end_time
+  = f.input       :project_begin
+  = f.input       :project_finish
+  = f.input       :category_id, :collection => Category.all
+  = f.input       :location
+  = f.input       :budget
+  = f.input       :pricing_method
+  = f.input       :service_contact
+  = f.input       :buyers_support_contact
+
+  = f.button :submit

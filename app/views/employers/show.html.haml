@@ -1,0 +1,29 @@
+%b 
+  First name
+  = @employer.first_name
+%br
+%b 
+  Last Name
+  = @employer.last_name
+%br
+%b 
+  Company Name
+  = @employer.company_name
+%br
+%b 
+  Address
+  = @employer.address1
+  
+- unless @employer.jobs.empty?
+  %table
+    %thead
+      %th Title
+      %th Description
+      %th Start Time
+      %th End Time
+    - @employer.jobs.each do |job|
+      %tr
+        %td= job.title
+        %td= job.description
+        %td= job.start_time
+        %td= job.end_time
