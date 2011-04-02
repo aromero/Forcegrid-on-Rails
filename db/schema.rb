@@ -46,8 +46,7 @@ ActiveRecord::Schema.define(:version => 20110324162935) do
   end
 
   create_table "employers", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "full_name"
     t.string   "company_name"
     t.string   "address1"
     t.string   "address2"
@@ -109,9 +108,7 @@ ActiveRecord::Schema.define(:version => 20110324162935) do
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
     t.string   "reset_password_token"
-    t.string   "remember_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",                       :default => 0
     t.datetime "current_sign_in_at"
@@ -129,8 +126,7 @@ ActiveRecord::Schema.define(:version => 20110324162935) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "workers", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "full_name"
     t.string   "phone"
     t.string   "country"
     t.string   "business_name"

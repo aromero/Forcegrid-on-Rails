@@ -12,7 +12,7 @@
       .headerSecNav.clearfix
         %ul.clearfix
           %li.first 
-            Hello #{h current_user.owner.first_name} #{h current_user.owner.last_name}
+            Hello #{h current_user.owner.full_name}
           %li
             %a{:href => destroy_user_session_path} Logout
 .headerMainNav.clearfix

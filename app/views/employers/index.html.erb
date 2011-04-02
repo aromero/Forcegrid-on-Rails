@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>First name</th>
-    <th>Last name</th>
     <th>Company name</th>
     <th>Address1</th>
     <th>Address2</th>
@@ -18,8 +17,7 @@
 
 <%= @employers.each do |employer| %>
   <tr>
-    <td><%=h employer.first_name %></td>
-    <td><%=h employer.last_name %></td>
+    <td><%=h employer.full_name %></td>
     <td><%=h employer.company_name %></td>
     <td><%=h employer.address1 %></td>
     <td><%=h employer.address2 %></td>

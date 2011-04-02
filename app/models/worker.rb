@@ -10,9 +10,5 @@ class Worker < ActiveRecord::Base
   has_many :skills, :through => :skill_workers
   accepts_nested_attributes_for :skill_workers, :allow_destroy => true
   
-  validates_presence_of :first_name, :last_name
-  
-  def full_name
-    first_name + " " + last_name
-  end
+  validates_presence_of :full_name
 end

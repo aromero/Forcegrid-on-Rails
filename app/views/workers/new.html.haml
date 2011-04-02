@@ -1,7 +1,6 @@
 = simple_form_for @worker do |worker|
   %h3 Please, fill in your profile
-  = worker.input :first_name
-  = worker.input :last_name
+  = worker.input :full_name
   = worker.input :phone
   = worker.input :city
   = worker.association :skills, :as => :check_boxes

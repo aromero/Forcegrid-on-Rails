@@ -21,12 +21,12 @@ admin.save
 
 # Worker
 user1 = User.new(:email => 'fparra@forcegrid.com', :password => 'forcegrid')
-user1.owner = Worker.new(:first_name => 'Fernando', :last_name => 'Parra', :address1 => 'Raffo 2976')
+user1.owner = Worker.new(:full_name => 'Fernando Parra', :address1 => 'Raffo 2976')
 # TODO: agregar skills
 #user1.owner.skills << skills[3]
 user1.save
 
 # Employer
 user2 = User.new(:email => 'accountvalidation@forcegrid.com', :password => 'forcegrid')
-user2.owner = Employer.new(:first_name => 'Ariel', :last_name => 'Romero', :company_name => 'Microstrategy', :address1 => 'Alem 1000')
+user2.owner = Employer.new(:full_name => 'Ariel Romero', :company_name => 'Microstrategy', :address1 => 'Alem 1000')
 user2.save

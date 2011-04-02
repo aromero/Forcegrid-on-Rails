@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>First name</th>
-    <th>Last name</th>
     <th>Phone</th>
     <th>Country</th>
     <th>Business name</th>
@@ -24,8 +23,7 @@
 
 <%= @workers.each do |worker| -%>
   <tr>
-    <td><%=h worker.first_name %></td>
-    <td><%=h worker.last_name %></td>
+    <td><%=h worker.full_name %></td>
     <td><%=h worker.phone %></td>
     <td><%=h worker.country %></td>
     <td><%=h worker.business_name %></td>
