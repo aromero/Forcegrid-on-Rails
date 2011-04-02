@@ -9,7 +9,7 @@ Rails::Application.routes.draw do
     resources :jobs
   end
   
-  resources :workers do
+  resources :workers, :only => [:show, :new, :create] do
     resources :jobs
   end
     

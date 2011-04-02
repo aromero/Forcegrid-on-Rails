@@ -1,5 +1,6 @@
 # coding: utf-8
 # Archivo de datos seed
+require 'open-uri'
 
 # Categorías
 cat_file = File.join(Rails.root, 'db', 'categories.yml')
@@ -8,6 +9,11 @@ YAML::load_file(cat_file).each do |cat|
   category = Category.new cat
   category.save!
 end
+
+# Skills
+doc = Nokogiri::HTML(open('http://www.elance.com/skills'))
+skills = doc.css('.skills-section a').map(&:text)
+skills.each{|s| Skill.create(:name => s)}
 
 # Usuario administrador
 admin = User.create(:email => 'dev@forcegrid.com', :password => 'forcegrid', :admin => true)
