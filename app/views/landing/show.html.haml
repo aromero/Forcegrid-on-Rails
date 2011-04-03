@@ -1,0 +1,14 @@
+%hr
+%h4 What can we help you with?
+%p Post your job. We will soon launch Forcegrid in your location
+%ul
+  - @sub_categories.each do |sc|
+    %li
+      %a{:href => new_employer_path(:job_category => sc.name)}= sc.name
+%hr
+%h4 Become a Forcegrid Professional
+%p Be the first to know about the grid. If you are the best and brightest IT Pro, create your profile. |
+Get hired, deliver solutions and get paid for your work. It’s free to join |
+
+%a.mainButton{:href => new_worker_path}
+  %span Join Now

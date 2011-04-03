@@ -13,5 +13,5 @@ Rails::Application.routes.draw do
     resources :jobs
   end
     
-  root :to => "landing#index"
+  root :to => "landing#show"
 end
