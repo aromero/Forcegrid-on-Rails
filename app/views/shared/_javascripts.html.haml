@@ -4,15 +4,17 @@
 - if !google_api_key.blank?
   = javascript_include_tag "//www.google.com/jsapi?key=#{google_api_key}"
   :javascript
-    google.load(#{ remote_jquery("1.5.1") });
+    google.load(#{ remote_jquery("1.5.2") });
+    google.load(#{ remote_jquery_ui("1.8.11") })
 - else
-  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/#{ local_jquery("1.5.1") }"
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jqueryui/#{ local_jquery("1.5.2") }",
+      "//ajax.googleapis.com/ajax/libs/jquery/#{ local_jquery_ui("1.5.2") }" 
 
 -# fall back to local jQuery if necessary
 :javascript
   !window.jQuery && document.write(unescape('%3Cscript src="/javascripts/jquery.min.js"%3E%3C/script%3E'))
   
-= javascript_include_tag 'rails', 'plugins', 'application'
+= javascript_include_tag :app_scripts
 
 -# Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb
 /[if lt IE 7 ]

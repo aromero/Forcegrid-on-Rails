@@ -48,4 +48,6 @@ Forcegrid::Application.configure do
   config.active_support.deprecation = :notify
   
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  config.action_view.javascript_expansions[:app_scripts] = %w{rails application}
 end
