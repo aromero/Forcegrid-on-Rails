@@ -1,12 +1,6 @@
 class XhrController < ApplicationController
   def skills
-    @skills = Skill.find_all_by_category_id(params[:id])
-    render :xml => @skills.to_xml
+    @skills = Skill.all.where(['LOWER(name) LIKE LOWER(?)',"#{params[:name]}%"]).map {|s| [s.id, s.name]}
+    render :json => @skills
   end
-
-  def subcategories
-    @subcategories = Category.find(params[:id]).subcategories
-    render :xml => @subcategories.to_xml
-  end
-
 end
