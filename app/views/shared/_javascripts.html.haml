@@ -4,11 +4,11 @@
 - if !google_api_key.blank?
   = javascript_include_tag "//www.google.com/jsapi?key=#{google_api_key}"
   :javascript
-    google.load(#{ remote_jquery("1.5.2") });
-    google.load(#{ remote_jquery_ui("1.8.11") })
+    google.load(#{ remote_jquery("1.6.1") });
+    google.load(#{ remote_jquery_ui("1.8.13") })
 - else
-  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jqueryui/#{ local_jquery("1.5.2") }",
-      "//ajax.googleapis.com/ajax/libs/jquery/#{ local_jquery_ui("1.5.2") }" 
+  = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jqueryui/#{ local_jquery("1.6.1") }",
+      "//ajax.googleapis.com/ajax/libs/jquery/#{ local_jquery_ui("1.8.13") }" 
 
 -# fall back to local jQuery if necessary
 :javascript
