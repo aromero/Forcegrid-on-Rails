@@ -11,7 +11,7 @@
     = job.input       :end_time
     = job.input       :project_begin
     = job.input       :project_finish
-    = job.input       :category_id, :collection => Category.all
+    = job.input       :category_id, :input_html => { :value => params[:job_category] }, :as => :hidden
     = job.input       :location
     = job.input       :budget
     = job.input       :pricing_method
